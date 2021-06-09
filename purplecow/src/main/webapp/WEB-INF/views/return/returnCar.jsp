@@ -65,12 +65,16 @@
 														<li><a href="blog.html">이용 안내</a></li>
 														<li><a href="blog_details.html">요금 안내</a></li>
 													</ul></li>
-												<li><a href="packages.html">예약하기</a></li>
+												<li><a href="packages.html">예약하기</a>
+													<ul class="submenu">
+														<li><a href="blog.html">왕복 예약</a></li>
+														<li><a href="blog_details.html">편도 예약</a></li>
+														<li><a href="elements.html">부름예약</a></li>
+													</ul></li>
+
 												<li><a href="#">반납하기</a>
 													<ul class="submenu">
-														<li><a href="blog.html">Blog</a></li>
-														<li><a href="blog_details.html">Blog Details</a></li>
-														<li><a href="elements.html">Element</a></li>
+														<li><a href="blog.html">바로 반납하기</a></li>														
 													</ul></li>
 												<li><a href="#">마이페이지</a> <!-- Button -->
 												<li class="button-header margin-left "><a
@@ -119,7 +123,9 @@
 		<!--? Start Button -->
 		<section class="button-area">
 			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading"><strong>반납하기</strong></h3>
+				<h3 class="text-heading">
+					<strong>반납하기</strong>
+				</h3>
 
 				<div class="button-group-area mt-40">
 					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
@@ -131,10 +137,10 @@
 
 				<hr>
 				<div style="margin: 20px 0px 20px 0px;">
-					<p style="font-size:120%;margin-bottom:40px;">
+					<p style="font-size: 120%; margin-bottom: 40px;">
 						<strong>반납 전 마지막 확인</strong>
 					</p>
-					<div style="margin:10px 0px;">
+					<div style="margin: 10px 0px;">
 						창문은 모두 닫았나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
 					</div style="margin:10px 0px;">
@@ -142,7 +148,7 @@
 						실내등은 모두 껐나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
-					<div style="margin:10px 0px;">
+					<div style="margin: 10px 0px;">
 						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
