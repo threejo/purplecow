@@ -60,7 +60,11 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">
-												<li><a href="index.html">소개하기</a></li>
+												<li><a href="index.html">소개하기</a>
+													<ul class="submenu">
+														<li><a href="blog.html">이용 안내</a></li>
+														<li><a href="blog_details.html">요금 안내</a></li>
+													</ul></li>
 												<li><a href="packages.html">예약하기</a></li>
 												<li><a href="#">반납하기</a>
 													<ul class="submenu">
@@ -115,7 +119,7 @@
 		<!--? Start Button -->
 		<section class="button-area">
 			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading">반납하기</h3>
+				<h3 class="text-heading"><strong>반납하기</strong></h3>
 
 				<div class="button-group-area mt-40">
 					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
@@ -127,18 +131,18 @@
 
 				<hr>
 				<div style="margin: 20px 0px 20px 0px;">
-					<p>
+					<p style="font-size:120%;margin-bottom:40px;">
 						<strong>반납 전 마지막 확인</strong>
 					</p>
-					<div>
+					<div style="margin:10px 0px;">
 						창문은 모두 닫았나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
+					</div style="margin:10px 0px;">
 					<div>
 						실내등은 모두 껐나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
-					<div>
+					<div style="margin:10px 0px;">
 						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
 							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
@@ -146,9 +150,16 @@
 				</div>
 
 			</div>
+			<div style="margin: 20px 350px 20px 350px;">
+				<button
+					class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+					style="font-size: 120%;" type="submit">반납하기</button>
+			</div>
+
 		</section>
 		<!-- End Button -->
-		
+
+
 	</main>
 	<footer>
 		<div class="footer-wrappr "
@@ -252,7 +263,10 @@
 									<p>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 										Copyright &copy;
-										<script>document.write(new Date().getFullYear());</script>
+										<script>
+											document.write(new Date()
+													.getFullYear());
+										</script>
 										All rights reserved | This template is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
 											href="https://colorlib.com" target="_blank">Colorlib</a>
