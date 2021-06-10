@@ -156,7 +156,7 @@
 						<strong>차량 내부</strong>
 					</h3>
 					<div>
-						<strong>Step2. 내부 확인 후 이전 애용자 매너 평가하기!</strong>
+						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
 					</div>
 					<div class="button-group-area mt-40"  style="margin:20px 0px">
 						<input type="radio" name="innerStatus" id="default-radio">
