@@ -126,42 +126,40 @@
 
 		<!--? 반납 설문 시작 -->
 		<section class="button-area">
-			
-				<div class="container box_1170 border-top-generic">
-					<h3 class="text-heading">
-						<strong>반납하기</strong>
-					</h3>
 
-					<div class="button-group-area mt-40">
-						XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-							id="default-radio"> <label for="default-radio">YES</label>
+			<div class="container box_1170 border-top-generic">
+				<h3 class="text-heading">
+					<strong>반납하기</strong>
+				</h3>
 
-						<input type="radio" name="parking" id="default-radio"> <label
-							for="default-radio">NO</label>
+				<div class="button-group-area mt-40">
+					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
+						id="default-radio"> <label for="default-radio">YES</label>
+
+					<input type="radio" name="parking" id="default-radio"> <label
+						for="default-radio">NO</label>
+				</div>
+
+				<hr>
+				<div>
+					<p style="font-size: 120%; margin-bottom: 40px;">
+						<strong>반납 전 마지막 확인</strong>
+					</p>
+					<div style="margin: 10px 0px;">
+						창문은 모두 닫았나요? <input type="checkbox" name="parking"
+							id="default-radio"> <label for="default-radio">NO</label>
+					</div style="margin:10px 0px;">
+					<div>
+						실내등은 모두 껐나요? <input type="checkbox" name="parking"
+							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
-
-					<hr>
-					<div style="margin: 20px 0px 20px 0px;">
-						<p style="font-size: 120%; margin-bottom: 40px;">
-							<strong>반납 전 마지막 확인</strong>
-						</p>
-						<div style="margin: 10px 0px;">
-							창문은 모두 닫았나요? <input type="checkbox" name="parking"
-								id="default-radio"> <label for="default-radio">NO</label>
-						</div style="margin:10px 0px;">
-						<div>
-							실내등은 모두 껐나요? <input type="checkbox" name="parking"
-								id="default-radio"> <label for="default-radio">NO</label>
-						</div>
-						<div style="margin: 10px 0px;">
-							개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
-								id="default-radio"> <label for="default-radio">NO</label>
-						</div>
-
+					<div style="margin: 10px 0px;">
+						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
+							id="default-radio"> <label for="default-radio">NO</label>
 					</div>
 
 				</div>
-				<div style="margin: 20px 350px 20px 350px;">
+				<div style="margin-top:80px">
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
 						id="modal_btn" style="font-size: 120%;" type="submit">반납하기</button>
@@ -175,19 +173,22 @@
 						<div
 							style="display: flex; align-items: center; flex-direction: row; justify-content: center;">
 							<div
-								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);font-size: 150%;color:#ef67ff;">
+								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 150%; color: #ef67ff;">
 								정상 반납되었습니다.</div>
 							<div
 								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
-							<a href="#" class="borders-btn">확 인</a>
+								<a href="#" class="borders-btn">확 인</a>
 							</div>
 						</div>
 
-						
+
 					</div>
 					<!-- 모달 끝 -->
 				</div>
-			
+
+			</div>
+
+
 		</section>
 		<!-- 반납 설문 시작 끝-->
 
