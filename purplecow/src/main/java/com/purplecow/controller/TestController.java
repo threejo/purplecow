@@ -35,8 +35,13 @@ public class TestController {
 
 		
 		return "test/index";
+	}
+	
+	@GetMapping("/ex")
+	public String ex() {
 
-
+		
+		return "ex";
 	}
 
 }
