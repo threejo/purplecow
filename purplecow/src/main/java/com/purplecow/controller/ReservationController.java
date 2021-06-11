@@ -1,12 +1,14 @@
 package com.purplecow.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -51,14 +53,14 @@ public class ReservationController {
 
 
 
-//	/*PUT*/
-//	/*예약 테이블에 정해진 자리 주차 여부 수정*/
-//	@ResponseBody
-//	@PutMapping("/reservations/{id}")
-//	public void updateParkFixedInReservation(@PathVariable("id") int id,@RequestBody(required= false) Boolean park_fixed,@RequestBody(required= false) String[] images) {
-//		if(park_fixed != null && images == null) reservationsService.updateParkFixedInReservation(id,park_fixed);
-//		else if(images != null) reservationsService.updateImagesInReservation(id,images);
-//	}
+	/*PUT*/
+	/*예약 테이블에 정해진 자리 주차 여부 수정*/
+	@ResponseBody
+	@PutMapping("/reservations/{id}")
+	public void updateParkFixedInReservation(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
+		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,(Boolean)rbo.get("park_fixed"));
+		else if(rbo.get("images")!=null) reservationsService.updateImagesInReservation(id,(String[])rbo.get("images"));
+	}
 
 	/*예약 테이블에 외부사진 목록 수정*/
 //	@ResponseBody
