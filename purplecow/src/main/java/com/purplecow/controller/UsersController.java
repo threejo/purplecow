@@ -1,10 +1,12 @@
 package com.purplecow.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,13 +18,10 @@ public class UsersController {
 
 	@Autowired UsersService usersService;
 
-	/*유저생성하기 */
-
+	/*유저 생성하기 */
 	@ResponseBody
 	@PostMapping("/users")
 	public void insertUsers(@RequestBody Users users) {
-
-
 
 		usersService.insertUser(users);
 
@@ -35,4 +34,9 @@ public class UsersController {
 		return usersService.getUser(id);
 	}
 
+	/*유저 삭제하기 */
+	@DeleteMapping("/users")
+	public void deleteUserById(@RequestParam int id) {
+		usersService.deleteUserById(id);
+	}
 }

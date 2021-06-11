@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.purplecow.mapper.ReservationsMapper">
+
+	<insert id="insertReservations"
+		parameterType="com.purplecow.dto.Reservations">
+		INSERT INTO reservations
+		(user_id,zone_id,car_id,start_time,end_time,delayed,accident,hipass_count)
+		VALUES
+		(#{user_id},#{zone_id},#{car_id},#{start_time},#{end_time},#{delayed},#{accident},#{hipass_count})
+	</insert>
+
+	<select id="getReservationById"
+
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+		WHERE id= #{id}
+	</select>
+	<select id="getReservationsByUserId"
+
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+		WHERE user_id= #{userId}
+	</select>
+	<select id="getReservations"
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+	</select>
+	<update id="updateParkFixedInReservation">
+		UPDATE reservations 
+		SET
+		park_fixed=#{park_fixed}
+		WHERE id = #{id}
+	</update>
+	
+
+
+</mapper>

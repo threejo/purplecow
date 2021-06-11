@@ -8,7 +8,7 @@ import lombok.Setter;
 
 public class Users {
 
-	private String id;
+	private int id;
 	private String name;
 	private String email;
 	private String password;
@@ -18,10 +18,10 @@ public class Users {
 	private String license_cert;
 
 	/*Getter & Setter*/
-	public String getId() {
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 	public String getName() {
@@ -67,6 +67,7 @@ public class Users {
 	public void setLicense_cert(String license_cert) {
 		this.license_cert = license_cert;
 	}
+
 	/*constructor*/
 	public Users(String email, String password) {
 		super();

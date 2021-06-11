@@ -11,4 +11,6 @@ public interface UsersMapper {
 
 	Users getUser(int id);
 
+	void deleteUserById(int id);
+
 }

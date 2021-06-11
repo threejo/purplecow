@@ -1,10 +1,78 @@
 package com.purplecow.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.purplecow.dto.Reservations;
+import com.purplecow.service.ReservationsService;
 
 @RestController
 public class ReservationController {
-	
-	
+
+	@Autowired ReservationsService reservationsService;
+
+	/*POST*/
+	/*예약 최초 생성*/
+	@ResponseBody
+	@PostMapping("/reservations")
+	public void insertReservations(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd kk:mm:ss") Reservations reservations) {
+
+		reservationsService.insertReservations(reservations);
+
+	}
+
+	/*SELECT*/
+	/*id로 특정 예약 조회*/
+	@GetMapping("/reservations/{id}")
+	public Reservations getReservationById(@PathVariable("id") int id) {
+		return reservationsService.getReservationById(id);
+	}
+
+	/*user_id로 특정 사용자의 예약 전체 조회*/
+	@GetMapping("/reservations")
+	public Reservations getReservationsByUserId(@RequestParam("user_id") int userId) {
+		return reservationsService.getReservationsByUserId(userId);
+	}
+
+	/*예약 전체 목록 조회*/
+	@GetMapping("/reservations/list")
+	public List<Reservations> getReservationsByUserId() {
+		return reservationsService.getReservations();
+	}
+
+
+
+//	/*PUT*/
+//	/*예약 테이블에 정해진 자리 주차 여부 수정*/
+//	@ResponseBody
+//	@PutMapping("/reservations/{id}")
+//	public void updateParkFixedInReservation(@PathVariable("id") int id,@RequestBody(required= false) Boolean park_fixed,@RequestBody(required= false) String[] images) {
+//		if(park_fixed != null && images == null) reservationsService.updateParkFixedInReservation(id,park_fixed);
+//		else if(images != null) reservationsService.updateImagesInReservation(id,images);
+//	}
+
+	/*예약 테이블에 외부사진 목록 수정*/
+//	@ResponseBody
+//	@PutMapping("/reservations/{id}")
+//	public void updateImagesInReservation(@PathVariable("id") int id,@RequestBody String[] images) {
+//		reservationsService.updateImagesInReservation(id,images);
+//	}
+
+	/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
+
+	/*예약 테이블에 결제한 정보 저장*/
+
+
+
+
 
 }
