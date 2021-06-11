@@ -9,4 +9,6 @@ public interface UsersMapper {
 
 	void insertUser(Users user);
 
+	Users getUser(int id);
+
 }

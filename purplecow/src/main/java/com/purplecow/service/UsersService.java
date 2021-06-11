@@ -8,12 +8,17 @@ import com.purplecow.mapper.UsersMapper;
 
 @Service
 public class UsersService {
-	
-	@Autowired UsersMapper userMapper;
+
+	@Autowired UsersMapper usersMapper;
 
 	public void insertUser(Users user) {
 		// TODO Auto-generated method stub
-		userMapper.insertUser(user);
+		usersMapper.insertUser(user);
+	}
+
+	public Users getUser(int id) {
+		// TODO Auto-generated method stub
+		return usersMapper.getUser(id);
 	}
 
 }

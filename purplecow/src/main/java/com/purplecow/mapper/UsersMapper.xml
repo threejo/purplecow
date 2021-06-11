@@ -3,8 +3,13 @@
 <mapper namespace="com.purplecow.mapper.UsersMapper">
 
    <insert id="insertUser" parameterType="com.purplecow.dto.Users">
-        insert into users (email,password)
-        values (#{email},#{password})
+        INSERT INTO users (email,password)
+        VALUES (#{email},#{password})
     </insert>
+    
+    <select id="getUser" parameterType="java.util.HashMap" resultType="com.purplecow.dto.Users">
+  	SELECT * FROM users
+    WHERE id= #{id}
+  </select>
 
 </mapper>
