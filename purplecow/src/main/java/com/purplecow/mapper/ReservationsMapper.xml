@@ -11,7 +11,6 @@
 	</insert>
 
 	<select id="getReservationById"
-
 		resultType="com.purplecow.dto.Reservations">
 		SELECT * FROM reservations
 		WHERE id= #{id}
@@ -26,12 +25,23 @@
 		resultType="com.purplecow.dto.Reservations">
 		SELECT * FROM reservations
 	</select>
+	
 	<update id="updateParkFixedInReservation">
 		UPDATE reservations 
 		SET
 		park_fixed=#{park_fixed}
 		WHERE id = #{id}
 	</update>
+	<update id="updateImagesInReservation">
+		UPDATE reservations 
+		SET	images=
+		
+		#{images,jdbcType=ARRAY,typeHandler=com.purplecow.mapper.ListArrayTypeHandler}
+		
+		WHERE id = #{id};
+		 
+	</update>
+	
 	
 
 

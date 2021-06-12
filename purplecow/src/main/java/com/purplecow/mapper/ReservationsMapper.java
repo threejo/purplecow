@@ -1,5 +1,7 @@
 package com.purplecow.mapper;
 
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -19,6 +21,6 @@ public interface ReservationsMapper {
 
 	void updateParkFixedInReservation(int id, Boolean park_fixed);
 
-	void updateImagesInReservation(int id, String[] images);
+	void updateImagesInReservation(int id, List<String> images);
 
 }

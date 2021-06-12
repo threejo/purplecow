@@ -54,20 +54,17 @@ public class ReservationController {
 
 
 	/*PUT*/
-	/*예약 테이블에 정해진 자리 주차 여부 수정*/
+	
 	@ResponseBody
 	@PutMapping("/reservations/{id}")
 	public void updateParkFixedInReservation(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
+		/*예약 테이블에 정해진 자리 주차 여부 수정*/
 		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,(Boolean)rbo.get("park_fixed"));
-		else if(rbo.get("images")!=null) reservationsService.updateImagesInReservation(id,(String[])rbo.get("images"));
+		/*예약 테이블에 외부사진 목록 수정*/
+		else if(rbo.get("images")!=null) {			
+			reservationsService.updateImagesInReservation(id,(List<String>)rbo.get("images"));}
 	}
 
-	/*예약 테이블에 외부사진 목록 수정*/
-//	@ResponseBody
-//	@PutMapping("/reservations/{id}")
-//	public void updateImagesInReservation(@PathVariable("id") int id,@RequestBody String[] images) {
-//		reservationsService.updateImagesInReservation(id,images);
-//	}
 
 	/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
 

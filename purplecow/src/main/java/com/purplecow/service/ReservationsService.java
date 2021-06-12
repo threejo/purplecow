@@ -1,5 +1,7 @@
 package com.purplecow.service;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +41,16 @@ public class ReservationsService {
 
 	}
 
-	public void updateImagesInReservation(int id, String[] images) {
-		reservationsMapper.updateImagesInReservation(id,images);
+	public void updateImagesInReservation(int id, List<String> images) {
+		
+//		String[] imgArr =(String[])images.toArray(new String[images.size()]);
+//		String imageList="{";
+//		for(String img:imgArr) {
+//			imageList += img;
+//		}
+//		imageList += "}";
+//		String[] a = {"1","2","3000000"};
+		reservationsMapper.updateImagesInReservation(id,images );
 
 	}
 
