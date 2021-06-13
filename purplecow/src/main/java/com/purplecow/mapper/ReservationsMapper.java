@@ -15,12 +15,16 @@ public interface ReservationsMapper {
 
 	Reservations getReservationById(int id);
 
-	Reservations getReservationsByUserId(int userId);
+	Reservations getReservationsByUserId(int usersId);
 
 	List<Reservations> getReservations();
 
 	void updateParkFixedInReservation(int id, Boolean park_fixed);
 
 	void updateImagesInReservation(int id, List<String> images);
+
+	void updateCarStatesInReservation(int id, String outside_state, String inside_state);
+
+	void updatePaymentsInReservations(int id, int cards_id, int payments_id);
 
 }

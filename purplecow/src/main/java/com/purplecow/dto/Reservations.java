@@ -11,23 +11,26 @@ import lombok.Setter;
 
 @Getter
 @Setter
+enum CarStates {Good,Soso,Bad}
 public class Reservations {
 
 	private int id;
 	//최초 예약 페이지에서 필요한 변수
-	private int user_id;
-	private int zone_id;
-	private int car_id;
+	private int users_id;
+	private int zones_id;
+	private int cars_id;
+	private int cards_id;
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date start_time;
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd HH:mm:ss")
 	private Date end_time;
 
-	private int payment_id;
+	private int payments_id;
 
 	//수령 후 필요한 변수
-	private String[] images= {"1","2","3"};
-
+	private String[] images;
+	private CarStates outside_state;
+	private CarStates inside_state;
 	//반납시 필요한 변수?
 
 	private double distance;
@@ -40,11 +43,6 @@ public class Reservations {
 
 
 	/*Getter & Setter*/
-
-
-
-
-
 	public int getId() {
 		return id;
 	}
@@ -55,33 +53,43 @@ public class Reservations {
 	}
 
 
-	public int getUser_id() {
-		return user_id;
+	public int getusers_id() {
+		return users_id;
 	}
 
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setusers_id(int users_id) {
+		this.users_id = users_id;
 	}
 
 
-	public int getZone_id() {
-		return zone_id;
+	public int getzones_id() {
+		return zones_id;
 	}
 
 
-	public void setZone_id(int zone_id) {
-		this.zone_id = zone_id;
+	public void setzones_id(int zones_id) {
+		this.zones_id = zones_id;
 	}
 
 
-	public int getCar_id() {
-		return car_id;
+	public int getCars_id() {
+		return cars_id;
 	}
 
 
-	public void setCar_id(int car_id) {
-		this.car_id = car_id;
+	public void setCars_id(int cars_id) {
+		this.cars_id = cars_id;
+	}
+
+
+	public int getCards_id() {
+		return cards_id;
+	}
+
+
+	public void setCards_id(int cards_id) {
+		this.cards_id = cards_id;
 	}
 
 
@@ -105,13 +113,13 @@ public class Reservations {
 	}
 
 
-	public int getPayment_id() {
-		return payment_id;
+	public int getpayments_id() {
+		return payments_id;
 	}
 
 
-	public void setPayment_id(int payment_id) {
-		this.payment_id = payment_id;
+	public void setpayments_id(int payments_id) {
+		this.payments_id = payments_id;
 	}
 
 
@@ -122,6 +130,26 @@ public class Reservations {
 
 	public void setImages(String[] images) {
 		this.images = images;
+	}
+
+
+	public CarStates getOutside_state() {
+		return outside_state;
+	}
+
+
+	public void setOutside_state(CarStates outside_state) {
+		this.outside_state = outside_state;
+	}
+
+
+	public CarStates getInside_state() {
+		return inside_state;
+	}
+
+
+	public void setInside_state(CarStates inside_state) {
+		this.inside_state = inside_state;
 	}
 
 
@@ -184,12 +212,13 @@ public class Reservations {
 		this.park_fixed = park_fixed;
 	}
 
+
 	/*constructor*/
-	public Reservations(int user_id, int zone_id, int car_id,String start_time,String end_time) {
+	public Reservations(int users_id, int zones_id, int cars_id,String start_time,String end_time) {
 		super();
-		this.user_id = user_id;
-		this.zone_id = zone_id;
-		this.car_id = car_id;
+		this.users_id = users_id;
+		this.zones_id = zones_id;
+		this.cars_id = cars_id;
 
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date stime = null;
@@ -209,14 +238,13 @@ public class Reservations {
 			e.printStackTrace();
 		}
 		this.end_time = etime;
-
-//		this.hipass_count = hipass_count;
-//		this.delayed = delayed;
-//		this.accident = accident;
-
-
 	}
 
+
+	
+
+
+	
 
 
 

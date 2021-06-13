@@ -5,9 +5,9 @@
 	<insert id="insertReservations"
 		parameterType="com.purplecow.dto.Reservations">
 		INSERT INTO reservations
-		(user_id,zone_id,car_id,start_time,end_time,delayed,accident,hipass_count)
+		(users_id,zones_id,cars_id,start_time,end_time,delayed,accident,hipass_count)
 		VALUES
-		(#{user_id},#{zone_id},#{car_id},#{start_time},#{end_time},#{delayed},#{accident},#{hipass_count})
+		(#{users_id},#{zones_id},#{cars_id},#{start_time},#{end_time},#{delayed},#{accident},#{hipass_count})
 	</insert>
 
 	<select id="getReservationById"
@@ -19,7 +19,7 @@
 
 		resultType="com.purplecow.dto.Reservations">
 		SELECT * FROM reservations
-		WHERE user_id= #{userId}
+		WHERE user_id= #{usersId}
 	</select>
 	<select id="getReservations"
 		resultType="com.purplecow.dto.Reservations">
@@ -34,12 +34,18 @@
 	</update>
 	<update id="updateImagesInReservation">
 		UPDATE reservations 
-		SET	images=
-		
-		#{images,jdbcType=ARRAY,typeHandler=com.purplecow.mapper.ListArrayTypeHandler}
-		
-		WHERE id = #{id};
-		 
+		SET	images=#{images,jdbcType=ARRAY,typeHandler=com.purplecow.mapper.ListArrayTypeHandler}		
+		WHERE id = #{id};		 
+	</update>
+	<update id="updateCarStatesInReservation">
+		UPDATE reservations 
+		SET	(outside_state,inside_state) = (#{outside_state}::car_state,#{inside_state}::car_state)		
+		WHERE id = #{id};		 
+	</update>
+	<update id="updatePaymentsInReservations">
+		UPDATE reservations 
+		SET	(cards_id,payments_id) = (#{cards_id},#{payments_id})	
+		WHERE id = #{id};		 
 	</update>
 	
 	

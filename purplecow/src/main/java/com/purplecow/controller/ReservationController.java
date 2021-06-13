@@ -24,12 +24,11 @@ public class ReservationController {
 
 	/*POST*/
 	/*예약 최초 생성*/
+	/*전달되는 날짜 패턴은 yyyy-MM-dd kk:mm:ss 이 형태로 전달해야 함*/
 	@ResponseBody
 	@PostMapping("/reservations")
 	public void insertReservations(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd kk:mm:ss") Reservations reservations) {
-
 		reservationsService.insertReservations(reservations);
-
 	}
 
 	/*SELECT*/
@@ -41,7 +40,7 @@ public class ReservationController {
 
 	/*user_id로 특정 사용자의 예약 전체 조회*/
 	@GetMapping("/reservations")
-	public Reservations getReservationsByUserId(@RequestParam("user_id") int userId) {
+	public Reservations getReservationsByUserId(@RequestParam("users_id") int userId) {
 		return reservationsService.getReservationsByUserId(userId);
 	}
 
@@ -53,8 +52,7 @@ public class ReservationController {
 
 
 
-	/*PUT*/
-	
+	/*PUT*/	
 	@ResponseBody
 	@PutMapping("/reservations/{id}")
 	public void updateParkFixedInReservation(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
@@ -62,13 +60,24 @@ public class ReservationController {
 		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,(Boolean)rbo.get("park_fixed"));
 		/*예약 테이블에 외부사진 목록 수정*/
 		else if(rbo.get("images")!=null) {			
-			reservationsService.updateImagesInReservation(id,(List<String>)rbo.get("images"));}
+			reservationsService.updateImagesInReservation(id,(List<String>)rbo.get("images"));
+		}
+		/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
+		else if(rbo.get("outside_state")!=null && rbo.get("inside_state")!=null) {
+			reservationsService.updateCarStatesInReservation(id,(String)rbo.get("outside_state"),(String)rbo.get("inside_state"));
+		}
+		/*예약 테이블에 결제한 카드 정보와 선결제한 금액으로 예약시 선결제한 정보 저장*/
+		else if(rbo.get("cards_id") != null && rbo.get("rental_amount") != null) {
+			reservationsService.updatePaymentsInReservations(id, (Integer)rbo.get("cards_id"),(Integer)rbo.get("rental_amount"));
+		}
+		/*예약 테이블에  결제한 정보 저장*/
+		
 	}
 
 
-	/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
+	
 
-	/*예약 테이블에 결제한 정보 저장*/
+	
 
 
 
