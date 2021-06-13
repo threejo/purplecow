@@ -6,6 +6,8 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.purplecow.dto.Cars;
+import com.purplecow.dto.Payments;
 import com.purplecow.dto.Reservations;
 
 @Mapper
@@ -19,6 +21,10 @@ public interface ReservationsMapper {
 
 	List<Reservations> getReservations();
 
+	Cars getCarsById(int id);
+	
+	Payments getPaymentsById(int id);
+
 	void updateParkFixedInReservation(int id, Boolean park_fixed);
 
 	void updateImagesInReservation(int id, List<String> images);
@@ -26,5 +32,9 @@ public interface ReservationsMapper {
 	void updateCarStatesInReservation(int id, String outside_state, String inside_state);
 
 	void updatePaymentsInReservations(int id, int cards_id, int payments_id);
+
+	
+
+	
 
 }

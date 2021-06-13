@@ -17,6 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.purplecow.dto.Reservations;
 import com.purplecow.service.ReservationsService;
 
+/**
+ * @author miho7
+ *
+ */
 @RestController
 public class ReservationController {
 
@@ -71,6 +75,9 @@ public class ReservationController {
 			reservationsService.updatePaymentsInReservations(id, (Integer)rbo.get("cards_id"),(Integer)rbo.get("rental_amount"));
 		}
 		/*예약 테이블에  결제한 정보 저장*/
+		else if(rbo.get("distance")!=null) {			
+			reservationsService.updatePostPaymentsInReservation(id,(Integer)rbo.get("distance"));
+		}
 		
 	}
 

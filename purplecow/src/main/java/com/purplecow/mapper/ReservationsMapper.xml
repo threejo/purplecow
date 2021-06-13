@@ -16,7 +16,6 @@
 		WHERE id= #{id}
 	</select>
 	<select id="getReservationsByUserId"
-
 		resultType="com.purplecow.dto.Reservations">
 		SELECT * FROM reservations
 		WHERE user_id= #{usersId}
@@ -25,6 +24,17 @@
 		resultType="com.purplecow.dto.Reservations">
 		SELECT * FROM reservations
 	</select>
+	<select id="getCarsById"
+		resultType="com.purplecow.dto.Cars">
+		SELECT c.* FROM reservations r,cars c
+		WHERE r.cars_id=c.id and r.id=#{id}
+	</select>
+	<select id="getPaymentsById"
+		resultType="com.purplecow.dto.Payments">
+		SELECT p.* FROM reservations r,payments p
+		WHERE r.payments_id=p.id and r.id=#{id}
+	</select>
+	
 	
 	<update id="updateParkFixedInReservation">
 		UPDATE reservations 

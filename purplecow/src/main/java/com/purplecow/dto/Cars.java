@@ -1,7 +1,13 @@
 package com.purplecow.dto;
 
+/**
+ * @author miho7724
+ *
+ */
+
 enum OilTypes {	휘발유,경유,LPG,전기 }
 enum CarScales {경차,소형차,중형차,대형차 }
+
 
 public class Cars {
 	
@@ -19,11 +25,18 @@ public class Cars {
 	private CarScales scale;
 	
 	/*Getter & Setter*/
+	
 	public String getModel_color() {
 		return model_color;
 	}
 	public void setModel_color(String model_color) {
 		this.model_color = model_color;
+	}
+	public int getDriving_fee_per_km() {
+		return driving_fee_per_km;
+	}
+	public void setDriving_fee_per_km(int driving_fee_per_km) {
+		this.driving_fee_per_km = driving_fee_per_km;
 	}
 	public int getDaily_rental_fee() {
 		return daily_rental_fee;
@@ -64,16 +77,9 @@ public class Cars {
 	
 	
 	/*constructor*/
-	public Cars(String model_color, int daily_rental_fee, int driving_fee_per_km, Boolean available, OilTypes oil_type,
-			CarScales scale) {
-		super();
-		this.model_color = model_color;
-		this.daily_rental_fee = daily_rental_fee;
-		this.driving_fee_per_km = driving_fee_per_km;
-		this.available = available;
-		this.oil_type = oil_type;
-		this.scale = scale;
-	}	
+	
+	
+	
 	
 	
 

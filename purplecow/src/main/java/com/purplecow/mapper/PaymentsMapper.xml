@@ -9,4 +9,10 @@
 		VALUES
 		(#{rental_amount},#{calling_fee},#{insurance_fee},#{prepaid_amount})		
     </insert>
+    
+    <update id="updatePayments" parameterType="com.purplecow.dto.Payments">
+		UPDATE payments 
+		SET	(driving_amount,hipass_fee,penalty_fee,postpaid_amount ) = (#{driving_amount},#{hipass_fee},#{penalty_fee},#{postpaid_amount})		
+		WHERE id = #{id};		 
+	</update>
 </mapper>

@@ -9,4 +9,6 @@ import com.purplecow.dto.Reservations;
 public interface PaymentsMapper {
 	
 	int insertPayments(Payments payments);
+
+	void updatePayments(Payments payment);
 }
