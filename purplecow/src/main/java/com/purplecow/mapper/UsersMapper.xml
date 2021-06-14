@@ -2,14 +2,36 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.purplecow.mapper.UsersMapper">
 
-   <insert id="insertUser" parameterType="com.purplecow.dto.Users">
-        INSERT INTO users (email,password)
-        VALUES (#{email},#{password})
-    </insert>
-    
-    <select id="getUser" parameterType="java.util.HashMap" resultType="com.purplecow.dto.Users">
-  	SELECT * FROM users
-    WHERE id= #{id}
-  </select>
+	<insert id="insertUser" parameterType="com.purplecow.dto.Users">
+		INSERT INTO users (email,password)
+		VALUES (#{email},#{password})
+	</insert>
+
+	<select id="getUser" parameterType="java.util.HashMap"
+		resultType="com.purplecow.dto.Users">
+		SELECT * FROM users
+		WHERE id= #{id}
+	</select>
+	
+	<update id="updatePasswordInUsers">
+		UPDATE users 
+		SET password=#{password}
+		WHERE id = #{id}
+	</update>
+	<update id="updateEmailInUsers">
+		UPDATE users 
+		SET email=#{email}
+		WHERE id = #{id}
+	</update>
+	<update id="updatePhoneNoInUsers">
+		UPDATE users 
+		SET phone_no=#{phone}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="deleteUserById">
+		DELETE FROM users 
+		WHERE id = #{id}
+	</delete>
 
 </mapper>
