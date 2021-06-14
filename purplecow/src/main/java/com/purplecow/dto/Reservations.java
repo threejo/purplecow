@@ -6,40 +6,42 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Data
 enum CarStates {Good,Soso,Bad}
 public class Reservations {
 
-	private int id;
+	private int id; // 예약 식별자
 	//최초 예약 페이지에서 필요한 변수
-	private int users_id;
-	private int zones_id;
-	private int cars_id;
-	private int cards_id;
+	private int users_id; // 유저 식별자
+	private int zones_id; // 퍼플존 식별자
+	private int cars_id; // 차량 식별자
+	private int cards_id; // 카드 식별자
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date start_time;
+	private Date start_time; // 예약시작시간
 	@JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd HH:mm:ss")
-	private Date end_time;
+	private Date end_time; // 예약종료시간
 
-	private int payments_id;
+	private int payments_id; // 결제 식별자
 
 	//수령 후 필요한 변수
-	private String[] images;
-	private CarStates outside_state;
-	private CarStates inside_state;
+	private String[] images; //외관사진 
+	private CarStates outside_state; // 차량 바깥상태 
+	private CarStates inside_state; // 차량 내부 상태
 	//반납시 필요한 변수?
 
-	private double distance;
-	private int hipass_count=0;
-	private int returned_time;
-	private Boolean delayed=false;
-	private Boolean accident=false;
+	private double distance; // 주행거리
+	private int hipass_count=0; //하이패스 얼마나 사용했는지
+	private int returned_time; // 반납시간
+	private Boolean delayed=false; // 반납지연 됫는지
+	private Boolean accident=false; // 사고여부
 
-	private Boolean park_fixed;
+	private Boolean park_fixed; // 퍼플존에 주차했는지
 
 
 	/*Getter & Setter*/
