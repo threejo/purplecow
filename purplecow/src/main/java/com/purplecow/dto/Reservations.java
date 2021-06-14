@@ -6,11 +6,6 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 enum CarStates {Good,Soso,Bad}
 public class Reservations {
 
@@ -241,10 +236,10 @@ public class Reservations {
 	}
 
 
-	
 
 
-	
+
+
 
 
 
