@@ -33,5 +33,5 @@ build/
 .vscode/
 
 
-purplecow/src/main/resources/application.properties
-purplecow/pom.xml
+!**/src/main/resources/application.properties
+!**/pom.xml

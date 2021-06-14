@@ -39,7 +39,7 @@ public class TestController {
 
 	}
 	
-	@GetMapping("/test/login")
+	@GetMapping("/login")
 	public String login() {
 
 		
