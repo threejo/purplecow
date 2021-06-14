@@ -18,6 +18,7 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,6 +79,7 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.5</version>
 		</dependency>
+		
 		<!-- jackson setting -->
 		
 		<dependency>
@@ -95,6 +97,7 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.12.3</version>
 		</dependency>
+		
 		<!-- lombok 설정 -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -102,6 +105,9 @@
 			<version>1.18.16</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		
+		
 	</dependencies>
 
 	<build>
