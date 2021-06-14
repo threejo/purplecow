@@ -24,9 +24,6 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
-<link rel="stylesheet" href="../../res/assets/css/return.css">
-
-
 </head>
 <body>
 	<!-- ? Preloader Start -->
@@ -77,8 +74,7 @@
 
 												<li><a href="#">반납하기</a>
 													<ul class="submenu">
-														<li><a href="blog.html">바로 반납</a></li>
-														<li><a href="blog.html">반납 연장</a></li>
+														<li><a href="blog.html">바로 반납하기</a></li>														
 													</ul></li>
 												<li><a href="#">마이페이지</a> <!-- Button -->
 												<li class="button-header margin-left "><a
@@ -124,9 +120,8 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? 반납 설문 시작 -->
+		<!--? Start Button -->
 		<section class="button-area">
-
 			<div class="container box_1170 border-top-generic">
 				<h3 class="text-heading">
 					<strong>반납하기</strong>
@@ -141,7 +136,7 @@
 				</div>
 
 				<hr>
-				<div>
+				<div style="margin: 20px 0px 20px 0px;">
 					<p style="font-size: 120%; margin-bottom: 40px;">
 						<strong>반납 전 마지막 확인</strong>
 					</p>
@@ -159,38 +154,16 @@
 					</div>
 
 				</div>
-				<div style="margin-top:80px">
-					<button
-						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						id="modal_btn" style="font-size: 120%;" type="submit">반납하기</button>
-					<!-- 모달 시작 -->
-					<div class="black_bg"></div>
-					<div class="modal_wrap"
-						style="background-color: #fbf9ff; border-radius: 20px;">
-						<div class="modal_close">
-							<a href="#">close</a>
-						</div>
-						<div
-							style="display: flex; align-items: center; flex-direction: row; justify-content: center;">
-							<div
-								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 150%; color: #ef67ff;">
-								정상 반납되었습니다.</div>
-							<div
-								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
-								<a href="#" class="borders-btn">확 인</a>
-							</div>
-						</div>
-
-
-					</div>
-					<!-- 모달 끝 -->
-				</div>
 
 			</div>
-
+			<div style="margin: 20px 350px 20px 350px;">
+				<button
+					class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+					style="font-size: 120%;" type="submit">반납하기</button>
+			</div>
 
 		</section>
-		<!-- 반납 설문 시작 끝-->
+		<!-- End Button -->
 
 
 	</main>
@@ -359,11 +332,6 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
-
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
-
-
 
 </body>
 </html>

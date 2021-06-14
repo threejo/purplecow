@@ -44,7 +44,7 @@
 
 <!-- Register -->
 
-<main class="login-body" data-vide-bg="../../res/assets/img/login-bg.mp4">
+<main class="login-body"> <!--  data-vide-bg="../../res/assets/img/login-bg.mp4"> -->
     <!-- Login Admin -->
     <form class="form-default" action="login-bg.mp4" method="POST">
         
@@ -53,11 +53,11 @@
             <div class="logo-login">
                 <a href="index.html"><img src="../../res/assets/img/logo/loder.png" alt=""></a>
             </div>
-            <h2>Registration Here</h2>
+            <h2>회원 가입</h2>
 
             <div class="form-input">
-                <label for="name">Full name</label>
-                <input  type="text" name="name" placeholder="Full name">
+                <label for="name">성명</label>
+                <input  type="text" name="name" placeholder="성함을 적어주세요">
             </div>
             <div class="form-input">
                 <label for="name">Email Address</label>
@@ -72,7 +72,7 @@
                 <input type="password" name="password" placeholder="Confirm Password">
             </div>
             <div class="form-input pt-30">
-                <input type="submit" name="submit" value="Registration">
+                <input type="submit" name="submit" value="회원가입">
             </div>
             <!-- Forget Password -->
             <a href="login.html" class="registration">login</a>
