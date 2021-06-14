@@ -123,58 +123,58 @@
 			</div>
 		</div>
 		<!-- Slider Area End -->
-		
-	<section class="team-area section-padding40 offset-lg-1">
-		<div class="container">
-		<div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat">
-                        <div class="cat-icon" style="color:#4C1E51">
-                            <img src="../../res/assets/img/icon/services4.svg" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h4>결제 카드</h4>
-                            <p>Supercharge your WordPress hosting with detailed website analytics, marketing tools.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat">
-                        <div class="cat-icon" style="color:#4C1E51">
-                            <img src="../../res/assets/img/icon/services4.svg" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h4>결제 카드</h4>
-                            <p>Supercharge your WordPress hosting with detailed website analytics, marketing tools.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat">
-                        <div class="cat-icon" style="color:#4C1E51">
-                            <img src="../../res/assets/img/icon/services4.svg" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h4>결제 카드</h4>
-                            <p>Supercharge your WordPress hosting with detailed website analytics, marketing tools.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6">
-                    <div class="single-cat">
-                        <div class="cat-icon" style="color:#4C1E51">
-                            <img src="../../res/assets/img/icon/services4.svg" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h4>결제 카드</h4>
-                            <p>Supercharge your WordPress hosting with detailed website analytics, marketing tools.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         
-        </div>
-    </section>
+
+		<section class="team-area section-padding40 offset-lg-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="single-cat">
+							<div class="cat-icon" style="color: #4C1E51">
+								<img src="../../res/assets/img/icon/services4.svg" alt="">
+							</div>
+							<div class="cat-cap">
+								<h4>결제 카드</h4>
+								<p>결제 카드1 정보</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="single-cat">
+							<div class="cat-icon" style="color: #4C1E51">
+								<img src="../../res/assets/img/icon/services4.svg" alt="">
+							</div>
+							<div class="cat-cap">
+								<h4>결제 카드</h4>
+								<p>결제 카드2 정보</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="single-cat">
+							<div class="cat-icon" style="color: #4C1E51">
+								<img src="../../res/assets/img/icon/services4.svg" alt="">
+							</div>
+							<div class="cat-cap">
+								<h4>결제 카드 추가</h4>
+								<p>결제 카드 추가</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="single-cat">
+							<div class="cat-icon" style="color: #4C1E51">
+								<img src="../../res/assets/img/icon/services4.svg" alt="">
+							</div>
+							<div class="cat-cap">
+								<h4>운전 면허</h4>
+								<p>운전 면허 정보</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
 
 
 	</main>
@@ -323,7 +323,7 @@
 
 	<!-- Date Picker -->
 	<script src="./../../res/assets/js/gijgo.min.js"></script>
-	
+
 	<!-- Nice-select, sticky -->
 	<script src="./../../res/assets/js/jquery.nice-select.min.js"></script>
 	<script src="./../../res/assets/js/jquery.sticky.js"></script>
@@ -344,10 +344,10 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
-	
+
 	<!-- 리턴 관련 js -->
 	<script src="./../../res/assets/js/return.js"></script>
-	
+
 
 </body>
 </html>

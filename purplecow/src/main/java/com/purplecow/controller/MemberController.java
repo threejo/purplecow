@@ -25,6 +25,12 @@ public class MemberController {
 	//회원 정보 수정 전 비밀번호 확인
 	
 	//회원 정보 수정
+	@GetMapping("/modifyInfo")
+	public String modifyUserInfo() {
+		
+		return "mypage/modifyInfo";
+	}
+	
 	
 	//결제 정보 확인
 	@GetMapping("/payInfo")

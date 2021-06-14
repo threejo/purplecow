@@ -123,46 +123,46 @@
 			</div>
 		</div>
 		<!-- Slider Area End -->
-		
-	<section class="pricing-card-area fix">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
-                    <div class="single-card text-center mb-30">
-                        <div class="card-top">
-                            <img src="../../res/assets/img/icon/price1.svg" alt="">
-                            <h4>계정 관리</h4>
-                        </div>
-                        <div class="card-bottom">
-                            <a href="" class="borders-btn">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
-                    <div class="single-card text-center mb-30">
-                        <div class="card-top">
-                              <img src="../../res/assets/img/icon/price2.svg" alt="">
-                            <h4>결제 및 면허</h4>
-                        </div>
-                        <div class="card-bottom">
-                            <a href="#" class="borders-btn">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
-                    <div class="single-card text-center mb-30">
-                        <div class="card-top">
-                            <img src="../../res/assets/img/icon/price3.svg" alt="">
-                            <h4>예약 내역</h4>
-                        </div>
-                        <div class="card-bottom">
-                            <a href="#" class="borders-btn">Get Started</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+		<section class="pricing-card-area fix">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+						<div class="single-card text-center mb-30">
+							<div class="card-top">
+								<img src="../../res/assets/img/icon/price1.svg" alt="">
+								<h4>계정 관리</h4>
+							</div>
+							<div class="card-bottom">
+								<a href="" class="borders-btn">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+						<div class="single-card text-center mb-30">
+							<div class="card-top">
+								<img src="../../res/assets/img/icon/price2.svg" alt="">
+								<h4>결제 및 면허</h4>
+							</div>
+							<div class="card-bottom">
+								<a href="#" class="borders-btn">Get Started</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+						<div class="single-card text-center mb-30">
+							<div class="card-top">
+								<img src="../../res/assets/img/icon/price3.svg" alt="">
+								<h4>예약 내역</h4>
+							</div>
+							<div class="card-bottom">
+								<a href="#" class="borders-btn">Get Started</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 
 	</main>
@@ -311,7 +311,7 @@
 
 	<!-- Date Picker -->
 	<script src="./../../res/assets/js/gijgo.min.js"></script>
-	
+
 	<!-- Nice-select, sticky -->
 	<script src="./../../res/assets/js/jquery.nice-select.min.js"></script>
 	<script src="./../../res/assets/js/jquery.sticky.js"></script>
@@ -332,10 +332,10 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
-	
+
 	<!-- 리턴 관련 js -->
 	<script src="./../../res/assets/js/return.js"></script>
-	
+
 
 </body>
 </html>
