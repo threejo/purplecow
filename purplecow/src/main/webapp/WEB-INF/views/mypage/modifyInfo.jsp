@@ -124,123 +124,76 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<section class="team-area section-padding40 offset-lg-1">
+		<section class="contact-section">
 			<div class="container">
+				<div class="d-none d-sm-block mb-5 pb-4"></div>
 				<div class="row">
-					<div class="col-lg-8 col-md-8">
-						<h3 class="mb-30">내 정보</h3>
-						<form action="#">
-							<div class="mt-10">
-								<input type="text" name="first_name" placeholder="First Name"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'First Name'" required=""
-									class="single-input">
-							</div>
-							<div class="mt-10">
-								<input type="text" name="last_name" placeholder="Last Name"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Last Name'" required=""
-									class="single-input">
-							</div>
-							<div class="mt-10">
-								<input type="text" name="last_name" placeholder="Last Name"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Last Name'" required=""
-									class="single-input">
-							</div>
-							<div class="mt-10">
-								<input type="email" name="EMAIL" placeholder="Email address"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Email address'" required=""
-									class="single-input">
-							</div>
-							<div class="input-group-icon mt-10">
-								<div class="icon">
-									<i class="fa fa-thumb-tack" aria-hidden="true"></i>
-								</div>
-								<input type="text" name="address" placeholder="Address"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Address'" required=""
-									class="single-input">
-							</div>
-							<div class="input-group-icon mt-10">
-								<div class="icon">
-									<i class="fa fa-plane" aria-hidden="true"></i>
-								</div>
-								<div class="form-select" id="default-select""="">
-									<select style="display: none;">
-										<option value=" 1">City</option>
-										<option value="1">Dhaka</option>
-										<option value="1">Dilli</option>
-										<option value="1">Newyork</option>
-										<option value="1">Islamabad</option>
-									</select>
-									<div class="nice-select" tabindex="0">
-										<span class="current">City</span>
-										<ul class="list">
-											<li data-value=" 1" class="option selected">City</li>
-											<li data-value="1" class="option">Dhaka</li>
-											<li data-value="1" class="option">Dilli</li>
-											<li data-value="1" class="option">Newyork</li>
-											<li data-value="1" class="option">Islamabad</li>
-										</ul>
+					<div class="col-12">
+						<form class="form-contact contact_form"
+							action="contact_process.php" method="post" id="contactForm"
+							novalidate="novalidate">
+							<div class="row">
+								<div class="col-sm-10">
+									<div class="form-group">
+										<h5 class="widget_title" style="color: #2d2d2d;">이름</h5>
+										<input class="form-control error" name="name" id="name"
+											type="text" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Enter your name'"
+											placeholder="Enter your name"><label for="name"
+											class="error"></label>
 									</div>
 								</div>
-							</div>
-							<div class="input-group-icon mt-10">
-								<div class="icon">
-									<i class="fa fa-globe" aria-hidden="true"></i>
-								</div>
-								<div class="form-select" id="default-select""="">
-									<select style="display: none;">
-										<option value=" 1">Country</option>
-										<option value="1">Bangladesh</option>
-										<option value="1">India</option>
-										<option value="1">England</option>
-										<option value="1">Srilanka</option>
-									</select>
-									<div class="nice-select" tabindex="0">
-										<span class="current">Country</span>
-										<ul class="list">
-											<li data-value=" 1" class="option selected">Country</li>
-											<li data-value="1" class="option">Bangladesh</li>
-											<li data-value="1" class="option">India</li>
-											<li data-value="1" class="option">England</li>
-											<li data-value="1" class="option">Srilanka</li>
-										</ul>
+								<div class="col-sm-10">
+									<div class="form-group">
+										<h5 class="widget_title" style="color: #2d2d2d;">이메일</h5>
+										<input class="form-control error" name="email" id="email"
+											type="email" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Enter email address'"
+											placeholder="Enter your email address"><label
+											for="email" class="error emailMsg"></label>
 									</div>
 								</div>
-							</div>
+								<div class="col-sm-10">
+									<div class="form-group">
+										<h5 class="widget_title" style="color: #2d2d2d;">비밀번호</h5>
+										<input class="form-control error" name="password"
+											id="password" type="password" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Enter your password'"
+											placeholder="Enter your password"><label
+											for="password" class="error pwMsg"></label>
+									</div>
+								</div>
+								<div class="col-sm-10">
+									<div class="form-group">
+										<h5 class="widget_title" style="color: #2d2d2d;">비밀번호 확인</h5>
+										<input class="form-control error" name="passwordCheck"
+											id="passwordCheck" type="password"
+											onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Enter password'"
+											placeholder="Check your password"><label
+											for="password" class="error pwCheckMsg"></label>
+									</div>
+								</div>
+								<div class="col-sm-10">
+									<div class="form-group">
+										<h5 class="widget_title" style="color: #2d2d2d;">전화번호</h5>
+										<input class="form-control error" name="phoneNumber"
+											id="phoneNumber" type="text" onfocus="this.placeholder = ''"
+											onblur="this.placeholder = 'Enter your phoneNumber'"
+											placeholder="Enter your phoneNumber"><label
+											for="phoneNumber" class="error phoneMsg"></label>
+									</div>
+								</div>
 
-							<div class="mt-10">
-								<textarea class="single-textarea" placeholder="Message"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Message'" required=""></textarea>
 							</div>
-							<div class="mt-10">
-								<input type="text" name="first_name" placeholder="Primary color"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Primary color'" required=""
-									class="single-input-primary">
-							</div>
-							<div class="mt-10">
-								<input type="text" name="first_name" placeholder="Accent color"
-									onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Accent color'" required=""
-									class="single-input-accent">
-							</div>
-							<div class="mt-10">
-								<input type="text" name="first_name"
-									placeholder="Secondary color" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Secondary color'" required=""
-									class="single-input-secondary">
+							<div class="form-group mt-3">
+								<button type="submit"
+									class="button button-contactForm boxed-btn">수정하기</button>
+								<button type="submit"
+									class="button button-contactForm boxed-btn">탈퇴하기</button>
 							</div>
 						</form>
 					</div>
-
-				</div>
-				<div class="more-btn text-center mt-20">
-					<a href="#" class="btn">수정하기</a>
 				</div>
 			</div>
 		</section>

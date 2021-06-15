@@ -134,7 +134,7 @@
 								<h4>계정 관리</h4>
 							</div>
 							<div class="card-bottom">
-								<a href="" class="borders-btn">Get Started</a>
+								<a href="${path}/accountMgt" class="borders-btn">확 인</a>
 							</div>
 						</div>
 					</div>
@@ -142,10 +142,10 @@
 						<div class="single-card text-center mb-30">
 							<div class="card-top">
 								<img src="../../res/assets/img/icon/price2.svg" alt="">
-								<h4>결제 및 면허</h4>
+								<h4>결제 및 할인</h4>
 							</div>
 							<div class="card-bottom">
-								<a href="#" class="borders-btn">Get Started</a>
+								<a href="${path}/payInfo" class="borders-btn">확 인</a>
 							</div>
 						</div>
 					</div>
@@ -156,7 +156,7 @@
 								<h4>예약 내역</h4>
 							</div>
 							<div class="card-bottom">
-								<a href="#" class="borders-btn">Get Started</a>
+								<a href="${path}/resvHistory" class="borders-btn">확 인</a>
 							</div>
 						</div>
 					</div>

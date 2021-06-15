@@ -148,9 +148,32 @@
 						<p>Send us your query anytime!</p>
 					</div>
 				</div>
-							<div class="more-btn text-center mt-20">
-                        <a href="#" class="btn">수정하기</a>
-                    </div>
+				<div style="margin-top: 80px">
+					<button
+						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+						id="modal_btn" style="font-size: 120%;" type="submit">수정하기</button>
+					<!-- 모달 시작 -->
+					<div class="black_bg gj-modal"></div>
+					<div class="modal_wrap"
+						style="background-color: #fbf9ff; border-radius: 20px;">
+						<div class="modal_close">
+							<a href="#">close</a>
+						</div>
+						<div
+							style="display: flex; align-items: center; flex-direction: row; justify-content: center;">
+							<div
+								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 150%; color: #ef67ff;">
+								회원 확인되었습니다.</div>
+							<div
+								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
+								<a href="${path}/modifyInfo" class="borders-btn">확 인</a>
+							</div>
+						</div>
+
+
+					</div>
+					<!-- 모달 끝 -->
+				</div>
 			</div>
 		</section>
 

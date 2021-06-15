@@ -155,8 +155,8 @@
 								<img src="../../res/assets/img/icon/services4.svg" alt="">
 							</div>
 							<div class="cat-cap">
-								<h4>결제 카드 추가</h4>
-								<p>결제 카드 추가</p>
+								<h4>결제 카드 등록하기</h4>
+								<p>결제 카드는 3개까지 등록 가능합니다.</p>
 							</div>
 						</div>
 					</div>
@@ -168,6 +168,17 @@
 							<div class="cat-cap">
 								<h4>운전 면허</h4>
 								<p>운전 면허 정보</p>
+							</div>
+						</div>
+					</div>
+										<div class="col-lg-4 col-md-4 col-sm-6">
+						<div class="single-cat">
+							<div class="cat-icon" style="color: #4C1E51">
+								<img src="../../res/assets/img/icon/services4.svg" alt="">
+							</div>
+							<div class="cat-cap">
+								<h4>운전 면허 변경하기</h4>
+								<p>운전 면허는 1개만 등록 가능합니다.</p>
 							</div>
 						</div>
 					</div>
