@@ -128,10 +128,11 @@
 				</h3>
 
 				<div class="button-group-area mt-40">
-					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-						id="default-radio"> <label for="default-radio">YES</label>
+					XXXXXXX 에 주차하셨나요? 
+					<input type="radio" name="park_fixed"
+						id="park_fixed" value="true" checked> <label for="default-radio">YES</label>
 
-					<input type="radio" name="parking" id="default-radio"> <label
+					<input type="radio" name="park_fixed" id="park_fixed" value="false"> <label
 						for="default-radio">NO</label>
 				</div>
 
@@ -154,6 +155,35 @@
 					</div>
 
 				</div>
+<<<<<<< HEAD
+=======
+				<div style="margin-top:80px">
+					<button
+						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+						id="modal_btn" style="font-size: 120%;" type="submit">반납하기</button>
+					<!-- 모달 시작 -->
+					<div class="black_bg"></div>
+					<div class="modal_wrap"
+						style="background-color: #fbf9ff; border-radius: 20px;">
+						<div class="modal_close">
+							<a href="#">close</a>
+						</div>
+						<div
+							style="display: flex; align-items: center; flex-direction: row; justify-content: center;">
+							<div
+								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 150%; color: #ef67ff;">
+								정상 반납되었습니다.</div>
+							<div
+								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
+								<button type="button" id="radioButton" class="borders-btn">확 인</button>
+							</div>
+						</div>
+
+
+					</div>
+					<!-- 모달 끝 -->
+				</div>
+>>>>>>> 85d1e438c87e20de3d70aa6f7ce9b83e07464243
 
 			</div>
 			<div style="margin: 20px 350px 20px 350px;">
