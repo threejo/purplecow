@@ -63,19 +63,19 @@ public class ReservationController {
 		/*예약 테이블에 정해진 자리 주차 여부 수정*/
 		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,Boolean.valueOf((String) rbo.get("park_fixed")));
 		/*예약 테이블에 외부사진 목록 수정*/
-		else if(rbo.get("images")!=null) {
+		if(rbo.get("images")!=null) {
 			reservationsService.updateImagesInReservation(id,(List<String>)rbo.get("images"));
 		}
 		/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
-		else if(rbo.get("outside_state")!=null && rbo.get("inside_state")!=null) {
+		if(rbo.get("outside_state")!=null && rbo.get("inside_state")!=null) {
 			reservationsService.updateCarStatesInReservation(id,(String)rbo.get("outside_state"),(String)rbo.get("inside_state"));
 		}
 		/*예약 테이블에 결제한 카드 정보와 선결제한 금액으로 예약시 선결제한 정보 저장*/
-		else if(rbo.get("cards_id") != null && rbo.get("rental_amount") != null) {
+		if(rbo.get("cards_id") != null && rbo.get("rental_amount") != null) {
 			reservationsService.updatePaymentsInReservations(id, (Integer)rbo.get("cards_id"),(Integer)rbo.get("rental_amount"));
 		}
 		/*예약 테이블에  결제한 정보 저장*/
-		else if(rbo.get("distance")!=null) {
+		if(rbo.get("distance")!=null) {
 			reservationsService.updatePostPaymentsInReservation(id,(Integer)rbo.get("distance"));
 		}
 

@@ -125,9 +125,7 @@
 		<!-- Slider Area End -->
 
 		<!--? 차량 상태 확인 시작 -->
-		<section class="button-area">
-			<form action="statusUpload" method="post"
-				enctype="multipart/form-data">
+		<section class="button-area">			
 				<!-- 차량 외부 -->
 				<div class="container box_1170 border-top-generic">
 					<h3 class="text-heading">
@@ -136,46 +134,42 @@
 					<div>
 						<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
 					</div>
-					<div class="button-group-area mt-40" style="margin:20px 0px">
-						<input type="radio" name="outStatus" id="outStatus" value="Good" checked>
-						<label for="default-radio">Good</label> 
-						<input type="radio"	name="outStatus" id="outStatus" value="Soso"> 
-						<label for="default-radio">So-so</label> 
-						<input type="radio" name="outStatus" id="outStatus" value="Bad"> 
-						<label for="default-radio">Bad</label>
+					<div class="button-group-area mt-40" style="margin: 20px 0px">
+						<input type="radio" name="outStatus" id="outStatus" value="Good"
+							checked> <label for="default-radio">Good</label> <input
+							type="radio" name="outStatus" id="outStatus" value="Soso">
+						<label for="default-radio">So-so</label> <input type="radio"
+							name="outStatus" id="outStatus" value="Bad"> <label
+							for="default-radio">Bad</label>
 					</div>
 					<div>
-					<input type="file" name="uploads" multiple="multiple"
-						accept="image/*" /> <br />
-					</div>
-				</div>
-				
-				<!-- 차량 내부 -->
-				<div class="container box_1170 border-top-generic">
-					<h3 class="text-heading">
-						<strong>차량 내부</strong>
-					</h3>
-					<div>
-						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
-					</div>
-					<div class="button-group-area mt-40"  style="margin:20px 0px">
-						<input type="radio" name="inStatus" id="inStatus" value="Good" checked>
-						<label for="default-radio">Good</label> 
-						<input type="radio"	name="inStatus" id="inStatus" value="Soso"> 
-						<label for="default-radio">So-so</label> 
-						<input type="radio" name="inStatus" id="inStatus" value="Bad"> 
-						<label for="default-radio">Bad</label>
+						<input type="file" id="imgupload" style="display:none"/> 
+						<button id="OpenImgUpload">Image Upload</button>
 					</div>
 
-					<div>
-						<input type="submit" style="font-size: 120%;"
-							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-							value="확인" />
-					</div>
-				</div>
+					<!-- 차량 내부 -->
+					<div class="container box_1170 border-top-generic">
+						<h3 class="text-heading">
+							<strong>차량 내부</strong>
+						</h3>
+						<div>
+							<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
+						</div>
+						<div class="button-group-area mt-40" style="margin: 20px 0px">
+							<input type="radio" name="inStatus" id="inStatus" value="Good"
+								checked> <label for="default-radio">Good</label> <input
+								type="radio" name="inStatus" id="inStatus" value="Soso">
+							<label for="default-radio">So-so</label> <input type="radio"
+								name="inStatus" id="inStatus" value="Bad"> <label
+								for="default-radio">Bad</label>
+						</div>
 
-
-			</form>
+						<div>
+							<input type="submit" style="font-size: 120%;"
+								class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+								value="확인" />
+						</div>
+					</div>			
 		</section>
 		<!-- 차량 상태 확인 끝-->
 
@@ -307,7 +301,8 @@
 	</div>
 
 	<!-- JS here -->
-
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="./../../res/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
 	<script src="./../../res/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -347,8 +342,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 해당페이지 관련 js -->
+	<script src="./../../res/assets/js/checkStatus.js"></script>
 
 
 

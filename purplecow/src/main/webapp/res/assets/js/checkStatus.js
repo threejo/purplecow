@@ -1,3 +1,1 @@
-/**
- * 
- */
+$('#OpenImgUpload').click(function(){ $('#imgupload').trigger('click'); });
