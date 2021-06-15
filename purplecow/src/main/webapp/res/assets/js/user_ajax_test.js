@@ -6,6 +6,7 @@ $("#submit").bind("click", function() {
                 "check": $('input[name="check"]').val()
                 
         }
+    //    alert("데이터입력 성공" + data.email + data.password  );
 	$.ajax({
 		url: "/users",
 		type: "post",

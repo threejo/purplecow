@@ -41,11 +41,11 @@ public class UsersController {
 		return usersService.getUser(id);
 	}
 	
-	@GetMapping("/users/{email}")
-	public Users getUserByEmail(@PathVariable("email") String email) {
-		Users info = usersService.getUserByEmail(email);
-		System.out.println(info.getEmail() + info.getPassword());
-		return info;
+	@GetMapping("/users/email/{email}")
+	public Users getUserByEmail(@RequestBody String email) {
+		
+		System.out.println(email);
+		return usersService.getUserByEmail(email);
 	}
 	
 	
