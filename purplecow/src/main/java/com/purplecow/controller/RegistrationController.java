@@ -7,37 +7,32 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.purplecow.mapper.AccountMapper;
 
 @Controller
-public class TestController {
+public class RegistrationController {
 
+	
 	@Autowired
     private AccountMapper accountMapper;
 
-
-
-	@RequestMapping("home/index")
-	public String index(Model model) throws Exception {
-
-		model.addAttribute("message", "좋은 아침입니다");
-		model.addAttribute("now", new Date());
-		model.addAttribute("account",accountMapper.getOne());
-
-
-		return "home/index";
-	}
 	
 	
-	@GetMapping("/")
-	public String Admin() {
+	@GetMapping("/registration")
+	public String login() {
 
 		
-		return "test/index";
+		return "registration/registration";
 
 
 	}
 	
+	 @RequestMapping("/user_ajax_test")
+	    public @ResponseBody String restest() {
+	        System.out.println("ajax 요청 도착!");
+	        return "cool";
 
+	 }
 }

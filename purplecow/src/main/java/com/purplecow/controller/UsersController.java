@@ -2,6 +2,8 @@ package com.purplecow.controller;
 
 import java.util.Map;
 
+import javax.websocket.Encoder.Text;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,10 +23,22 @@ public class UsersController {
 
 	@Autowired UsersService usersService;
 	
+	/*TEST*/
+	
+	
+	@PostMapping(value = "/test_get")
+	public void test_get(String  name, String email, String password) {
+
+		System.out.println(name);
+		System.out.println(email);
+		System.out.println(password);
+
+	}
+	
 	/*POST*/
 	/*유저 생성하기 */
 	@ResponseBody
-	@PostMapping("/users")
+	@PostMapping(value = "/users")
 	public void insertUsers(@RequestBody Users users) {
 
 		usersService.insertUser(users);

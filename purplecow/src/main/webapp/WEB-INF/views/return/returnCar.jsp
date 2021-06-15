@@ -78,7 +78,7 @@
 													</ul></li>
 												<li><a href="#">마이페이지</a> <!-- Button -->
 												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
+													href="${path}/registration" class="btn">Sign Up</a></li>
 												<li class="button-header"><a href="login.html"
 													class="btn3">Sign In</a></li>
 											</ul>
@@ -332,6 +332,7 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
+	<script src="./../../res/assets/js/return.js"></script>
 
 </body>
 </html>
