@@ -110,7 +110,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 반납하기</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 상태 확인</h1>
 							</div>
 						</div>
 					</div>
@@ -124,20 +124,60 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? 반납 설문 시작 -->
+		<!--? 차량 상태 확인 시작 -->
 		<section class="button-area">
-			
+			<form action="statusUpload" method="post"
+				enctype="multipart/form-data">
+				<!-- 차량 외부 -->
 				<div class="container box_1170 border-top-generic">
 					<h3 class="text-heading">
-						<strong>반납하기</strong>
+						<strong>차량 외부</strong>
 					</h3>
-
-					
+					<div>
+						<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
+					</div>
+					<div class="button-group-area mt-40" style="margin:20px 0px">
+						<input type="radio" name="innerStatus" id="default-radio">
+						<label for="default-radio">Good</label> <input type="radio"
+							name="innerStatus" id="default-radio"> <label
+							for="default-radio">So-so</label> <input type="radio"
+							name="innerStatus" id="default-radio"> <label
+							for="default-radio">Bad</label>
+					</div>
+					<div>
+					<input type="file" name="uploads" multiple="multiple"
+						accept="image/*" /> <br />
+					</div>
 				</div>
 				
-			
+				<!-- 차량 내부 -->
+				<div class="container box_1170 border-top-generic">
+					<h3 class="text-heading">
+						<strong>차량 내부</strong>
+					</h3>
+					<div>
+						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
+					</div>
+					<div class="button-group-area mt-40"  style="margin:20px 0px">
+						<input type="radio" name="innerStatus" id="default-radio">
+						<label for="default-radio">Good</label> <input type="radio"
+							name="innerStatus" id="default-radio"> <label
+							for="default-radio">So-so</label> <input type="radio"
+							name="innerStatus" id="default-radio"> <label
+							for="default-radio">Bad</label>
+					</div>
+
+					<div>
+						<input type="submit" style="font-size: 120%;"
+							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+							value="확인" />
+					</div>
+				</div>
+
+
+			</form>
 		</section>
-		<!-- 반납 설문 시작 끝-->
+		<!-- 차량 상태 확인 끝-->
 
 
 	</main>

@@ -66,6 +66,14 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.4.1209.jre6</version>
 		</dependency>
+		<!-- lombok -->
+      <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+      </dependency>
+
 	</dependencies>
 
 	<build>

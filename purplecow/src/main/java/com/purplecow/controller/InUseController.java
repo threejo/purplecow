@@ -10,11 +10,11 @@ public class InUseController {
 	 * 필요한 기능들을 모아둔 것입니다.*/
 
 	//차량 상태 확인하기(차량 내부/외부)
-	@GetMapping("/inUse/checkStatus")
+	@GetMapping("/inuse/checkStatus")
 	public String checkStatus() {
 
 
-		return "inUse/checkStatus";
+		return "in_use/checkStatus";
 
 
 	}

@@ -38,5 +38,14 @@ public class TestController {
 
 
 	}
+	
+	@GetMapping("/login")
+	public String login() {
+
+		
+		return "test_login/index";
+
+
+	}
 
 }
