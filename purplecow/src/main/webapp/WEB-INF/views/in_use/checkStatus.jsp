@@ -137,12 +137,12 @@
 						<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
 					</div>
 					<div class="button-group-area mt-40" style="margin:20px 0px">
-						<input type="radio" name="innerStatus" id="default-radio">
-						<label for="default-radio">Good</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">So-so</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">Bad</label>
+						<input type="radio" name="outStatus" id="outStatus" value="Good" checked>
+						<label for="default-radio">Good</label> 
+						<input type="radio"	name="outStatus" id="outStatus" value="Soso"> 
+						<label for="default-radio">So-so</label> 
+						<input type="radio" name="outStatus" id="outStatus" value="Bad"> 
+						<label for="default-radio">Bad</label>
 					</div>
 					<div>
 					<input type="file" name="uploads" multiple="multiple"
@@ -159,12 +159,12 @@
 						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
 					</div>
 					<div class="button-group-area mt-40"  style="margin:20px 0px">
-						<input type="radio" name="innerStatus" id="default-radio">
-						<label for="default-radio">Good</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">So-so</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">Bad</label>
+						<input type="radio" name="inStatus" id="inStatus" value="Good" checked>
+						<label for="default-radio">Good</label> 
+						<input type="radio"	name="inStatus" id="inStatus" value="Soso"> 
+						<label for="default-radio">So-so</label> 
+						<input type="radio" name="inStatus" id="inStatus" value="Bad"> 
+						<label for="default-radio">Bad</label>
 					</div>
 
 					<div>

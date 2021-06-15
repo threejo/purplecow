@@ -18,7 +18,7 @@ import com.purplecow.dto.Reservations;
 import com.purplecow.service.ReservationsService;
 
 /**
- * @author miho7
+ * @author miho7724
  *
  */
 @RestController
