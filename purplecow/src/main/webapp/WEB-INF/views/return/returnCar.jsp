@@ -133,10 +133,11 @@
 				</h3>
 
 				<div class="button-group-area mt-40">
-					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-						id="default-radio"> <label for="default-radio">YES</label>
+					XXXXXXX 에 주차하셨나요? 
+					<input type="radio" name="park_fixed"
+						id="park_fixed" value="true" checked> <label for="default-radio">YES</label>
 
-					<input type="radio" name="parking" id="default-radio"> <label
+					<input type="radio" name="park_fixed" id="park_fixed" value="false"> <label
 						for="default-radio">NO</label>
 				</div>
 
@@ -177,7 +178,7 @@
 								정상 반납되었습니다.</div>
 							<div
 								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
-								<a href="#" class="borders-btn">확 인</a>
+								<button type="button" id="radioButton" class="borders-btn">확 인</button>
 							</div>
 						</div>
 
