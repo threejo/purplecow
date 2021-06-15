@@ -18,7 +18,7 @@ import com.purplecow.dto.Reservations;
 import com.purplecow.service.ReservationsService;
 
 /**
- * @author miho7
+ * @author miho7724
  *
  */
 @RestController
@@ -56,14 +56,14 @@ public class ReservationController {
 
 
 
-	/*PUT*/	
+	/*PUT*/
 	@ResponseBody
 	@PutMapping("/reservations/{id}")
 	public void updateReservationsById(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
 		/*예약 테이블에 정해진 자리 주차 여부 수정*/
-		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,(Boolean)rbo.get("park_fixed"));
+		if(rbo.get("park_fixed") != null) reservationsService.updateParkFixedInReservation(id,Boolean.valueOf((String) rbo.get("park_fixed")));
 		/*예약 테이블에 외부사진 목록 수정*/
-		else if(rbo.get("images")!=null) {			
+		else if(rbo.get("images")!=null) {
 			reservationsService.updateImagesInReservation(id,(List<String>)rbo.get("images"));
 		}
 		/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
@@ -75,16 +75,16 @@ public class ReservationController {
 			reservationsService.updatePaymentsInReservations(id, (Integer)rbo.get("cards_id"),(Integer)rbo.get("rental_amount"));
 		}
 		/*예약 테이블에  결제한 정보 저장*/
-		else if(rbo.get("distance")!=null) {			
+		else if(rbo.get("distance")!=null) {
 			reservationsService.updatePostPaymentsInReservation(id,(Integer)rbo.get("distance"));
 		}
-		
+
 	}
 
 
-	
 
-	
+
+
 
 
 
