@@ -30,7 +30,7 @@ public class TestController {
 	}
 	
 	
-	@GetMapping("/")
+	@GetMapping("/test")
 	public String Admin() {
 
 		

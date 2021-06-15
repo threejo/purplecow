@@ -23,17 +23,6 @@ public class UsersController {
 
 	@Autowired UsersService usersService;
 	
-	/*TEST*/
-	
-	
-	@PostMapping(value = "/test_get")
-	public void test_get(String  name, String email, String password) {
-
-		System.out.println(name);
-		System.out.println(email);
-		System.out.println(password);
-
-	}
 	
 	/*POST*/
 	/*유저 생성하기 */
@@ -51,6 +40,14 @@ public class UsersController {
 	public Users getUser(@PathVariable("id") int id) {
 		return usersService.getUser(id);
 	}
+	
+	@GetMapping("/users/{email}")
+	public Users getUserByEmail(@PathVariable("email") String email) {
+		Users info = usersService.getUserByEmail(email);
+		System.out.println(info.getEmail() + info.getPassword());
+		return info;
+	}
+	
 	
 	/*PUT*/	
 	/*유저 정보 업데이트*/

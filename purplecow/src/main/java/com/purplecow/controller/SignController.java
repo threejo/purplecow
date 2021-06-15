@@ -7,32 +7,28 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.purplecow.mapper.AccountMapper;
 
 @Controller
-public class RegistrationController {
+public class SignController {
 
-	
 	@Autowired
     private AccountMapper accountMapper;
 
-	
-	
-	@GetMapping("/registration")
-	public String login() {
 
+
+	@GetMapping("/registration")
+	public String reg() {
 		
 		return "registration/registration";
 
-
 	}
 	
-	 @RequestMapping("/user_ajax_test")
-	    public @ResponseBody String restest() {
-	        System.out.println("ajax 요청 도착!");
-	        return "cool";
+	@GetMapping("/login")
+	public String login() {
+		
+		return "login/login";
 
-	 }
+	}
 }

@@ -46,9 +46,8 @@
 
 <main class="login-body"> <!--  data-vide-bg="../../res/assets/img/login-bg.mp4"> -->
     <!-- Login Admin -->
-    <form class="form-default" action="./../../res/assets/js/user_ajax_test" method="POST"><!-- 여기에 회원가입 버튼을 누르면 리디렉션 되는 장소 지정 -->
+   
         
-        <div class="login-form">
             <!-- logo-login -->
             <div class="logo-login">
                 <a href="index.html"><img src="../../res/assets/img/logo/cow_loader.png" alt=""></a>
@@ -72,13 +71,12 @@
                 <input type="password" name="check" placeholder="Confirm Password">
             </div>
             <div class="form-input pt-30">
-                <input type="submit" name="submit" value="회원가입">
+                <input type="submit" id="submit" value="회원가입">
             </div>
-            <!-- Forget Password -->
-            <a href="login.html" class="registration">login</a>
-        </div>
-    </form>
-    <!-- /end login form -->
+            <li class="button-header margin-left "><a
+													href="${path}/login" class="btn">Sign Up</a></li>
+            
+            
 </main>
 
 

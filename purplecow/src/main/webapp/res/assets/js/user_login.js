@@ -1,21 +1,24 @@
 $("#submit").bind("click", function() {
 	var data = {
-                "name": $('input[name="name"]').val(),
+               
                 "email": $('input[name="email"]').val(),
                 "password": $('input[name="password"]').val(),
-                "check": $('input[name="check"]').val()
+                
                 
         }
 	$.ajax({
-		url: "/users",
-		type: "post",
+		url: "/users/{email}",
+		type: "get",
 		contentType: 'application/json',
 		data: JSON.stringify(data),
 		success: function() {
-			alert("성공이다 이놈아" + data.name + data.email + data.password + data.check );
+	//		if(item.password == data.password)
+				alert("로그인 성공" + data.email + data.password  );
+	//		else
+		//		alert("로그인 실패"+  data.email + data.password );	
 		},
 		error: function() {
-			alert("에러다 이놈아"+ data.name + data.email + data.password + data.check);
+			alert("에러"+  data.email + data.password );
 		}
 	});
 });

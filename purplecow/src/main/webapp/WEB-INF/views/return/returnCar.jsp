@@ -155,9 +155,7 @@
 					</div>
 
 				</div>
-<<<<<<< HEAD
-=======
-				<div style="margin-top:80px">
+		<div style="margin-top:80px">
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
 						id="modal_btn" style="font-size: 120%;" type="submit">반납하기</button>
@@ -183,7 +181,6 @@
 					</div>
 					<!-- 모달 끝 -->
 				</div>
->>>>>>> chu
 
 			</div>
 			<div style="margin: 20px 350px 20px 350px;">
