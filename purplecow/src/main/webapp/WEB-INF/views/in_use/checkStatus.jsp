@@ -132,7 +132,7 @@
 					<strong>차량 외부</strong>
 				</h3>
 				<div>
-					<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
+					<h6>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</h6>
 				</div>
 				<div class="button-group-area mt-40" style="margin: 20px 0px">
 					<input type="radio" name="outStatus" id="outStatus" value="Good"
@@ -151,7 +151,8 @@
 							<img src="https://img.icons8.com/nolan/64/camera.png" />
 						</button>
 					</div>
-					<div id="imagePreview"class="img_inline" style="border: 1px solid green;"></div>
+					<!-- 이미지 미리보기 -->
+					<div id="imagePreview" class="img_inline"></div>
 
 
 				</div>
@@ -163,7 +164,7 @@
 						<strong>차량 내부</strong>
 					</h3>
 					<div>
-						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
+						<h6>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</h6>
 					</div>
 					<div class="button-group-area mt-40" style="margin: 20px 0px">
 						<input type="radio" name="inStatus" id="inStatus" value="Good"
@@ -177,7 +178,7 @@
 					<div>
 						<button
 							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-							id="modal_btn" style="font-size: 120%;" type="submit">확
+							id="ajax_btn" style="font-size: 120%;" type="submit">확
 							인</button>
 					</div>
 				</div>

@@ -22,7 +22,7 @@ import com.purplecow.service.ReservationsService;
  *
  */
 @RestController
-public class ReservationController {
+public class ReservationAPIController {
 
 	@Autowired ReservationsService reservationsService;
 
