@@ -356,8 +356,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 마이페이지 관련 js -->
+	<script src="./../../res/assets/js/mypage.js"></script>
 
 
 </body>

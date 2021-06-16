@@ -134,7 +134,7 @@
 								<h4>계정 관리</h4>
 							</div>
 							<div class="card-bottom">
-								<a href="${path}/accountMgt" class="borders-btn">확 인</a>
+								<a href="${path}/accountMgt" class="borders-btn" id="show-info">확 인</a>
 							</div>
 						</div>
 					</div>
@@ -333,8 +333,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 마이페이지 관련 js -->
+	<script src="./../../res/assets/js/mypage.js"></script>
 
 
 </body>

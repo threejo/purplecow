@@ -135,7 +135,7 @@
 							<div class="row">
 								<div class="col-sm-10">
 									<div class="form-group">
-										<h5 class="widget_title" style="color: #2d2d2d;">이름</h5>
+										<h5 class="widget_title">이름</h5>
 										<input class="form-control error" name="name" id="name"
 											type="text" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter your name'"
@@ -145,7 +145,7 @@
 								</div>
 								<div class="col-sm-10">
 									<div class="form-group">
-										<h5 class="widget_title" style="color: #2d2d2d;">이메일</h5>
+										<h5 class="widget_title">이메일</h5>
 										<input class="form-control error" name="email" id="email"
 											type="email" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter email address'"
@@ -155,7 +155,7 @@
 								</div>
 								<div class="col-sm-10">
 									<div class="form-group">
-										<h5 class="widget_title" style="color: #2d2d2d;">비밀번호</h5>
+										<h5 class="widget_title">비밀번호</h5>
 										<input class="form-control error" name="password"
 											id="password" type="password" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter your password'"
@@ -165,7 +165,7 @@
 								</div>
 								<div class="col-sm-10">
 									<div class="form-group">
-										<h5 class="widget_title" style="color: #2d2d2d;">비밀번호 확인</h5>
+										<h5 class="widget_title">비밀번호 확인</h5>
 										<input class="form-control error" name="passwordCheck"
 											id="passwordCheck" type="password"
 											onfocus="this.placeholder = ''"
@@ -176,7 +176,7 @@
 								</div>
 								<div class="col-sm-10">
 									<div class="form-group">
-										<h5 class="widget_title" style="color: #2d2d2d;">전화번호</h5>
+										<h5 class="widget_title">전화번호</h5>
 										<input class="form-control error" name="phoneNumber"
 											id="phoneNumber" type="text" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter your phoneNumber'"
@@ -367,8 +367,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 마이페이지 관련 js -->
+	<script src="./../../res/assets/js/mypage.js"></script>
 
 
 </body>

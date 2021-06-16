@@ -130,49 +130,26 @@
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-home"></i></span>
 					<div class="media-body">
-						<h3>Buttonwood, California.</h3>
-						<p>Rosemead, CA 91770</p>
-					</div>
-				</div>
-				<div class="media contact-info">
-					<span class="contact-info__icon"><i class="ti-tablet"></i></span>
-					<div class="media-body">
-						<h3>+1 253 565 2365</h3>
-						<p>Mon to Fri 9am to 6pm</p>
+						<h3>이름</h3>
+						<p id="name">Rosemead, CA 91770</p>
 					</div>
 				</div>
 				<div class="media contact-info">
 					<span class="contact-info__icon"><i class="ti-email"></i></span>
 					<div class="media-body">
-						<h3>support@colorlib.com</h3>
-						<p>Send us your query anytime!</p>
+						<h3>이메일</h3>
+						<p id="email">Mon to Fri 9am to 6pm</p>
 					</div>
 				</div>
-				<div style="margin-top: 80px">
-					<button
-						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						id="modal_btn" style="font-size: 120%;" type="submit">수정하기</button>
-					<!-- 모달 시작 -->
-					<div class="black_bg gj-modal"></div>
-					<div class="modal_wrap"
-						style="background-color: #fbf9ff; border-radius: 20px;">
-						<div class="modal_close">
-							<a href="#">close</a>
-						</div>
-						<div
-							style="display: flex; align-items: center; flex-direction: row; justify-content: center;">
-							<div
-								style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 150%; color: #ef67ff;">
-								회원 확인되었습니다.</div>
-							<div
-								style="position: absolute; bottom: 20%; left: 50%; transform: translate(-50%, -50%);">
-								<a href="${path}/modifyInfo" class="borders-btn">확 인</a>
-							</div>
-						</div>
-
-
+				<div class="media contact-info">
+					<span class="contact-info__icon"><i class="ti-tablet"></i></span>
+					<div class="media-body">
+						<h3>전화번호</h3>
+						<p id ="phone">Send us your query anytime!</p>
 					</div>
-					<!-- 모달 끝 -->
+				</div>
+				<div class="card-bottom">
+					<a href="${path}/modifyInfo" class="borders-btn" id="modify-info">수정하기</a>
 				</div>
 			</div>
 		</section>
@@ -346,8 +323,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 마이페이지 관련 js -->
+	<script src="./../../res/assets/js/mypage"></script>
 
 
 </body>
