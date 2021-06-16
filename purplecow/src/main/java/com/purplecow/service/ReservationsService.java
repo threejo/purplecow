@@ -65,7 +65,7 @@ public class ReservationsService {
 	public void updatePostPaymentsInReservation(int id, int distance) {
 		//reservations 테이블에 저장된 cars_id를 통해 이용한 차량의 km당 주행요금을 가져온다.
 		Cars car = reservationsMapper.getCarsById(id);		
-		int driving_fee_per_km = car.getdriving_fee_per_km();
+		int driving_fee_per_km = car.getDriving_fee_per_km();
 		//입력된 주행거리(distance)를 바탕으로 주행요금(차량별 km당 주행요금*주행거리)를 payments의 driving_amount에 기록한다.
 		int driving_amount = driving_fee_per_km*distance;
 		int hipass_fee = 0;

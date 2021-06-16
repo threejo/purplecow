@@ -50,7 +50,7 @@ public class ReservationController {
 
 	/*예약 전체 목록 조회*/
 	@GetMapping("/reservations/list")
-	public List<Reservations> getReservationsByUserId() {
+	public List<Reservations> getReservations() {
 		return reservationsService.getReservations();
 	}
 
