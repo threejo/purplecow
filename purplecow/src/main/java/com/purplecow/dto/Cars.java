@@ -14,17 +14,16 @@ public class Cars {
 	/*차량 정보 테이블
 	 * 차량 색상, 일일 대여요금, km당 주행요금,
 	 * 사용가능 여부,현재 위치한 존 정보,유종,차급*/
-	
-	private int id; // 차량 식별자
-	private String model_color; //차량 색상
-	/* (일일대여요금 / 24) / 6 = 10분당 요금 */
-	private int daily_rental_fee; // 일일 대여요금 
-	private int driving_fee_per_km; //km당 주행요금
-	private Boolean available; // 사용가능 여부
-	private int zones_id; // 소속된 존 정보
-	private String car_number; //차량넘버
-	private OilTypes oil_type; // 오일타입
-	private CarScales scale; // 차량 크기
+
+	private int id;
+	private String car_number;
+	private String model_color;
+	private int daily_rental_fee;
+	private int driving_fee_per_km;
+	private Boolean available;
+	private int zones_id;
+	private OilTypes oil_type;
+	private CarScales scale;
 	
 	/*Getter & Setter*/
 	
@@ -76,12 +75,22 @@ public class Cars {
 	public void setScale(CarScales scale) {
 		this.scale = scale;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCar_number() {
+		return car_number;
+	}
+	public void setCar_number(String car_number) {
+		this.car_number = car_number;
+	}
+	
 	
 	
 	/*constructor*/
-	
-	
-	
 	
 	
 
