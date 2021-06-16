@@ -16,7 +16,8 @@ public class Cars {
 	 * 사용가능 여부,현재 위치한 존 정보,유종,차급*/
 
 	private int id;
-	private String car_number;
+	private String name;
+	private String number;
 	private String model_color;
 	private int daily_rental_fee;
 	private int driving_fee_per_km;
@@ -82,10 +83,16 @@ public class Cars {
 		this.id = id;
 	}
 	public String getCar_number() {
-		return car_number;
+		return number;
 	}
 	public void setCar_number(String car_number) {
-		this.car_number = car_number;
+		this.number = car_number;
+	}
+	public String getCar_name() {
+		return name;
+	}
+	public void setCar_name(String car_name) {
+		this.name = car_name;
 	}
 	
 	
