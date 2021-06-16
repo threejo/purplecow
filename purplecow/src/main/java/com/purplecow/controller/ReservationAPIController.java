@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.purplecow.dto.Reservations;
@@ -57,7 +59,7 @@ public class ReservationAPIController {
 
 
 	/*PUT*/
-	@ResponseBody
+	//@ResponseStatus(code = HttpStatus.BAD_REQUEST)
 	@PutMapping("/reservations/{id}")
 	public void updateReservationsById(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
 		/*예약 테이블에 정해진 자리 주차 여부 수정*/
@@ -68,7 +70,12 @@ public class ReservationAPIController {
 		}
 		/*예약 테이블에 차량 외부상태와 내부상태 값 수정*/
 		if(rbo.get("outside_state")!=null && rbo.get("inside_state")!=null) {
-			reservationsService.updateCarStatesInReservation(id,(String)rbo.get("outside_state"),(String)rbo.get("inside_state"));
+			try {
+				reservationsService.updateCarStatesInReservation(id,(String)rbo.get("outside_state"),(String)rbo.get("inside_state"));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		/*예약 테이블에 결제한 카드 정보와 선결제한 금액으로 예약시 선결제한 정보 저장*/
 		if(rbo.get("cards_id") != null && rbo.get("rental_amount") != null) {

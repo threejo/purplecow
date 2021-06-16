@@ -1,5 +1,7 @@
 package com.purplecow.mapper;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.purplecow.dto.Payments;
