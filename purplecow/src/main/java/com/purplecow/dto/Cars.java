@@ -16,6 +16,7 @@ public class Cars {
 	 * 사용가능 여부,현재 위치한 존 정보,유종,차급*/
 	
 	private int id;
+	private String car_number;
 	private String model_color;
 	private int daily_rental_fee;
 	private int driving_fee_per_km;
@@ -74,6 +75,19 @@ public class Cars {
 	public void setScale(CarScales scale) {
 		this.scale = scale;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCar_number() {
+		return car_number;
+	}
+	public void setCar_number(String car_number) {
+		this.car_number = car_number;
+	}
+	
 	
 	
 	/*constructor*/
