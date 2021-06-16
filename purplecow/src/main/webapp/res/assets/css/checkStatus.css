@@ -1,1 +1,26 @@
 @charset "UTF8";
+
+
+
+.browse-btn {
+	background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    
+    
+}
+
+#image_manage {
+	display: inline-block;
+}
+#image_manage .preview{
+	width: 100px;
+    height: 100px;
+    margin: 0.2em -0.7em 0 0;
+}
+
+.img_inline {
+	display: inline-block;
+}

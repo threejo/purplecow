@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
-<link rel="stylesheet" href="../../res/assets/css/return.css">
+<link rel="stylesheet" href="../../res/assets/css/checkStatus.css">
 
 
 </head>
@@ -125,51 +125,62 @@
 		<!-- Slider Area End -->
 
 		<!--? 차량 상태 확인 시작 -->
-		<section class="button-area">			
-				<!-- 차량 외부 -->
+		<section class="button-area">
+			<!-- 차량 외부 -->
+			<div class="container box_1170 border-top-generic">
+				<h3 class="text-heading">
+					<strong>차량 외부</strong>
+				</h3>
+				<div>
+					<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
+				</div>
+				<div class="button-group-area mt-40" style="margin: 20px 0px">
+					<input type="radio" name="outStatus" id="outStatus" value="Good"
+						checked> <label for="default-radio">Good</label> <input
+						type="radio" name="outStatus" id="outStatus" value="Soso">
+					<label for="default-radio">So-so</label> <input type="radio"
+						name="outStatus" id="outStatus" value="Bad"> <label
+						for="default-radio">Bad</label>
+				</div>
+				<!-- 이미지 등록 -->
+				<div id="image_manage">
+					<div class="img_inline">
+						<input type="file" id="real-input" class="image_inputType_file"
+							style="display: none;" accept="img/*" required multiple>
+						<button class="browse-btn">
+							<img src="https://img.icons8.com/nolan/64/camera.png" />
+						</button>
+					</div>
+					<div id="imagePreview"class="img_inline" style="border: 1px solid green;"></div>
+
+
+				</div>
+
+				<!-- 이미지 등록 끝-->
+				<!-- 차량 내부 -->
 				<div class="container box_1170 border-top-generic">
 					<h3 class="text-heading">
-						<strong>차량 외부</strong>
+						<strong>차량 내부</strong>
 					</h3>
 					<div>
-						<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
+						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
 					</div>
 					<div class="button-group-area mt-40" style="margin: 20px 0px">
-						<input type="radio" name="outStatus" id="outStatus" value="Good"
+						<input type="radio" name="inStatus" id="inStatus" value="Good"
 							checked> <label for="default-radio">Good</label> <input
-							type="radio" name="outStatus" id="outStatus" value="Soso">
+							type="radio" name="inStatus" id="inStatus" value="Soso">
 						<label for="default-radio">So-so</label> <input type="radio"
-							name="outStatus" id="outStatus" value="Bad"> <label
+							name="inStatus" id="inStatus" value="Bad"> <label
 							for="default-radio">Bad</label>
 					</div>
+
 					<div>
-						<input type="file" id="imgupload" style="display:none"/> 
-						<button id="OpenImgUpload">Image Upload</button>
+						<button
+							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+							id="modal_btn" style="font-size: 120%;" type="submit">확
+							인</button>
 					</div>
-
-					<!-- 차량 내부 -->
-					<div class="container box_1170 border-top-generic">
-						<h3 class="text-heading">
-							<strong>차량 내부</strong>
-						</h3>
-						<div>
-							<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
-						</div>
-						<div class="button-group-area mt-40" style="margin: 20px 0px">
-							<input type="radio" name="inStatus" id="inStatus" value="Good"
-								checked> <label for="default-radio">Good</label> <input
-								type="radio" name="inStatus" id="inStatus" value="Soso">
-							<label for="default-radio">So-so</label> <input type="radio"
-								name="inStatus" id="inStatus" value="Bad"> <label
-								for="default-radio">Bad</label>
-						</div>
-
-						<div>
-							<input type="submit" style="font-size: 120%;"
-								class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-								value="확인" />
-						</div>
-					</div>			
+				</div>
 		</section>
 		<!-- 차량 상태 확인 끝-->
 
