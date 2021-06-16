@@ -60,7 +60,7 @@
             <div class="form-input pt-30">
                 <input type="submit" id="submit" value="로그인">
             </div>
-            
+            <a href="https://kauth.kakao.com/oauth/authorize?client_id=키넣어야함&redirect_uri=http://localhost:8088/kakaologin&response_type=code">카카오 로그인</a>
             <!-- Forget Password -->
             <a href="#" class="forget">Forget Password</a>
             <!-- Forget Password -->
@@ -114,6 +114,7 @@
     <script src="./../../res/assets/js/plugins.js"></script>
     <script src="./../../res/assets/js/main.js"></script>
     <script src="./../../res/assets/js/user_login.js"></script>
+    <script src="./../../res/assets/js/getkakaokey.js"></script>
     
     </body>
 </html>

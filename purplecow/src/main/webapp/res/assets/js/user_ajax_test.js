@@ -13,10 +13,10 @@ $("#submit").bind("click", function() {
 		contentType: 'application/json',
 		data: JSON.stringify(data),
 		success: function() {
-			alert("성공이다 이놈아" + data.name + data.email + data.password + data.check );
+			alert("회원가입 성공" );
 		},
 		error: function() {
-			alert("에러다 이놈아"+ data.name + data.email + data.password + data.check);
+			alert("회원가입 실패");
 		}
 	});
 });

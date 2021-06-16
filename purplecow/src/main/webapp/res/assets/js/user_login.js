@@ -7,15 +7,16 @@ $("#submit").bind("click", function() {
                 
         }
         alert("데이터입력 성공" + data.email + data.password  );
+      
 	$.ajax({
-		url: "/users/email/{email}",
+		url: "/users/login/" + data.email,
 		type: "get",
-		contentType: 'string', //'application/json',
-		data: data.email,
+		contentType: 'application/json',
+		//data: data.eamil,
 		success: function(item) {
-			alert("정보 로딩 성공" + item.email + item.password  );
+			alert("정보 로딩 성공"  );
 			if(item.password == data.password)
-				alert("로그인 성공"  );
+				alert("로그인 성공" );
 			else
 				alert("로그인 실패");	
 		},
