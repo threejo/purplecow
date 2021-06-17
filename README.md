@@ -38,10 +38,10 @@ _*글자*_
 :anger:
 :dash:
 :grey_exclamation:
-:queestion:
+:question:
 :hankey:
 :ok_hand:
-:point:on:
+:point_on:
 :two_hearts:
 :star2:
 :notes:
