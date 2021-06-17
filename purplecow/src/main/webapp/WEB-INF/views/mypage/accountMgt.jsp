@@ -152,6 +152,7 @@
                         <a href="#" class="btn">수정하기</a>
                     </div>
 			</div>
+			
 		</section>
 
 

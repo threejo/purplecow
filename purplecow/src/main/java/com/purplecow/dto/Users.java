@@ -1,11 +1,5 @@
 package com.purplecow.dto;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
-
 public class Users {
 
 	private int id;

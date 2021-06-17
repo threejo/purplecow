@@ -154,19 +154,19 @@
 										<p>예약 내역1</p>
 								</a></li>
 								<li><a href="#" class="d-flex">
-										<p>예약 내역 1</p>
+										<p>예약 내역2</p>
 								</a></li>
 								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
+										<p>예약 내역3</p>
 								</a></li>
 								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
+										<p>예약 내역4</p>
 								</a></li>
 								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
+										<p>예약 내역5</p>
 								</a></li>
 								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
+										<p>예약 내역6</p>
 								</a></li>
 							</ul>
 						</aside>

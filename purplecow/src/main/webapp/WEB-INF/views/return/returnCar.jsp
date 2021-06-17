@@ -52,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -63,10 +63,10 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">
-												<li><a href="index.html">소개하기</a>
+												<li><a href="/">소개하기</a>
 													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+														<li><a href="/usageguide">이용 안내</a></li>
+														<li><a href="/feeinfo">요금 안내</a></li>
 													</ul></li>
 												<li><a href="packages.html">예약하기</a>
 													<ul class="submenu">
@@ -80,7 +80,12 @@
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
+												<li><a href="#">마이페이지</a>
+												<ul class="submenu">
+														<li><a href="/resvHistory">예약 내역</a></li>
+														<li><a href="/accountMgt">계정 관리</a></li>
+													</ul></li>
+												 <!-- Button -->												
 												<li class="button-header margin-left "><a
 													href="register.html" class="btn">Sign Up</a></li>
 												<li class="button-header"><a href="login.html"
@@ -196,91 +201,94 @@
 
 	</main>
 	<footer>
-		<div class="footer-wrappr "
-			data-background="../../res/assets/img/gallery/footer-bg.png">
-			<div class="footer-area footer-padding ">
-				<div class="container">
-					<div class="row d-flex justify-content-between">
-						<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-							<div class="single-footer-caption mb-50">
-								<!-- logo -->
-								<div class="footer-logo mb-25">
-									<a href="index.html"><img
-										src="../../res/assets/img/logo/logo2_footer.png" alt=""></a>
-								</div>
-								<div class="footer-tittle mb-50">
-									<p>Subscribe our newsletter to get updates about our
-										services</p>
-								</div>
-								<!-- Form -->
-								<div class="footer-form">
-									<div id="mc_embed_signup">
-										<form target="_blank"
-											action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-											method="get" class="subscribe_form relative mail_part"
-											novalidate="true">
-											<input type="email" name="EMAIL" id="newsletter-form-email"
-												placeholder=" Email Address "
-												class="placeholder hide-on-focus"
-												onfocus="this.placeholder = ''"
-												onblur="this.placeholder = 'Your email address'">
-											<div class="form-icon">
-												<button type="submit" name="submit" id="newsletter-submit"
-													class="email_icon newsletter-submit button-contactForm">
-													Subscribe</button>
-											</div>
-											<div class="mt-10 info"></div>
-										</form>
-									</div>
-								</div>
-								<!-- social -->
-								<div class="footer-social mt-50">
-									<a href="#"><i class="fab fa-twitter"></i></a> <a
-										href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-									<a href="#"><i class="fab fa-pinterest-p"></i></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
-						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-							<div class="single-footer-caption mb-50">
-								<div class="footer-tittle">
-									<h4>Company</h4>
-									<ul>
-										<li><a href="#">Why choose us</a></li>
-										<li><a href="#"> Review</a></li>
-										<li><a href="#">Customers</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Carrier</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-							<div class="single-footer-caption mb-50">
-								<div class="footer-tittle">
-									<h4>Products</h4>
-									<ul>
-										<li><a href="#">Why choose us</a></li>
-										<li><a href="#"> Review</a></li>
-										<li><a href="#">Customers</a></li>
-										<li><a href="#">Blog</a></li>
-										<li><a href="#">Carrier</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
-							<div class="single-footer-caption mb-50">
-								<div class="footer-tittle">
-									<h4>Support</h4>
-									<ul>
-										<li><a href="#">Technology</a></li>
-										<li><a href="#"> Products</a></li>
-										<li><a href="#">Customers</a></li>
-										<li><a href="#">Quality</a></li>
-										<li><a href="#">Sales geography</a></li>
-									</ul>
+    <div class="footer-wrappr " data-background="../../res/assets/img/gallery/footer-bg.png">
+        <div class="footer-area footer-padding ">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <!-- logo -->
+                            <div class="footer-logo mb-25">
+                                <a href="index.html"><img
+										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
+                            </div>
+                            <div class="footer-tittle mb-50">
+                                <p>뉴스레터를 구독하여 서비스에 대한 최신를 확인하세요</p>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form">
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                        <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" 이메일 " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">
+                                                구독하기
+                                            </button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- social -->
+                            <div class="footer-social mt-50">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1"></div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>회사</h4>
+                                <ul>
+                                    <li><a href="#">퍼플카우를 선택한 이유</a></li>
+                                    <li><a href="#"> 후기</a></li>
+                                    <li><a href="#">고객들</a></li>
+                                    <li><a href="#">블로그</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>상품</h4>
+                                <ul>
+                                    <li><a href="#">퍼플카우를 선택한 이유</a></li>
+                                    <li><a href="#"> 후기</a></li>
+                                    <li><a href="#">고객들</a></li>
+                                    <li><a href="#">블로그</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>서포트</h4>
+                                <ul>
+                                    <li><a href="#">기술</a></li>
+                                    <li><a href="#">  상품</a></li>
+                                    <li><a href="#">고객</a></li>
+                                    <li><a href="#">퀄리티</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  PURPLECOW</i>
 								</div>
 							</div>
 						</div>
