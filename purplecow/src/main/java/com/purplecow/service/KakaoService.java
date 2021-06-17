@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.purplecow.dto.PropertyUtil;
 import com.purplecow.dto.Users;
 
 
@@ -45,7 +46,8 @@ public class KakaoService {
                 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
                 StringBuilder sb = new StringBuilder();
                 sb.append("grant_type=authorization_code");
-                sb.append("&client_id=키넣어야함");  //본인이 발급받은 key
+                String key = PropertyUtil.getProperty("kakao.restapi.key");
+                sb.append("&client_id=" + key);  //본인이 발급받은 key
                 sb.append("&redirect_uri=http://localhost:8088/kakaologin");     // 본인이 설정해 놓은 경로
                 sb.append("&code=" + authorize_code);
                 bw.write(sb.toString());
