@@ -36,8 +36,13 @@ public class TestController {
 	@GetMapping("/")
 	public String Admin() {
 		return "test/index";
+	}
+	
+	@GetMapping("/ex")
+	public String ex() {
 
-
+		
+		return "ex";
 	}
 	
 

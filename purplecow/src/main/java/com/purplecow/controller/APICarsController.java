@@ -4,9 +4,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.purplecow.dto.Cars;
 import com.purplecow.dto.Reservations;
 import com.purplecow.service.CarsService;
 
@@ -21,6 +23,12 @@ public class APICarsController {
 	@GetMapping("/cars/list")
 	public List<Reservations> getReservations() {
 		return carsService.getCars();
+	}
+	
+	@GetMapping("/resv/{zones_id}")
+	public Cars getCarByZoneId(@PathVariable("zones_id") int zones_id) {
+		
+		return carsService.getCarByZoneId(zones_id);
 	}
 
 }

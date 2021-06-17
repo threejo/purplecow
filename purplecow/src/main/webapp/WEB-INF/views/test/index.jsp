@@ -66,7 +66,7 @@
 														<li><a href="/usageGuide">이용 안내</a></li>
 														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-                                                <li><a href="packages.html">예약하기</a>
+                                                <li><a href="/reservation/resv">예약하기</a>
                                                 <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>

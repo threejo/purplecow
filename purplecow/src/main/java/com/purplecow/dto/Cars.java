@@ -17,6 +17,8 @@ public class Cars {
 	
 	private int id;
 	private String name;
+	private String number;
+
 	private String model_color;
 	private int daily_rental_fee;
 	private int driving_fee_per_km;
@@ -76,12 +78,28 @@ public class Cars {
 	public void setScale(CarScales scale) {
 		this.scale = scale;
 	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCar_number() {
+		return number;
+	}
+	public void setCar_number(String car_number) {
+		this.number = car_number;
+	}
+	public String getCar_name() {
+		return name;
+	}
+	public void setCar_name(String car_name) {
+		this.name = car_name;
+	}
+	
 	
 	
 	/*constructor*/
-	
-	
-	
 	
 	
 
