@@ -45,4 +45,6 @@ _*글자*_
 :two_hearts:
 :star2:
 # :notes:
-
+:tongue:
+:eyes:
+:speech_balloon:
