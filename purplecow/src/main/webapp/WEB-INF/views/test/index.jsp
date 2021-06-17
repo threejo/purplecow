@@ -261,7 +261,7 @@
                         <div class="col-xl-12">
                             <div class="footer-copy-right text-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  PURPLECOW</i>
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  PURPLECOW
 
                               </div>
                           </div>

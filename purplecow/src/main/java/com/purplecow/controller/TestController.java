@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.purplecow.mapper.AccountMapper;
 
@@ -30,7 +31,6 @@ public class TestController {
 	}
 
 	
-	
 
 
 	@GetMapping("/")
@@ -46,14 +46,14 @@ public class TestController {
 	}
 	
 
-	@GetMapping("/login")
-	public String login() {
-
-		
-		return "test_login/index";
-
-	}
-
+	/*
+	 * @GetMapping("/login") public String login() {
+	 * 
+	 * 
+	 * return "test_login/index";
+	 * 
+	 * }
+	 */
 	
 
 	@GetMapping("/feeInfo")
@@ -66,6 +66,7 @@ public class TestController {
 	public String getusageGuide() {
 		return "introduction/usageGuide";
 	}
+
 
 
 }

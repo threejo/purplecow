@@ -63,12 +63,12 @@
                            <div class="main-menu d-none d-lg-block">
                               <nav>
                                  <ul id="navigation">
-                                    <li><a href="/usageGuide">소개하기</a>
+                                    <li><a href="index.html">소개하기</a>
                                        <ul class="submenu">
                                           <li><a href="blog.html">이용 안내</a></li>
                                           <li><a href="blog_details.html">요금 안내</a></li>
                                        </ul></li>
-                                    <li><a href="/reservation/resv">예약하기</a>
+                                    <li><a href="packages.html">예약하기</a>
                                        <ul class="submenu">
                                           <li><a href="blog.html">왕복 예약</a></li>
                                           <li><a href="blog_details.html">편도 예약</a></li>
@@ -87,8 +87,8 @@
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
                                     <li class="button-header margin-left "><a
-                                       href="/registration" class="btn">Sign Up</a></li>
-                                    <li class="button-header"><a href="/login"
+                                       href="register.html" class="btn">Sign Up</a></li>
+                                    <li class="button-header"><a href="login.html"
                                        class="btn3">Sign In</a></li>
                                  </ul>
                               </nav>

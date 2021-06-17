@@ -2,17 +2,17 @@ function startSomething() {
 	
 	//userAPI 요청
 	$.ajax({
-		url: "/users/accountMgt/6",
+		url: "/users/6",
 		type: "get",		
 		success: function(user) {
 			console.log(user);
-			
-			
-			
-			document.getElementById('#ajax_username').innerHTML="user.name";
-			$('#ajax_username').innerHTML = user.name;
-			$('#ajax_email').innerHTML = user.email;
-			$('#ajax_phone').innerHTML = user.phone_no;
+
+			//이름 가져오기
+			document.getElementById("ajax_username").innerHTML = user.name;
+			//이메일 가져오기
+			document.getElementById("ajax_email").innerHTML = user.email;
+			//핸드폰 번호 가져오기
+			document.getElementById("ajax_phone").innerHTML = user.phone_no;
 			
 		},
 		error: function() {
@@ -24,6 +24,7 @@ function startSomething() {
 
 
 document.addEventListener("DOMContentLoaded", ()=>{
+
 	startSomething();
 });
 
