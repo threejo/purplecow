@@ -14,7 +14,7 @@ import com.purplecow.service.FileService;
  */
 
 @RestController
-public class FileController {
+public class APIFileController {
 
 	@Autowired FileService fileService;
 

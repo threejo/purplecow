@@ -28,10 +28,13 @@ public class TestController {
 
 		return "home/index";
 	}
+
 	
 	
-	@GetMapping("/") 
-	public String Admin() {		
+
+
+	@GetMapping("/")
+	public String Admin() {
 		return "test/index";
 
 
@@ -46,10 +49,18 @@ public class TestController {
 
 	}
 
+	
+
 	@GetMapping("/feeInfo")
-	public String getFeeInfo() {		
-		return "test/feeInfo";
+	public String getFeeInfo() {
+		return "introduction/feeInfo";
 
 	}
+
+	@GetMapping("/usageGuide")
+	public String getusageGuide() {
+		return "introduction/usageGuide";
+	}
+
 
 }

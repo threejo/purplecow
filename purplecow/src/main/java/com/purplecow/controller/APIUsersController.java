@@ -17,7 +17,7 @@ import com.purplecow.dto.Users;
 import com.purplecow.service.UsersService;
 
 @RestController
-public class UsersController {
+public class APIUsersController {
 
 	@Autowired UsersService usersService;
 	
@@ -29,7 +29,7 @@ public class UsersController {
 
 		usersService.insertUser(users);
 
-	}
+	} 
 
 	/*SELECT*/
 	/*id로 유저조회하기*/

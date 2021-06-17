@@ -52,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -62,31 +62,33 @@
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
 										<nav>
-											<ul id="navigation">
-												<li><a href="index.html">소개하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="/usageGuide">소개하기</a>
+                                                <ul class="submenu">
+														<li><a href="/usageGuide">이용 안내</a></li>
+														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-												<li><a href="packages.html">예약하기</a>
-													<ul class="submenu">
+                                                <li><a href="packages.html">예약하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-
-												<li><a href="#">반납하기</a>
-													<ul class="submenu">
+                                                <li><a href="/return">반납 하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
-												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="login.html"
-													class="btn3">Sign In</a></li>
-											</ul>
-										</nav>
+                                                <li><a href="#">마이페이지</a>
+                                             <ul class="submenu">
+														<li><a href="/resvHistory">예약 내역</a></li>
+														<li><a href="/accountMgt">계정 관리</a></li>
+													</ul></li>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="register.html" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="login.html" class="btn3">Sign In</a></li>
+                                            </ul>
+                                        </nav>
 									</div>
 								</div>
 							</div>
@@ -161,7 +163,7 @@
 							<div class="single-footer-caption mb-50">
 								<!-- logo -->
 								<div class="footer-logo mb-25">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/logo2_footer.png" alt=""></a>
 								</div>
 								<div class="footer-tittle mb-50">
