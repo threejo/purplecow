@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
-<link rel="stylesheet" href="../../res/assets/css/return.css">
+<link rel="stylesheet" href="../../res/assets/css/checkStatus.css">
 
 
 </head>
@@ -126,56 +126,62 @@
 
 		<!--? 차량 상태 확인 시작 -->
 		<section class="button-area">
-			<form action="statusUpload" method="post"
-				enctype="multipart/form-data">
-				<!-- 차량 외부 -->
-				<div class="container box_1170 border-top-generic">
-					<h3 class="text-heading">
-						<strong>차량 외부</strong>
-					</h3>
-					<div>
-						<strong>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</strong>
-					</div>
-					<div class="button-group-area mt-40" style="margin:20px 0px">
-						<input type="radio" name="innerStatus" id="default-radio">
-						<label for="default-radio">Good</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">So-so</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">Bad</label>
-					</div>
-					<div>
-					<input type="file" name="uploads" multiple="multiple"
-						accept="image/*" /> <br />
-					</div>
+			<!-- 차량 외부 -->
+			<div class="container box_1170 border-top-generic">
+				<h3 class="text-heading">
+					<strong>차량 외부</strong>
+				</h3>
+				<div>
+					<h6>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</h6>
 				</div>
-				
+				<div class="button-group-area mt-40" style="margin: 20px 0px">
+					<input type="radio" name="outStatus" id="outStatus" value="Good"
+						checked> <label for="default-radio">Good</label> <input
+						type="radio" name="outStatus" id="outStatus" value="Soso">
+					<label for="default-radio">So-so</label> <input type="radio"
+						name="outStatus" id="outStatus" value="Bad"> <label
+						for="default-radio">Bad</label>
+				</div>
+				<!-- 이미지 등록 -->
+				<div id="image_manage">
+					<div class="img_inline">
+						<input type="file" id="real-input" class="image_inputType_file"
+							style="display: none;" accept="img/*" required multiple>
+						<button class="browse-btn">
+							<img src="https://img.icons8.com/nolan/64/camera.png" />
+						</button>
+					</div>
+					<!-- 이미지 미리보기 -->
+					<div id="imagePreview" class="img_inline"></div>
+
+
+				</div>
+
+				<!-- 이미지 등록 끝-->
 				<!-- 차량 내부 -->
 				<div class="container box_1170 border-top-generic">
 					<h3 class="text-heading">
 						<strong>차량 내부</strong>
 					</h3>
 					<div>
-						<strong>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</strong>
+						<h6>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</h6>
 					</div>
-					<div class="button-group-area mt-40"  style="margin:20px 0px">
-						<input type="radio" name="innerStatus" id="default-radio">
-						<label for="default-radio">Good</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
-							for="default-radio">So-so</label> <input type="radio"
-							name="innerStatus" id="default-radio"> <label
+					<div class="button-group-area mt-40" style="margin: 20px 0px">
+						<input type="radio" name="inStatus" id="inStatus" value="Good"
+							checked> <label for="default-radio">Good</label> <input
+							type="radio" name="inStatus" id="inStatus" value="Soso">
+						<label for="default-radio">So-so</label> <input type="radio"
+							name="inStatus" id="inStatus" value="Bad"> <label
 							for="default-radio">Bad</label>
 					</div>
 
 					<div>
-						<input type="submit" style="font-size: 120%;"
+						<button
 							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-							value="확인" />
+							id="ajax_btn" style="font-size: 120%;" type="submit">확
+							인</button>
 					</div>
 				</div>
-
-
-			</form>
 		</section>
 		<!-- 차량 상태 확인 끝-->
 
@@ -307,7 +313,8 @@
 	</div>
 
 	<!-- JS here -->
-
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="./../../res/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
 	<script src="./../../res/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -347,8 +354,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 해당페이지 관련 js -->
+	<script src="./../../res/assets/js/checkStatus.js"></script>
 
 
 

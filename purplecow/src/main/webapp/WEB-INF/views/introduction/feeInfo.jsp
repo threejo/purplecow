@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -25,6 +24,9 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
+<link rel="stylesheet" href="../../res/assets/css/feeInfo.css">
+
+
 </head>
 <body>
 	<!-- ? Preloader Start -->
@@ -50,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.jsp"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -60,30 +62,33 @@
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
 										<nav>
-											<ul id="navigation">
-												<li><a href="/">소개하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="/usageGuide">소개하기</a>
+                                                <ul class="submenu">
+														<li><a href="/usageGuide">이용 안내</a></li>
+														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-												<li><a href="reservation/resv">예약하기</a>
-													<ul class="submenu">
+                                                <li><a href="packages.html">예약하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-
-												<li><a href="#">반납하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">바로 반납하기</a></li>														
+                                                <li><a href="/return">반납 하기</a>
+                                                <ul class="submenu">
+														<li><a href="blog.html">바로 반납</a></li>
+														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
-												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="login.html"
-													class="btn3">Sign In</a></li>
-											</ul>
-										</nav>
+                                                <li><a href="#">마이페이지</a>
+                                             <ul class="submenu">
+														<li><a href="/resvHistory">예약 내역</a></li>
+														<li><a href="/accountMgt">계정 관리</a></li>
+													</ul></li>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="register.html" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="login.html" class="btn3">Sign In</a></li>
+                                            </ul>
+                                        </nav>
 									</div>
 								</div>
 							</div>
@@ -107,7 +112,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 예약하기111</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 반납하기</h1>
 							</div>
 						</div>
 					</div>
@@ -121,72 +126,30 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? Start Button -->
-		<ul>
-			<li><button onclick="purple_zone" value="1">purple_zone1</button></li>
-			<li><input type="button" id="zone_id" value="purplezone1"></li>
-		</ul>
-		<table>
-			<thead>
-				<tr>
-					<th>기종</th>
-					<th>컬러</th>
-					<th>오일타입</th>				
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="cars" items="${cars}">
-					<tr>
-						<td>${cars.name}</td>
-						<td>${cars.model_color}</td>
-						<td>${cars.oil_type}</td>
-					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
-		<!-- <section class="button-area">
+		<!--? 반납 설문 시작 -->
+		<section class="button-area">
+
 			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading">
-					<strong>반납하기</strong>
-				</h3>
-
-				<div class="button-group-area mt-40">
-					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-						id="default-radio"> <label for="default-radio">YES</label>
-
-					<input type="radio" name="parking" id="default-radio"> <label
-						for="default-radio">NO</label>
-				</div>
-
-				<hr>
-				<div style="margin: 20px 0px 20px 0px;">
-					<p style="font-size: 120%; margin-bottom: 40px;">
-						<strong>반납 전 마지막 확인</strong>
-					</p>
-					<div style="margin: 10px 0px;">
-						창문은 모두 닫았나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div style="margin:10px 0px;">
-					<div>
-						실내등은 모두 껐나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
-					<div style="margin: 10px 0px;">
-						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
-
-				</div>
-
-			</div>
-			<div style="margin: 20px 350px 20px 350px;">
-				<button
-					class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-					style="font-size: 120%;" type="submit">반납하기</button>
+				<h3 class="mb-30">이용 요금 안내</h3>
+				<!-- 테이블 시작 -->
+				<table class="type10">
+					<thead>
+						<tr>
+							<th scope="cols">모델명</th>
+							<th scope="cols">차급</th>
+							<th scope="cols">km당 주행가격</th>
+							<th scope="cols">일일 주행가격</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<!-- 테이블 끝 -->
 			</div>
 
-		</section> -->
-		<!-- End Button -->
+
+		</section>
+		<!-- 반납 설문 시작 끝-->
 
 
 	</main>
@@ -200,7 +163,7 @@
 							<div class="single-footer-caption mb-50">
 								<!-- logo -->
 								<div class="footer-logo mb-25">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/logo2_footer.png" alt=""></a>
 								</div>
 								<div class="footer-tittle mb-50">
@@ -292,10 +255,7 @@
 									<p>
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 										Copyright &copy;
-										<script>
-											document.write(new Date()
-													.getFullYear());
-										</script>
+										
 										All rights reserved | This template is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
 											href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -316,7 +276,6 @@
 	</div>
 
 	<!-- JS here -->
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
 	<script src="./../../res/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
@@ -356,9 +315,11 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
-	
-	<!-- cars js ajax -->
-	<script src="./../../res/assets/js/cars.js"></script>
+
+	<!-- 리턴 관련 js -->
+	<script src="./../../res/assets/js/feeInfo.js"></script>
+
+
 
 </body>
 </html>

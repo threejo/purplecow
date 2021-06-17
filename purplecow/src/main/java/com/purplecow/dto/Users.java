@@ -1,7 +1,5 @@
 package com.purplecow.dto;
 
-
-
 public class Users {
 
 	private int id;
