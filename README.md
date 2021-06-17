@@ -34,4 +34,15 @@
 _*글자*_
 
 :blush:
+:yellow_heart:
+:anger:
+:dash:
+:grey_exclamation:
+:queestion:
+:hankey:
+:ok_hand:
+:point:on:
+:two_hearts:
+:star2:
+:notes:
 
