@@ -11,7 +11,7 @@ import com.purplecow.dto.Reservations;
 import com.purplecow.service.CarsService;
 
 @RestController
-public class CarAPIController {
+public class APICarsController {
 	
 	@Autowired CarsService carsService;
 	

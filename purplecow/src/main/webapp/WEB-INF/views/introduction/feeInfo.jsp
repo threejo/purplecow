@@ -52,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="/l"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -163,7 +163,7 @@
 							<div class="single-footer-caption mb-50">
 								<!-- logo -->
 								<div class="footer-logo mb-25">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/logo2_footer.png" alt=""></a>
 								</div>
 								<div class="footer-tittle mb-50">
