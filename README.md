@@ -5,8 +5,8 @@
 #### 퍼플카우
 
 +안녕
- +hello
-  +hi
+    +hello
+        +hi
 
 *안녕
  *hello
@@ -14,4 +14,4 @@
 
 -안녕
  -hello
-  -hi
+  -hi  
