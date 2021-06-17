@@ -165,13 +165,14 @@
         </div>
 
                          
-                        <!-- Testimonial End -->
-                    </div>
+                      <!-- Testimonial End -->
+                     <!-- </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --> 
     <!--? Testimonial Area End -->
+
 </main>
 <footer>
     <div class="footer-wrappr " data-background="../../res/assets/img/gallery/footer-bg.png">
