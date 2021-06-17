@@ -52,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.html"><img
+									<a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -75,15 +75,20 @@
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
 
-												<li><a href="#">반납하기</a>
+												<li><a href="/return">반납하기</a>
 													<ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
+												<li><a href="/mypage">마이페이지</a> <!-- Button -->
+												<ul class="submenu">
+														<li><a href="/accountMgt">계정 관리</a></li>
+														<li><a href="/payInfo">결제 및 할인</a></li>
+														<li><a href="/resvHistory">예약 내역</a></li>
+													</ul></li>
 												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="login.html"
+													href="/registration" class="btn">Sign Up</a></li>
+												<li class="button-header"><a href="/login"
 													class="btn3">Sign In</a></li>
 											</ul>
 										</nav>

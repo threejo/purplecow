@@ -99,7 +99,7 @@
 		</dependency>
 		<!-- jackson 설정 -->
 		
-
+ 
 	</dependencies>
 
 	<build>
