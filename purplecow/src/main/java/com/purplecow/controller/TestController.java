@@ -31,20 +31,24 @@ public class TestController {
 	
 	
 	@GetMapping("/")
-	public String Admin() {
-
-		
+	public String Admin() {		
 		return "test/index";
 
 
 	}
 	
+
 	@GetMapping("/login")
 	public String login() {
 
 		
 		return "test_login/index";
 
+	}
+
+	@GetMapping("/feeInfo")
+	public String getFeeInfo() {		
+		return "test/feeInfo";
 
 	}
 
