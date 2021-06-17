@@ -1,27 +1,36 @@
-window.onload = function() {
+//function startSomething() {
+	
+	//userAPI 요청
+//	$.ajax({
+//		url: "/users/accountMgt/6",
+//		type: "get",		
+//		success: function(user) {
+//			console.log(user);
+			
+			
+			
+			//document.getElementById('#ajax_username').innerHTML="user.name";
+			//$('#ajax_username').innerHTML = user.name;
+			//$('#ajax_email').innerHTML = user.email;
+			//$('#ajax_phone').innerHTML = user.phone_no;
+			
+//		},
+//		error: function() {
+//			alert("에러다 이놈아");
+//		}
+//	});
+	
+//}
 
-	$("#show-info").on("click", function() {
 
+//document.addEventListener("DOMContentLoaded", ()=>{
+//	startSomething();
+//});
 
-		$.ajax({
-			url: "/users/accountMgt/6",
-			type: "get",
-			contentType: 'application/json',
-			success: function(data) {
-
-				console.log(data)
-				alert("성공");
-
-
-			},
-			error: function() {
-				alert("에러");
-			}
-
-		});
-
-	});
-
+function appendDiv() {
+	
+	const element = 
+	document.getElementById();
 }
 
 

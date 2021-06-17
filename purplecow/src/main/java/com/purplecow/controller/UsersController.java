@@ -33,7 +33,7 @@ public class UsersController {
 
 	/*SELECT*/
 	/*id로 유저조회하기*/
-	@GetMapping("/users/{id}")
+	@GetMapping("/users/accountMgt/{id}")
 	public Users getUser(@PathVariable("id") int id) {
 		return usersService.getUser(id);
 	}
@@ -41,7 +41,7 @@ public class UsersController {
 	/*PUT*/	
 	/*유저 정보 업데이트*/
 	@ResponseBody
-	@PutMapping("/users/{id}")
+	@PutMapping("/users/modifyInfo/{id}")
 	public void updateUsersById(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
 		if(rbo.get("password") != null) usersService.updatePasswordInUsers(id,(String)rbo.get("password"));
 		if(rbo.get("email") != null) usersService.updateEmailInUsers(id,(String)rbo.get("email"));
