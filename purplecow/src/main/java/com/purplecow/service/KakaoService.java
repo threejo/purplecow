@@ -17,14 +17,14 @@ import org.springframework.stereotype.Service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.purplecow.dto.Users;
+
+
 
 @Service
 public class KakaoService {
 
-		@Value("${kakao.RestAPI.key}")
-		static
-		String kakaoKey;
-		
+	
         public static String getAccessToken (String authorize_code) {
             String access_Token = "";
             String refresh_Token = "";
