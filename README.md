@@ -41,7 +41,7 @@ _*글자*_
 :question:
 :hankey:
 :ok_hand:
-:point_on:
+:point_up:
 :two_hearts:
 :star2:
 :notes:
