@@ -22,7 +22,7 @@ public class CarsService {
 		return carsMapper.getCars();
 	}
 	
-	public Cars getCarByZoneId(int zones_id) {
+	public Cars getCarByZoneId(Cars zones_id) {
 		//Map<K, V> cars = new Cars();
 		//cars.getCar_name();
 		

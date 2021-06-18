@@ -1,7 +1,10 @@
 package com.purplecow.controller;
 
 import java.util.List;
+import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,7 +18,11 @@ import com.purplecow.service.CarsService;
 @RestController
 public class APICarsController {
 	
-	@Autowired CarsService carsService;
+	private static final Logger log = LogManager.getLogger(APICarsController.class);
+
+	@Autowired 
+	private CarsService carsService;
+	
 	
 	/*SELECT*/
 	/*user_id로 특정 사용자의 예약 전체 조회*/
@@ -25,9 +32,11 @@ public class APICarsController {
 		return carsService.getCars();
 	}
 	
-	@GetMapping("/resv/{zones_id}")
-	public Cars getCarByZoneId(@PathVariable("zones_id") int zones_id) {
-		
+	
+	@GetMapping("/cars/{zones_id}")
+	public Cars getCarByZoneId(@PathVariable("zones_id") Cars zones_id) {
+		log.info("잘 왔니?");
+		log.debug(zones_id);
 		return carsService.getCarByZoneId(zones_id);
 	}
 

@@ -18,22 +18,26 @@ ajax의 기본 샘플
  */
 
 /*PurpleCow의 퍼플존을 클릭시 해당 퍼플존에 있는 차 리스트를 가져올거다.*/
-$('#purple_zone').onclick(function(){
-	var zone_id = $('#purple_zone')
+$('#purple_zone').click(function(){
+	var zones_id = $('#purple_zone').val()
+	console.log(zones_id)
 	$.ajax({
-		url: '/resv/{zones_id}',
+		url: '/cars/zones_id',
 		type: 'get',
 		dataType: 'json',
 		/*contentType: '',*/
-		data: {zones_id: $("#id").val()},
+		/*data: {zones_id: $("#id").val()},*/
 		success: function(data) {
 			/*데이터 전송 성공시 실행문구*/
-			console.log(data)
-			alert("tjdrhd")
+			console.log(data);
+			alert("tjdrhd");
+			/*document.getElementById("name").innerHTML = cars.name;
+			document.getElementById("model_color").innerHTML = cars.model_color;
+			document.getElementById("oil_type").innerHTML = cars.oil_type;*/
 			
-		},
-		error:function(){
-		console.log("에러다");
+			
+		}, error: function(){
+		console.log(zone_id);
 		alert("에러");
 		}
 	})

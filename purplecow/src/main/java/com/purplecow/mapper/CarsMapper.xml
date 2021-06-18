@@ -7,7 +7,7 @@
 		resultType="com.purplecow.dto.Cars">
 		SELECT * 
 		FROM cars
-		WHERE zones_id= #{id}
+		WHERE zones_id = #{id}
 	</select>
 	
 	<select id="getCars"
