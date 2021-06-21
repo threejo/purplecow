@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -54,11 +56,20 @@ public class SignController {
 	
 	
 	@GetMapping("/kakaologin")
-	public String kakaologin(String code) {
+	public String kakaologin(String code, HttpSession session) {
 		System.out.println("code :" + code);
 		String access_Token = KakaoService.getAccessToken(code);
         System.out.println("access_Token : " + access_Token);
-		return "login/login";
+        HashMap<String, Object> userInfo = KakaoService.getUserInfo(access_Token);
+        System.out.println("login Controller : " + userInfo);
+        
+        //    클라이언트의 이메일이 존재할 때 세션에 해당 이메일과 토큰 등록
+        if (userInfo.get("email") != null) {
+            session.setAttribute("userId", userInfo.get("email"));
+            session.setAttribute("access_Token", access_Token);
+        }
+        
+		return "login/login_complete";
 
 	}
 	
