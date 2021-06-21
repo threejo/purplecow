@@ -34,7 +34,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="../../res/assets/img/logo/loder.png" alt="">
+                    <img src="../../res/assets/img/logo/cow_loader.png" alt="">
                 </div>
             </div>
         </div>
@@ -46,12 +46,11 @@
 
 <main class="login-body"> <!--  data-vide-bg="../../res/assets/img/login-bg.mp4"> -->
     <!-- Login Admin -->
-    <form class="form-default" action="login-bg.mp4" method="POST">
+   
         
-        <div class="login-form">
             <!-- logo-login -->
             <div class="logo-login">
-                <a href="index.html"><img src="../../res/assets/img/logo/loder.png" alt=""></a>
+                <a href="index.html"><img src="../../res/assets/img/logo/cow_loader.png" alt=""></a>
             </div>
             <h2>회원 가입</h2>
 
@@ -69,16 +68,15 @@
             </div>
             <div class="form-input">
                 <label for="name">Confirm Password</label>
-                <input type="password" name="password" placeholder="Confirm Password">
+                <input type="password" name="check" placeholder="Confirm Password">
             </div>
             <div class="form-input pt-30">
-                <input type="submit" name="submit" value="회원가입">
+                <input type="submit" id="submit" value="회원가입">
             </div>
-            <!-- Forget Password -->
-            <a href="login.html" class="registration">login</a>
-        </div>
-    </form>
-    <!-- /end login form -->
+            <li class="button-header margin-left "><a
+													href="${path}/login" class="btn">Sign Up</a></li>
+            
+            
 </main>
 
 
@@ -125,6 +123,7 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./../../res/assets/js/plugins.js"></script>
     <script src="./../../res/assets/js/main.js"></script>
+    <script src="./../../res/assets/js/user_ajax_test.js"></script>
     
     </body>
 </html>
