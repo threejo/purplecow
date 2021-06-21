@@ -1,6 +1,7 @@
 package com.purplecow.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,9 +23,10 @@ public class CarsService {
 		return carsMapper.getCars();
 	}
 	
-	public Cars getCarByZoneId(Cars zones_id) {
-		//Map<K, V> cars = new Cars();
-		//cars.getCar_name();
+	public List<Cars> getCarByZoneId(int zones_id) {
+		/*
+		 * Map<String, Object> cars = new Map<String, Object>; cars.
+		 */
 		
 		return carsMapper.getCarByZoneId(zones_id);
 	}

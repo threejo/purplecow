@@ -8,7 +8,6 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.purplecow.dto.Cars;
@@ -34,7 +33,7 @@ public class APICarsController {
 	
 	
 	@GetMapping("/cars/{zones_id}")
-	public Cars getCarByZoneId(@PathVariable("zones_id") Cars zones_id) {
+	public List<Cars> getCarByZoneId(@PathVariable("zones_id") int zones_id) throws Exception {
 		log.info("잘 왔니?");
 		log.debug(zones_id);
 		return carsService.getCarByZoneId(zones_id);
