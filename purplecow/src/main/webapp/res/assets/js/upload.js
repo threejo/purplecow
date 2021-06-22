@@ -1,26 +1,26 @@
-$('#btnUpload').on('click', function(event) {
+$("#btnUpload").bind("click", function(event) {
     event.preventDefault();
     
-    var form = $('#uploadForm')[0]
+	var form = $("#uploadForm")[0];   
     var data = new FormData(form);
-    
-    $('#btnUpload').prop('disabled', true);
+   
+    $("#btnUpload").prop('disabled', true);
 	
     $.ajax({
-        type: "POST",
+        type: "Post",
         enctype: 'multipart/form-data',
-        url: "/extractText",
+        url: "/test", //"/extractText",
         data: data,
         processData: false,
-        contentType: false,
+        contentType: 'application/json',
         cache: false,
         timeout: 600000,
-        success: function (data) {
-        	$('#btnUpload').prop('disabled', false);
+        success: function (response) {
+        	$("#btnUpload").prop('disabled', false);
         	alert('success')
         },
         error: function (e) {
-            $('#btnUpload').prop('disabled', false);
+            $("#btnUpload").prop('disabled', false);
             alert('fail');
         }
     });

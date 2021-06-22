@@ -9,7 +9,7 @@ $("#submit").bind("click", function() {
         alert("데이터입력 성공" + data.email + data.password  );
       
 	$.ajax({
-		url: "/users/login/" + data.email,
+		url: "/users/" + data.email,
 		type: "get",
 		contentType: 'application/json',
 		//data: data.eamil,

@@ -3,24 +3,30 @@ package com.purplecow.controller;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.stream.Collectors;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.gcp.vision.CloudVisionTemplate;
-import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.servlet.ModelAndView;
-import org.apache.commons.codec.binary.Base64;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.google.cloud.vision.v1.AnnotateImageRequest;
 import com.google.cloud.vision.v1.AnnotateImageResponse;
+import com.google.cloud.vision.v1.BatchAnnotateImagesResponse;
 import com.google.cloud.vision.v1.EntityAnnotation;
+import com.google.cloud.vision.v1.Feature;
 import com.google.cloud.vision.v1.Feature.Type;
+import com.google.cloud.vision.v1.Image;
+import com.google.cloud.vision.v1.ImageAnnotatorClient;
+import com.google.protobuf.ByteString;
 import com.purplecow.mapper.AccountMapper;
 @Controller
 public class TestController {
@@ -36,7 +42,7 @@ public class TestController {
 		return "img_upload/img_upload";
 
 	}
-	
+	/*
 	public static String fileToBinary(File file) {
 	    String out = new String();
 	    FileInputStream fis = null;
@@ -77,14 +83,7 @@ public class TestController {
 	  private CloudVisionTemplate cloudVisionTemplate;
 	  // [END spring_vision_autowire]
 
-	  /**
-	   * This method downloads an image from a URL and sends its contents to the Vision API for label
-	   * detection.
-	   *
-	   * @param imageUrl the URL of the image
-	   * @param map the model map to use
-	   * @return a string with the list of labels and percentage of certainty
-	   */
+/*	
 	  @GetMapping("/extractLabels")
 	  public ModelAndView extractLabels(String imageUrl, ModelMap map) {
 	    // [START spring_vision_image_labelling]
@@ -120,6 +119,33 @@ public class TestController {
 	    System.out.println( textFromImage);
 	    return "Text from image: " + textFromImage;
 	    // [END spring_vision_text_extraction]
-	  }
+	  }*/
+	  @ResponseBody
+	  @PostMapping("/test")
+	  public static void ImgVisionAPITest(@RequestBody MultipartFile file) throws Exception {
+		  List<AnnotateImageRequest> requests = new ArrayList<>();
+		  String content = new String(file.getBytes());
+		  ByteString imgBytes = ByteString.readFrom(new FileInputStream(content));
+		  Image img = Image.newBuilder().setContent(imgBytes).build();
+		  Feature feat = Feature.newBuilder().setType(Type.TEXT_DETECTION).build();
+		  AnnotateImageRequest request =
+		  AnnotateImageRequest.newBuilder().addFeatures(feat).setImage(img).build();
+		  requests.add(request);
+		  try (ImageAnnotatorClient client = ImageAnnotatorClient.create()) {
+			  BatchAnnotateImagesResponse response = client.batchAnnotateImages(requests);
+			  List<AnnotateImageResponse> responses = response.getResponsesList();
+			  for (AnnotateImageResponse res : responses) {
+				  if (res.hasError()) {
+					  System.out.printf("Error: %s\n", res.getError().getMessage());
+					  return;
+				  }
+		  // For full list of available annotations, see http://g.co/cloud/vision/docs
+				  for (EntityAnnotation annotation : res.getTextAnnotationsList()) {
+					  System.out.printf("Text: %s\n", annotation.getDescription());
+					  System.out.printf("Position : %s\n", annotation.getBoundingPoly());
+				  }
+			  }
+		  	}
+		  }
 	
 }
