@@ -120,9 +120,9 @@ public class TestController {
 	    return "Text from image: " + textFromImage;
 	    // [END spring_vision_text_extraction]
 	  }*/
-	  @ResponseBody
+	  
 	  @PostMapping("/test")
-	  public static void ImgVisionAPITest(@RequestBody MultipartFile file) throws Exception {
+	  public static void ImgVisionAPITest(@RequestParam(name="profile") MultipartFile file) throws Exception {
 		  List<AnnotateImageRequest> requests = new ArrayList<>();
 		  String content = new String(file.getBytes());
 		  ByteString imgBytes = ByteString.readFrom(new FileInputStream(content));

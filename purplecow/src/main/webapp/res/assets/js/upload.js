@@ -9,12 +9,11 @@ $("#btnUpload").bind("click", function(event) {
     $.ajax({
         type: "Post",
         enctype: 'multipart/form-data',
-        url: "/test", //"/extractText",
+        url: "/api/v1/upload", 
         data: data,
         processData: false,
-        contentType: 'application/json',
+        contentType: false,
         cache: false,
-        timeout: 600000,
         success: function (response) {
         	$("#btnUpload").prop('disabled', false);
         	alert('success')
