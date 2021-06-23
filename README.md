@@ -27,10 +27,13 @@
 
 - Java(version)
 - Java script
-- AWS
-- Spring
-- Mysql
-
+- CSS
+- AWS ec2(linux)
+- SpringBoot
+- PostgreSQL
+- STS
+- eclipse
+- Jsp
 
 # API 목록
 
