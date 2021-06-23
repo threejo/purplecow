@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%> 
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
@@ -49,7 +48,6 @@
             <div class="logo-login">
                 <a href="index.html"><img src="../../res/assets/img/logo/cow_loader.png" alt=""></a>
             </div>
-           
             <h2>Login Here</h2>
             <div class="form-input">
                 <label for="name">Email</label>
@@ -62,7 +60,7 @@
             <div class="form-input pt-30">
                 <input type="submit" id="submit" value="로그인">
             </div>
-            <a id = "kakao" href="">카카오 로그인</a>
+            <a href="https://kauth.kakao.com/oauth/authorize?client_id=키넣어야함&redirect_uri=http://localhost:8088/kakaologin&response_type=code">카카오 로그인</a>
             <!-- Forget Password -->
             <a href="#" class="forget">Forget Password</a>
             <!-- Forget Password -->
@@ -119,5 +117,4 @@
     <script src="./../../res/assets/js/getkakaokey.js"></script>
     
     </body>
-
 </html>

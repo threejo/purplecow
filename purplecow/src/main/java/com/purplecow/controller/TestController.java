@@ -1,3 +1,4 @@
+
 package com.purplecow.controller;
 
 import java.util.Date;
@@ -66,7 +67,17 @@ public class TestController {
 	public String getusageGuide() {
 		return "introduction/usageGuide";
 	}
+	
+	@GetMapping("/upload")
+	public String upload() {
+		
+		return "img_upload/img_upload";
+
+	}
+	
 
 
 
 }
+
+

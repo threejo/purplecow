@@ -257,7 +257,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> 
 			<!-- footer-bottom area -->
 			<div class="footer-bottom-area">
 				<div class="container">
