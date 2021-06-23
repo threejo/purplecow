@@ -135,6 +135,7 @@
 			<div class="container box_1170 border-top-generic">
 				<h3 class="text-heading">
 					<strong>반납하기</strong>
+					<button class="button is-white">클릭</button>
 				</h3>
 
 				<div class="button-group-area mt-40">

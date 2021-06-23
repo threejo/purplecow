@@ -149,7 +149,21 @@
 <table style="margin-left: auto; margin-right: auto;">
 
 </table>
+<body>
+<div>
+<div style="margin-bottom: 30px">
+<div style="margin-top: 30px">
+<div class="hero__caption hero__caption3 text-center">
+								<h3 data-animation="fadeInLeft" data-delay=".6s ">차량 가격표</h3>
+<table style="margin-left: auto; margin-right: auto;">
 
+</table>
+
+<table border="1" bordercolor="blue" width ="500" height="300" align = "center" style = "font-size: 14pt;">
+    <tr bgcolor="skyblue" align ="center">
+	<p><td colspan = "5" span style="color:white">차량 정보 및 가격</td></p>
+    </tr>
+    <tr align = "center" bgcolor="white">
 <table border="1" bordercolor="blue" width ="500" height="300" align = "center" style = "font-size: 14pt;">
     <tr bgcolor="skyblue" align ="center">
 	<p><td colspan = "5" span style="color:white">차량 정보 및 가격</td></p>
