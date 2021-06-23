@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import com.purplecow.mapper.ListArrayTypeHandler;
 
@@ -32,11 +35,13 @@ public class DatabaseConfig {
         final SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactory);
         return sqlSessionTemplate;
     }
-    
+    //List를 postgreSQL의 배열로 전달하기 위한 handler 추가
     private org.apache.ibatis.session.Configuration buildConfiguration() {
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
         
         configuration.getTypeHandlerRegistry().register(ListArrayTypeHandler.class);
         return configuration;
     }
+    
+    
 }

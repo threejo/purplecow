@@ -21,7 +21,7 @@ public class APICarsController {
 	/*user_id로 특정 사용자의 예약 전체 조회*/
 	/*예약 전체 목록 조회*/
 	@GetMapping("/cars/list")
-	public List<Reservations> getReservations() {
+	public List<Cars> getReservations() {
 		return carsService.getCars();
 	}
 	

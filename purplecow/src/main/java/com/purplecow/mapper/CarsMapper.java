@@ -9,9 +9,12 @@ import com.purplecow.dto.Reservations;
 
 @Mapper
 public interface CarsMapper {
+
 	
 	Cars getCarByZoneId(int zones_id);
 	
-	List<Reservations> getCars();
+	
+	List<Cars> getCars();
+
 
 }
