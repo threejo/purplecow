@@ -4,6 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,6 +36,36 @@ public class FileController {
 	@Autowired FileService fileService;
 
 
+	private static void findname(String input) {
+		Pattern pattern = Pattern.compile("\\n[ㄱ-하-ㅣ가-힣]{2,}\\n");
+		Matcher matcher = pattern.matcher(input);
+	
+		if(matcher.find()) {
+			String result = matcher.group();
+			System.out.print(result+" \n"); 
+		}
+	}
+	private static void findsocialnumber(String input) {
+		Pattern pattern = Pattern.compile("\\d\\d\\d\\d\\d\\d-\\d\\d\\d\\d\\d\\d\\d");
+		Matcher matcher = pattern.matcher(input);
+		if(matcher.find()) System.out.print(matcher.group()+" \n"); 
+	}
+	private static void finddrivernumber(String input) {
+		Pattern pattern = Pattern.compile("\\d\\d-\\d\\d-\\d\\d\\d\\d\\d\\d-\\d\\d");
+		Matcher matcher = pattern.matcher(input);
+		if(matcher.find()) System.out.print(matcher.group()+" \n"); 
+	}
+	private static void findtype(String input) {
+		Pattern pattern = Pattern.compile(".종..");
+		Matcher matcher = pattern.matcher(input);
+		if(matcher.find()) System.out.print(matcher.group()+" \n"); 
+	}
+	private static void finddate(String input) {
+		Pattern pattern = Pattern.compile("\\d\\d\\d\\d\\.\\d\\d\\.\\d\\d");
+		Matcher matcher = pattern.matcher(input);
+		if(matcher.find()) System.out.print(matcher.group()+" \n"); 
+	}
+	
 	@PostMapping("/api/v1/upload")
     public String uploadImage(@RequestParam(name="profile") MultipartFile file) {
 		
@@ -74,8 +106,16 @@ public class FileController {
 
 	        // For full list of available annotations, see http://g.co/cloud/vision/docs
 	        for (EntityAnnotation annotation : res.getTextAnnotationsList()) {
-	          System.out.format("Text: %s%n", annotation.getDescription());
-	          System.out.format("Position : %s%n", annotation.getBoundingPoly());
+	        	//String test = annotation.getDescription();
+	        	findname(annotation.getDescription());
+	        	findtype(annotation.getDescription());
+	        	findsocialnumber(annotation.getDescription());
+	        	finddrivernumber(annotation.getDescription());
+	        	finddate(annotation.getDescription());
+	           // System.out.format("Text: %s\n", annotation.getDescription());
+	         // System.out.format("Position : %s%n", annotation.getBoundingPoly());
+	          //System.out.format("text score : %s%n", annotation.getScore());
+	         
 	        }
 	      }
 	    }
