@@ -12,6 +12,7 @@
 ![이미지](https://user-images.githubusercontent.com/85234019/123040321-88954480-d42e-11eb-9f92-3deaf09e59b7.PNG)
 
 ![기획안](https://user-images.githubusercontent.com/85234019/123046525-2bea5780-d437-11eb-80aa-707903c49d66.PNG)
+[자세한 기획안 링크](https://www.figma.com/file/TqDLGtEM3bI5ok82NanEkd/purplecow?node-id=1%3A136)
 
 
 # 서비스 구조
