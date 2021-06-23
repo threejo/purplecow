@@ -11,7 +11,7 @@ import com.purplecow.dto.Reservations;
 public interface CarsMapper {
 
 	
-	Cars getCarByZoneId(int zones_id);
+	Cars getCarByZoneId(Cars zones_id);
 	
 	
 	List<Cars> getCars();

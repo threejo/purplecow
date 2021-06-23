@@ -123,8 +123,7 @@
 
 		<!--? Start Button -->
 		<ul>
-			<li><button onclick="purple_zone" value="1">purple_zone1</button></li>
-			<li><input type="button" id="zone_id" value="purplezone1"></li>
+			<li><button id="purple_zone" value="1">purple_zone1</button></li>
 		</ul>
 		<table>
 			<thead>
@@ -137,9 +136,9 @@
 			<tbody>
 				<c:forEach var="cars" items="${cars}">
 					<tr>
-						<td>${cars.name}</td>
-						<td>${cars.model_color}</td>
-						<td>${cars.oil_type}</td>
+						<td id="name">${cars.name}</td>
+						<td id="model_color">${cars.model_color}</td>
+						<td id="oil_type">${cars.oil_type}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
