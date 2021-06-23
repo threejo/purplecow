@@ -156,7 +156,7 @@
 					</div>
 					<div class="form-group mt-3">
 						<button type="submit" class="button button-contactForm boxed-btn">결제카드
-							추가하기</button>
+							변경하기</button>
 						<button type="button" class="button button-contactForm boxed-btn">운전면허
 							변경하기</button>
 					</div>
