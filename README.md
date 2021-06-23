@@ -25,8 +25,11 @@
 
 # 개발 환경
 
-- Java(version) , Spring, Mysql ...
-- AWS( EC2, ...)
+- Java(version)
+- Java script
+- AWS
+- Spring
+- Mysql
 
 
 # API 목록
