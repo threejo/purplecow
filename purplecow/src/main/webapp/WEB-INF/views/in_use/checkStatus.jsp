@@ -145,11 +145,13 @@
 				<!-- 이미지 등록 -->
 				<div id="image_manage">
 					<div class="img_inline">
-						<input type="file" id="real-input" class="image_inputType_file"
+					<form method="POST" enctype="multipart/form-data" id="uploadForm">
+						<input type="file" id="real-input" class="image_inputType_file" name="profile"
 							style="display: none;" accept="img/*" required multiple>
 						<button class="browse-btn">
 							<img src="https://img.icons8.com/nolan/64/camera.png" />
 						</button>
+						</form>
 					</div>
 					<!-- 이미지 미리보기 -->
 					<div id="imagePreview" class="img_inline"></div>

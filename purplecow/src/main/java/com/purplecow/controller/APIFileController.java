@@ -78,6 +78,12 @@ public class APIFileController {
 		return fileService.uploadImage(file);
     }
 	
+	@PostMapping("/api/v2/upload")
+    public String[] uploadImages(@RequestParam(name="profile") MultipartFile[] file) {	
+		
+		return fileService.uploadImages(file);
+    }
+	
 	
 
 	// Detects text in the specified remote image on Google Cloud Storage.
