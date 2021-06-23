@@ -1,4 +1,4 @@
-package exception;
+package com.purplecow.security;
 
 public class CustomJwtRuntimeException extends RuntimeException {
 

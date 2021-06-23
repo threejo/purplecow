@@ -5,22 +5,20 @@ import java.time.ZoneId;
 import java.util.Date;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.purplecow.dto.MemberDTO;
-import com.purplecow.security.AuthToken;
+import com.purplecow.security.JwtAuthToken;
 import com.purplecow.security.JwtAuthTokenProvider;
+import com.purplecow.utils.Role;
 
-import config.provider.Role;
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
 public class LoginService implements LoginUseCase {
 
-	private final JwtAuthTokenProvider jwtAuthTokenProvider; 
-    //토큰 유효시간 30분
+    private final JwtAuthTokenProvider jwtAuthTokenProvider;
     private final static long LOGIN_RETENTION_MINUTES = 30;
 
     @Override
@@ -40,7 +38,7 @@ public class LoginService implements LoginUseCase {
 
     //TODO: 네이밍
     @Override
-    public AuthToken createAuthToken(MemberDTO memberDTO) {
+    public JwtAuthToken createAuthToken(MemberDTO memberDTO) {
 
         Date expiredDate = Date.from(LocalDateTime.now().plusMinutes(LOGIN_RETENTION_MINUTES).atZone(ZoneId.systemDefault()).toInstant());
         return jwtAuthTokenProvider.createAuthToken(memberDTO.getEmail(), memberDTO.getRole().getCode(), expiredDate);

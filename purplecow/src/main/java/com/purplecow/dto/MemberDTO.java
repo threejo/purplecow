@@ -1,6 +1,7 @@
 package com.purplecow.dto;
 
-import config.provider.Role;
+import com.purplecow.utils.Role;
+
 import lombok.Builder;
 import lombok.Getter;
 

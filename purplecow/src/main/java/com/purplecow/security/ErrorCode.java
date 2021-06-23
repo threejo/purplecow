@@ -1,4 +1,4 @@
-package exception;
+package com.purplecow.security;
 
 import lombok.Getter;
 
@@ -8,6 +8,7 @@ public enum ErrorCode {
     AUTHENTICATION_FAILED(401, "AUTH001", " AUTHENTICATION_FAILED."),
     LOGIN_FAILED(401, "AUTH002", " LOGIN_FAILED."),
     INVALID_JWT_TOKEN(401, "AUTH003", "INVALID_JWT_TOKEN.");
+	
 
     private final String code;
     private final String message;
@@ -17,7 +18,5 @@ public enum ErrorCode {
         this.status = status;
         this.message = message;
         this.code = code;
-    }	
-    
-    
+    }
 }

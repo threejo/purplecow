@@ -1,36 +1,28 @@
 package config;
 
-import static config.provider.SecurityConstants.*;
-
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.purplecow.security.JwtAuthToken;
 import com.purplecow.security.JwtAuthTokenProvider;
+import com.purplecow.utils.Role;
 
-import config.provider.Role;
 import exception.CustomAuthenticationException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Configuration 
-public class AuthInterceptor extends HandlerInterceptorAdapter{
+@Component
+@RequiredArgsConstructor
+public class AuthInterceptor implements HandlerInterceptor {
 
-
-
-    @Autowired private JwtAuthTokenProvider jwtAuthTokenProvider;
+    private final JwtAuthTokenProvider jwtAuthTokenProvider;
     private static final String AUTHORIZATION_HEADER = "x-auth-token";
 
     @Override

@@ -1,5 +1,7 @@
 package com.purplecow.mapper;
 
+import java.util.Optional;
+
 import org.apache.ibatis.annotations.Mapper;
 
 import com.purplecow.dto.Users;
@@ -16,6 +18,8 @@ public interface UsersMapper {
 	void updatePhoneNoInUsers(int id, String phone);
 	
 	void deleteUserById(int id);
+
+	Optional<Users> getUsersByEmail(String email);
 
 	
 

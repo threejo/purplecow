@@ -18,9 +18,11 @@ import com.purplecow.dto.Cars;
 import com.purplecow.dto.Users;
 import com.purplecow.security.JwtAuthToken;
 import com.purplecow.security.JwtAuthTokenProvider;
+import com.purplecow.security.TokenValidation;
 import com.purplecow.service.AuthService;
+import com.purplecow.utils.CommonResponse;
+import com.purplecow.utils.Role;
 
-import config.provider.Role;
 import exception.CustomAuthenticationException;
 import lombok.extern.slf4j.Slf4j;
 
@@ -31,33 +33,23 @@ public class AuthController {
 
 	@Autowired
 	AuthService authService;
-	@Autowired JwtAuthTokenProvider jwtAuthTokenProvider;
-	private static final String AUTHORIZATION_HEADER = "x-auth-token";
+	@Autowired
+	TokenValidation tokenValidation;
+	
 
 
 	@GetMapping("/api/v1/cars")
-	public List<Cars> getAllCars(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Object handler) {
+	public Object getAllCars(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Object handler) {
 
-		log.info("preHandle!!");
-
-        Optional<String> token = resolveToken(servletRequest);
-        log.info("token 객체는?"+token);
-        //헤더에 토큰이 존재한다면
-        if (token.isPresent()) {
-        	
-        	log.info("토큰 존재"+token.isPresent());
-        	//문자열 형태의 토큰에서 토큰 객체로 변환
-            JwtAuthToken jwtAuthToken = jwtAuthTokenProvider.convertAuthToken(token.get());
-            //토큰이 검증되고 헤더에서 받은 토큰의 권한이 유저일 경우 true 그외의 경우는 다 예외처리
-            if(jwtAuthToken.validate() & Role.USER.getCode().equals(jwtAuthToken.getData().get("role"))) {
-            	return authService.findAll();
-            }
-            else {
-                throw new CustomAuthenticationException();
-            }
-        } else {
-            throw new CustomAuthenticationException();
-        }
+		
+		if(tokenValidation.tokenIsVaild(servletRequest)) return authService.findAll();
+		else return CommonResponse.builder()
+                .code("INVALID_JWT_TOKEN")
+                .status(401)
+                .message("INVALID_JWT_TOKEN.")
+                .build();
+           
+        
 		
 
 	}
@@ -70,15 +62,6 @@ public class AuthController {
 	
 	
 	
-	private Optional<String> resolveToken(HttpServletRequest request) {
-    	//요청에서 헤더에서 'x-auth-token'의 값 가져와서 값이 있는지 확인 후 리턴
-        String authToken = request.getHeader(AUTHORIZATION_HEADER);
-        log.info("헤더에서 토큰 가져와"+authToken);
-        if (StringUtils.hasText(authToken)) {
-            return Optional.of(authToken);
-        } else {
-            return Optional.empty();
-        }
-    }
+	
 
 }

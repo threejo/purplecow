@@ -1,4 +1,4 @@
-package utils;
+package com.purplecow.utils;
 
 import java.util.Collections;
 import java.util.Map;

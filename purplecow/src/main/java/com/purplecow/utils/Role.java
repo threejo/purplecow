@@ -1,9 +1,7 @@
-package config.provider;
+package com.purplecow.utils;
 
 import lombok.Getter;
 import java.util.Arrays;
-
-//권한은 관리자-사용자-알 수 없음으로 나눠진다
 @Getter
 public enum Role {
     ADMIN("ROLE_ADMIN", "관리자권한"),
@@ -17,8 +15,7 @@ public enum Role {
         this.code = code;
         this.description = description;
     }
-    //들어온 파라미터에 정해진 권한 중에 있으면 그 권한 객체를 반환하지만
-    //없다면 unknown을 반환한다.
+
     public static Role of(String code) {
         return Arrays.stream(Role.values())
                 .filter(r -> r.getCode().equals(code))

@@ -11,6 +11,7 @@ public class Users {
 	private String license_id;
 	private String phone_cert;
 	private String license_cert;
+	private String role;
 
 	/*Getter & Setter*/
 	public int getId() {
@@ -68,6 +69,10 @@ public class Users {
 		super();
 		this.email = email;
 		this.password = password;
+	}
+	public String getRole() {
+		// TODO Auto-generated method stub
+		return role;
 	}
 
 

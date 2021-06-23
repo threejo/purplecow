@@ -2,8 +2,6 @@ package com.purplecow.controller;
 
 import java.util.Optional;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -11,17 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.purplecow.dto.LoginRequestDTO;
 import com.purplecow.dto.MemberDTO;
-
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-
 import com.purplecow.security.JwtAuthToken;
 import com.purplecow.service.LoginService;
+import com.purplecow.utils.CommonResponse;
 
-import exception.CommonResponse;
 import exception.LoginFailedException;
-import static config.provider.SecurityConstants.*;
+import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 
@@ -36,9 +29,9 @@ public class LoginController {
      * 해당 멤버가 없으면 로그인실패 예외처리한다.*/
     @PostMapping("/api/v1/login")
     public CommonResponse login(@RequestBody LoginRequestDTO loginRequestDTO) {
-    	
+    	log.info("loginRequestDTO"+String.valueOf(loginRequestDTO));
         Optional<MemberDTO> optionalMemberDTO = loginService.login(loginRequestDTO.getEmail(), loginRequestDTO.getPassword());
-        
+        log.info("optionalMemberDTO"+String.valueOf(optionalMemberDTO));
         if (optionalMemberDTO.isPresent()) {        	
             JwtAuthToken jwtAuthToken = (JwtAuthToken) loginService.createAuthToken(optionalMemberDTO.get());
 
