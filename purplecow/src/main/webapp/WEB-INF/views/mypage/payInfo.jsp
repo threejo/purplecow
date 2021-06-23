@@ -81,15 +81,15 @@
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
 												<li><a href="/mypage">마이페이지</a> <!-- Button -->
-												<ul class="submenu">
+													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
 												<li class="button-header margin-left "><a
 													href="/registration" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="/login"
-													class="btn3">Sign In</a></li>
+												<li class="button-header"><a href="/login" class="btn3">Sign
+														In</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -132,68 +132,40 @@
 		<section class="team-area section-padding40 offset-lg-1">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="col-md-6">
 						<div class="single-cat">
 							<div class="cat-icon" style="color: #4C1E51">
 								<img src="../../res/assets/img/icon/services4.svg" alt="">
 							</div>
 							<div class="cat-cap">
 								<h4>결제 카드</h4>
-								<p>결제 카드1 정보</p>
+								<p id="ajax_cardid"></p>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-cat">
-							<div class="cat-icon" style="color: #4C1E51">
-								<img src="../../res/assets/img/icon/services4.svg" alt="">
-							</div>
-							<div class="cat-cap">
-								<h4>결제 카드</h4>
-								<p>결제 카드2 정보</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-cat">
-							<div class="cat-icon" style="color: #4C1E51">
-								<img src="../../res/assets/img/icon/services4.svg" alt="">
-							</div>
-							<div class="cat-cap">
-								<h4>결제 카드 등록하기</h4>
-								<p>결제 카드는 3개까지 등록 가능합니다.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
+					<div class="col-md-6">
 						<div class="single-cat">
 							<div class="cat-icon" style="color: #4C1E51">
 								<img src="../../res/assets/img/icon/services4.svg" alt="">
 							</div>
 							<div class="cat-cap">
 								<h4>운전 면허</h4>
-								<p>운전 면허 정보</p>
+								<p id="ajax_licenseid"></p>
 							</div>
 						</div>
 					</div>
-										<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-cat">
-							<div class="cat-icon" style="color: #4C1E51">
-								<img src="../../res/assets/img/icon/services4.svg" alt="">
-							</div>
-							<div class="cat-cap">
-								<h4>운전 면허 변경하기</h4>
-								<p>운전 면허는 1개만 등록 가능합니다.</p>
-							</div>
-						</div>
+					<div class="form-group mt-3">
+						<button type="submit" class="button button-contactForm boxed-btn">결제카드
+							추가하기</button>
+						<button type="button" class="button button-contactForm boxed-btn">운전면허
+							변경하기</button>
 					</div>
 				</div>
 
 			</div>
 		</section>
-
-
 	</main>
+
 	<footer>
 		<div class="footer-wrappr "
 			data-background="../../res/assets/img/gallery/footer-bg.png">
@@ -362,7 +334,7 @@
 	<script src="./../../res/assets/js/main.js"></script>
 
 	<!-- 마이페이지 관련 js -->
-	<script src="./../../res/assets/js/mypage.js"></script>
+	<script src="./../../res/assets/js/payInfo.js"></script>
 
 
 </body>

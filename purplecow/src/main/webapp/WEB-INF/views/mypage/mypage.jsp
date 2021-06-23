@@ -42,7 +42,7 @@
 		</div>
 	</div>
 	<!-- Preloader Start -->
-	<header>f
+	<header>
 		<!-- Header Start -->
 		<div class="header-area header-transparent">
 			<div class="main-header ">

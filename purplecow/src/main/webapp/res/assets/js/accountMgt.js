@@ -8,11 +8,11 @@ function showUserInfo() {
 			console.log(user);
 
 			//이름 가져오기
-			document.getElementById("name").value = user.name;
+			document.getElementById("ajax_username").innerHTML = user.name;
 			//이메일 가져오기
-			document.getElementById("email").value = user.email;
+			document.getElementById("ajax_email").innerHTML = user.email;
 			//핸드폰 번호 가져오기
-			document.getElementById("phoneNumber").value = user.phone_no;		
+			document.getElementById("ajax_phone").innerHTML = user.phone_no;
 			
 		},
 		error: function() {
@@ -27,7 +27,4 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 	showUserInfo();
 });
-
-
-
 

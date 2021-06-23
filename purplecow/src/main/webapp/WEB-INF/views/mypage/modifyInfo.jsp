@@ -141,10 +141,10 @@
 								<div class="col-sm-10">
 									<div class="form-group">
 										<h5 class="widget_title">이름</h5>
-										<input class="form-control error" name="name" id="name"
+										<input class="form-control error " name="ajax_username" id="name"
 											type="text" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter your name'"
-											placeholder="Enter your name"><label for="name"
+											placeholder="Enter your name" value="" readonly="readonly"><label for="name"
 											class="error"></label>
 									</div>
 								</div>
@@ -153,8 +153,8 @@
 										<h5 class="widget_title">이메일</h5>
 										<input class="form-control error" name="email" id="email"
 											type="email" onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter email address'"
-											placeholder="Enter your email address"><label
+											onblur="this.placeholder = 'Enter your email address'"
+											placeholder="Enter your email address" value=""><label
 											for="email" class="error emailMsg"></label>
 									</div>
 								</div>
@@ -174,7 +174,7 @@
 										<input class="form-control error" name="passwordCheck"
 											id="passwordCheck" type="password"
 											onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Enter password'"
+											onblur="this.placeholder = 'Check your password'"
 											placeholder="Check your password"><label
 											for="password" class="error pwCheckMsg"></label>
 									</div>
@@ -185,7 +185,7 @@
 										<input class="form-control error" name="phoneNumber"
 											id="phoneNumber" type="text" onfocus="this.placeholder = ''"
 											onblur="this.placeholder = 'Enter your phoneNumber'"
-											placeholder="Enter your phoneNumber"><label
+											placeholder="Enter your phoneNumber" value=""><label
 											for="phoneNumber" class="error phoneMsg"></label>
 									</div>
 								</div>
@@ -194,9 +194,10 @@
 							<div class="form-group mt-3">
 								<button type="submit"
 									class="button button-contactForm boxed-btn">수정하기</button>
-								<button type="submit"
+								<button type="button"
 									class="button button-contactForm boxed-btn">탈퇴하기</button>
 							</div>
+							
 						</form>
 					</div>
 				</div>
@@ -373,7 +374,7 @@
 	<script src="./../../res/assets/js/main.js"></script>
 
 	<!-- 마이페이지 관련 js -->
-	<script src="./../../res/assets/js/mypage.js"></script>
+	<script src="./../../res/assets/js/modifyInfo.js"></script>
 
 
 </body>

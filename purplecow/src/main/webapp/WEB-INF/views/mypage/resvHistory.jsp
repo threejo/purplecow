@@ -12,6 +12,8 @@
 	href="../../res/assets/img/cow.ico">
 
 <!-- CSS here -->
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 <link rel="stylesheet" href="../../res/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../res/assets/css/owl.carousel.min.css">
 <link rel="stylesheet" href="../../res/assets/css/slicknav.css">
@@ -25,6 +27,8 @@
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
 <link rel="stylesheet" href="../../res/assets/css/return.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
 
 </head>
@@ -81,15 +85,15 @@
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
 												<li><a href="/mypage">마이페이지</a> <!-- Button -->
-												<ul class="submenu">
+													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
 												<li class="button-header margin-left "><a
 													href="/registration" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="/login"
-													class="btn3">Sign In</a></li>
+												<li class="button-header"><a href="/login" class="btn3">Sign
+														In</a></li>
 											</ul>
 										</nav>
 									</div>
@@ -131,66 +135,33 @@
 
 		<section class="team-area section-padding40 offset-lg-1">
 			<div class="container">
-				<div class="row">
-					<div class="blog_right_sidebar">
-						<aside class="single_sidebar_widget search_widget">
-							<form action="#">
-								<div class="form-group">
-									<div class="input-group mb-3">
-										<input type="text" class="form-control"
-											placeholder="Search Keyword" onfocus="this.placeholder = ''"
-											onblur="this.placeholder = 'Search Keyword'">
-										<div class="input-group-append">
-											<button class="btns" type="button">
-												<i class="ti-search"></i>
-											</button>
-										</div>
-									</div>
-								</div>
-								<button
-									class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-									type="submit">Search</button>
-							</form>
-						</aside>
-						<aside class="single_sidebar_widget post_category_widget">
-							<h4 class="widget_title" style="color: #2d2d2d;">예약 내역</h4>
-							<ul class="list cat-list">
-								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>예약 내역 1</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>예약 내역1</p>
-								</a></li>
-							</ul>
-						</aside>
-					</div>
-				</div>
-				<nav class="blog-pagination justify-content-center d-flex">
-					<ul class="pagination">
-						<li class="page-item"><a href="#" class="page-link"
-							aria-label="Previous"> <i class="ti-angle-left"></i>
-						</a></li>
-						<li class="page-item"><a href="#" class="page-link">1</a></li>
-						<li class="page-item active"><a href="#" class="page-link">2</a>
-						</li>
-						<li class="page-item"><a href="#" class="page-link"
-							aria-label="Next"> <i class="ti-angle-right"></i>
-						</a></li>
-					</ul>
-				</nav>
+				<table class="table">
+					<tbody>
+						<tr>
+							<th scope="cols">차량</th>
+							<th scope="cols">이용 시간</th>
+							<th scope="cols">퍼플존</th>
+							<th scope="cols">결제 요금</th>
+							<th scope="cols">결제 카드</th>
+						</tr>
+
+					</tbody>
+				</table>
 			</div>
+			<!-- 페이지네이션 -->
+			<nav class="blog-pagination justify-content-center d-flex">
+				<ul class="pagination">
+					<li class="page-item"><a href="#" class="page-link"
+						aria-label="Previous"> <i class="ti-angle-left"></i>
+					</a></li>
+					<li class="page-item"><a href="#" class="page-link">1</a></li>
+					<li class="page-item active"><a href="#" class="page-link">2</a>
+					</li>
+					<li class="page-item"><a href="#" class="page-link"
+						aria-label="Next"> <i class="ti-angle-right"></i>
+					</a></li>
+				</ul>
+			</nav>
 		</section>
 
 
@@ -363,7 +334,7 @@
 	<script src="./../../res/assets/js/main.js"></script>
 
 	<!-- 마이페이지 관련 js -->
-	<script src="./../../res/assets/js/mypage.js"></script>
+	<script src="./../../res/assets/js/resvHistory.js"></script>
 
 
 </body>
