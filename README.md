@@ -11,10 +11,9 @@
 
 ![이미지](https://user-images.githubusercontent.com/85234019/123040321-88954480-d42e-11eb-9f92-3deaf09e59b7.PNG)
 
-![기획안](https://user-images.githubusercontent.com/85234019/123056996-6e656180-d442-11eb-91fe-84e5c08f5945.PNG)
+![기획안](https://user-images.githubusercontent.com/85234019/123058365-b6d14f00-d443-11eb-914f-391536b249dd.PNG)
 
-[자세한 기획안 링크](https://www.figma.com/file/TqDLGtEM3bI5ok82NanEkd/purplecow?node-id=1%3A136)
-
+[자세한 기획안 링크](https://github.com/threejo/purplecow/files/6700148/default.pdf)
 
 # 서비스 구조
 
