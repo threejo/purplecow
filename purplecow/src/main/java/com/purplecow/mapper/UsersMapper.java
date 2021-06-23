@@ -21,6 +21,7 @@ public interface UsersMapper {
 
 	Optional<Users> getUsersByEmail(String email);
 
+	Users getUserByEmail(String email);
 	
 
 	

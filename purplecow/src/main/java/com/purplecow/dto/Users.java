@@ -1,12 +1,12 @@
 package com.purplecow.dto;
 
-
 public class Users {
 
 	private int id;
 	private String name;
 	private String email;
 	private String password;
+	private String phone_no;
 	private String card_id;
 	private String license_id;
 	private String phone_cert;
@@ -37,6 +37,12 @@ public class Users {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getPhone_no() {
+		return phone_no;
+	}
+	public void setPhone_no(String phone_no) {
+		this.phone_no = phone_no;
 	}
 
 	public String getCard_id() {

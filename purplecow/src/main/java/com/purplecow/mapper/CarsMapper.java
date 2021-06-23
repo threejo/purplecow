@@ -12,4 +12,7 @@ public interface CarsMapper {
 
 	List<Cars> getCars();
 
+	Cars getCarByZoneId(int zones_id);
+	
+	
 }

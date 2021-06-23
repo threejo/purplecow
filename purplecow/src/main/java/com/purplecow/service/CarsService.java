@@ -21,5 +21,12 @@ public class CarsService {
 	public List<Cars> getCars() {
 		return carsMapper.getCars();
 	}
+	
+	public Cars getCarByZoneId(int zones_id) {
+		//Map<K, V> cars = new Cars();
+		//cars.getCar_name();
+		
+		return carsMapper.getCarByZoneId(zones_id);
+	}
 
 }
