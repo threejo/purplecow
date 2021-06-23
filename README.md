@@ -50,7 +50,7 @@
 
 # 서비스 구조
 
-![이미지](https://technet.tmaxsoft.com/upload/download/online/jeus/pver-20171211-000001/web-service/resources/image003.png)
+![이미지](https://user-images.githubusercontent.com/85234019/123040321-88954480-d42e-11eb-9f92-3deaf09e59b7.PNG)
 
 # Database Schema
 
@@ -65,6 +65,6 @@
 # API 목록
 
 [API 상세]()
-- GET /products/{id}
+- put /reservations {park_fixed}
 - GET /users
 - POST /users
