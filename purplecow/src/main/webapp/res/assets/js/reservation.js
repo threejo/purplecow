@@ -2,7 +2,6 @@
  이건 카카오 지도에 관련된 js 파일임
 */
 
-
 var mapContainer = document.getElementById('map'); // 지도를 표시할 div 
 var lat = 33.450701, lon = 126.570667;
 // GeoLocation을 이용해서 접속 위치를 얻어옵니다
@@ -32,93 +31,106 @@ function panTo() {
 // 지도 이동시키기 끝 --------------------------------------------
 
 // 주소를 좌표로 바구기 위한 geocoder 생성
-var geocoder = new kakao.maps.services.Geocoder();
+//var geocoder = new kakao.maps.services.Geocoder();
 
 // 전체 존 위치 마커를 담을 배열
-var zones = [];
+//var zones = [];
 						
 $.ajax({
 	url: '/zones',
 	type: 'GET',
 	dataType: 'json',
 	success: function(data){
-			// zone 전체 리스트를 돌면서 마을 위치마다 마커 찍기
-			$.each (data, function() {
-				console.log(data);
-				// DB에서 주소를 불러와 geocoder를 이용해 좌표로 변환
-				geocoder.addressSearch(data.address, function(result, status) {
-					//정상적으로 검색이 완료됫으면
-					if (status === kakao.maps.services.Status.OK) {
-						var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-						
-						// 마커가 표시될 위치입니다
-						var markerPosition = new kakao.maps.LatLng(coords.Ha, coords.Ga);
-						
-						// 마커를 생성합니다.
-						var marker = new kakao.maps.Marker({
-							position: markerPosition
-						});
-						
-						// 마커가 지도 위에 표시되도록 설정
-						marker.setmap(map);
-						
-						//생성된 마커를 배열에 추가
-						markers.push(marker);
-						
-					}
-				})
-				
-			});
+		console.log("성공임");
+		console.log(data);
+		// zone 전체 리스트를 돌면서 마을 위치마다 마커 찍기
+        for (var i = 0; i < data.length; i++){
+            var marker = new kakao.maps.Marker({
+                map: map,
+                position: new kakao.maps.LatLng(data.latitude, data.longitude)
+            });
+            marker.setmap(map);
+    		markers.push(marker);
+        };
+        
 			
+			
+	}, error: function(){
+		console.log("에러임")
 	}
 })
 
-
+//// zone 전체 리스트를 돌면서 마을 위치마다 마커 찍기
+//			$.each (data, function() {
+//				console.log(data);
+//				// DB에서 주소를 불러와 geocoder를 이용해 좌표로 변환
+//				geocoder.addressSearch(data.address, function(result, status) {
+//					//정상적으로 검색이 완료됫으면
+//					if (status === kakao.maps.services.Status.OK) {
+//						var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+//						
+//						// 마커가 표시될 위치입니다
+//						var markerPosition = new kakao.maps.LatLng(coords.Ha, coords.Ga);
+//						
+//						// 마커를 생성합니다.
+//						var marker = new kakao.maps.Marker({
+//							position: markerPosition
+//						});
+//						
+//						// 마커가 지도 위에 표시되도록 설정
+//						marker.setmap(map);
+//						
+//						//생성된 마커를 배열에 추가
+//						markers.push(marker);
+//						
+//					}
+//				})
+//				
+//			});
 
 // 마커 생성하기 시작 ---------------------------------------------
 
 // 마커 생성하기 끝  ---------------------------------------------
 			
 // 마커를 표시할 위치와 title 객체 배열입니다 
-var positions = [
-	{
-		title: '카카오', 
-		latlng: new kakao.maps.LatLng(33.450705, 126.570677)
-	},
-	{
-		title: '생태연못', 
-		latlng: new kakao.maps.LatLng(33.450936, 126.569477)
-	},
-	{
-		title: '텃밭', 
-		latlng: new kakao.maps.LatLng(33.450879, 126.569940)
-	},
-	{
-		title: '근린공원',
-		latlng: new kakao.maps.LatLng(33.451393, 126.570738)
-	}
-];
+//var positions = [
+//	{
+//		title: '카카오', 
+//		latlng: new kakao.maps.LatLng(33.450705, 126.570677)
+//	},
+//	{
+//		title: '생태연못', 
+//		latlng: new kakao.maps.LatLng(33.450936, 126.569477)
+//	},
+//	{
+//		title: '텃밭', 
+//		latlng: new kakao.maps.LatLng(33.450879, 126.569940)
+//	},
+//	{
+//		title: '근린공원',
+//		latlng: new kakao.maps.LatLng(33.451393, 126.570738)
+//	}
+//];
 			
 // 마커 이미지의 이미지 주소입니다
-var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
-			    
-for (var i = 0; i < positions.length; i ++) {
-			    
-    // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(24, 35); 
-	    
-    // 마커 이미지를 생성합니다    
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-	    
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: positions[i].latlng, // 마커를 표시할 위치
-        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지 
-    });
-}
-			
+//var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+//			    
+//for (var i = 0; i < positions.length; i ++) {
+//			    
+//    // 마커 이미지의 이미지 크기 입니다
+//    var imageSize = new kakao.maps.Size(24, 35); 
+//	    
+//    // 마커 이미지를 생성합니다    
+//    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+//	    
+//    // 마커를 생성합니다
+//    var marker = new kakao.maps.Marker({
+//        map: map, // 마커를 표시할 지도
+//        position: positions[i].latlng, // 마커를 표시할 위치
+//        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+//        image : markerImage // 마커 이미지 
+//    });
+//};
 			
 /* 마커 클러스터러 ( 마커 모음, 지도 축소시 몇개~ 라고 표시하는거)
 마커 클러스터러를 생성합니다

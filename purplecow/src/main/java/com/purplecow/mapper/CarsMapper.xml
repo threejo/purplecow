@@ -9,13 +9,10 @@
 		FROM cars
 		WHERE zones_id = #{id}
 	</select>
-<<<<<<< HEAD
+
 	
-	<select id="getCars"
-=======
 	
 	<select id="getCars" 
->>>>>>> branch 'kimk' of https://github.com/threejo/purplecow.git
 		resultType="com.purplecow.dto.Cars">
 		SELECT * FROM cars
 	</select>

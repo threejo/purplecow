@@ -52,9 +52,6 @@ public class AuthController {
                 .message("INVALID_JWT_TOKEN.")
                 .build();
            
-        
-		
-
 	}
 	
 	 @GetMapping("/api/v2/cars")
