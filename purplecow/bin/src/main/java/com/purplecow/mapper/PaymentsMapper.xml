@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.purplecow.mapper.PaymentsMapper">
+
+	<insert id="insertPayments"
+		parameterType="com.purplecow.dto.Payments" useGeneratedKeys="true" keyProperty="id">
+		INSERT INTO payments
+		(rental_amount,calling_fee,insurance_fee,prepaid_amount)
+		VALUES
+		(#{rental_amount},#{calling_fee},#{insurance_fee},#{prepaid_amount})		
+    </insert>
+    
+    <update id="updatePayments" parameterType="com.purplecow.dto.Payments">
+		UPDATE payments 
+		SET	(driving_amount,hipass_fee,penalty_fee,postpaid_amount ) = (#{driving_amount},#{hipass_fee},#{penalty_fee},#{postpaid_amount})		
+		WHERE id = #{id};		 
+	</update>
+</mapper>

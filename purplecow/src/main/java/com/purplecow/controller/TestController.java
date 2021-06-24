@@ -1,3 +1,4 @@
+
 package com.purplecow.controller;
 
 import java.util.Date;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.purplecow.mapper.AccountMapper;
 
@@ -29,6 +31,8 @@ public class TestController {
 		return "home/index";
 	}
 
+	
+
 
 	@GetMapping("/")
 	public String Admin() {
@@ -41,16 +45,39 @@ public class TestController {
 		
 		return "ex";
 	}
+	
+
+	/*
+	 * @GetMapping("/login") public String login() {
+	 * 
+	 * 
+	 * return "test_login/index";
+	 * 
+	 * }
+	 */
+	
 
 	@GetMapping("/feeInfo")
 	public String getFeeInfo() {
 		return "introduction/feeInfo";
+
 	}
 
 	@GetMapping("/usageGuide")
 	public String getusageGuide() {
 		return "introduction/usageGuide";
 	}
+	
+	@GetMapping("/upload")
+	public String upload() {
+		
+		return "img_upload/img_upload";
+
+	}
+	
+
 
 
 }
+
+

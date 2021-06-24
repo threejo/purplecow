@@ -56,31 +56,34 @@ function readInputFile(e) {
 //ajax 요청하는 함수
 
 $("#ajax_btn").on("click", function() {
-	var data1 = {
-		"outside_state": $('input[name="outStatus"]:checked').val(),
-		"inside_state": $('input[name="inStatus"]:checked').val(),
-	};
+
+	var form = $("#uploadForm")[0];
+	var data2 = new FormData(form);
 
 	$.ajax({
-		url: "/reservations/1",
-		type: "put",
-		async: false,
-		contentType: 'application/json',
-		data: JSON.stringify(data1),
-		success: function(result) {
-			console.log(result);
-
+		type: "Post",
+		enctype: 'multipart/form-data',
+		url: "/api/v2/upload",
+		data: data2,
+		processData: false,
+		contentType: false,
+		cache: false,
+		success: function(imgLinks) {
+			var data1 = {
+				"outside_state": $('input[name="outStatus"]:checked').val(),
+				"inside_state": $('input[name="inStatus"]:checked').val(),
+				"images": imgLinks
+			};
 			$.ajax({
 				url: "/reservations/1",
 				type: "put",
-				contentType: 'application/json',
-				processData: false,
-				contentType: false,
 				async: false,
-				data: sel_files,
+				contentType: 'application/json',
+				data: JSON.stringify(data1),
 				success: function(result) {
-					console.log(result);
-					alert("성공이다 이놈아");
+
+					alert(imgLinks.length+"장의 사진이 업로드되었습니다");
+					window.location = '/';
 				},
 				error: function(result) {
 					console.log(result);

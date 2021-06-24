@@ -31,6 +31,9 @@ public class UsersService {
 	public void deleteUserById(int id) {
 		usersMapper.deleteUserById(id);
 	}
+	public Users getUserByEmail(String email) {
+		return usersMapper.getUserByEmail(email);
+	}
 	
 	
 

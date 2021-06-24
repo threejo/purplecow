@@ -77,14 +77,15 @@
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-                                                <li><a href="#">마이페이지</a>
-                                             <ul class="submenu">
-														<li><a href="/resvHistory">예약 내역</a></li>
+                                                <li><a href="/mypage">마이페이지</a>
+													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
+														<li><a href="/payInfo">결제 및 할인</a></li>
+														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="register.html" class="btn">Sign Up</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn3">Sign In</a></li>
+                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -118,7 +119,7 @@
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a data-animation="fadeInLeft" data-delay="1s" href="industries.html" class="btn radius-btn">시작하기</a>
+                                        <a data-animation="fadeInLeft" data-delay="1s" href="/reservation/resv" class="btn radius-btn">시작하기</a>
                                     </div>
                                 </div>
                             </div>
@@ -164,13 +165,14 @@
         </div>
 
                          
-                        <!-- Testimonial End -->
-                    </div>
+                      <!-- Testimonial End -->
+                     <!-- </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section>  --> 
     <!--? Testimonial Area End -->
+
 </main>
 <footer>
     <div class="footer-wrappr " data-background="../../res/assets/img/gallery/footer-bg.png">
@@ -260,7 +262,7 @@
                         <div class="col-xl-12">
                             <div class="footer-copy-right text-center">
                                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  PURPLECOW</i>
+                                  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  PURPLECOW
 
                               </div>
                           </div>
@@ -321,6 +323,7 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./../../res/assets/js/plugins.js"></script>
 <script src="./../../res/assets/js/main.js"></script>
+<script src="./../../res/assets/js/index.js"></script>
 
 </body>
 </html>

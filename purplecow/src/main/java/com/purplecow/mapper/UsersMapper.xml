@@ -12,6 +12,17 @@
 		SELECT * FROM users
 		WHERE id= #{id}
 	</select>
+	<select id="getUsersByEmail" parameterType="java.util.HashMap"
+		resultType="com.purplecow.dto.Users">
+		SELECT * FROM users
+		WHERE email= #{email}
+	</select>
+	
+	<select id="getUserByEmail" parameterType="java.util.HashMap"
+		resultType="com.purplecow.dto.Users">
+		SELECT * FROM users
+		WHERE email= #{email}
+	</select>
 	
 	<update id="updatePasswordInUsers">
 		UPDATE users 

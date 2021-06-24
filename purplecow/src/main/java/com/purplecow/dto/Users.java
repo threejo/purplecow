@@ -6,10 +6,12 @@ public class Users {
 	private String name;
 	private String email;
 	private String password;
+	private String phone_no;
 	private String card_id;
 	private String license_id;
 	private String phone_cert;
 	private String license_cert;
+	private String role;
 
 	/*Getter & Setter*/
 	public int getId() {
@@ -35,6 +37,12 @@ public class Users {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	public String getPhone_no() {
+		return phone_no;
+	}
+	public void setPhone_no(String phone_no) {
+		this.phone_no = phone_no;
 	}
 
 	public String getCard_id() {
@@ -67,6 +75,10 @@ public class Users {
 		super();
 		this.email = email;
 		this.password = password;
+	}
+	public String getRole() {
+		// TODO Auto-generated method stub
+		return role;
 	}
 
 
