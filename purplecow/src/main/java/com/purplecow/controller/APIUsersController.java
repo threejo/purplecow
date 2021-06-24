@@ -24,49 +24,50 @@ import com.purplecow.service.UsersService;
 @RestController
 public class APIUsersController {
 
-	@Autowired UsersService usersService;
-	
+   @Autowired UsersService usersService;
+   
 
-	/*POST*/
-	/*유저 생성하기 */
-	@ResponseBody
-	@PostMapping(value = "/users")
-	public void insertUsers(@RequestBody Users users) {
+   /*POST*/
+   /*유저 생성하기 */
+   @ResponseBody
+   @PostMapping(value = "/users")
+   public void insertUsers(@RequestBody Users users) {
 
-		usersService.insertUser(users);
+      usersService.insertUser(users);
 
-	} 
+   } 
 
-	
+   
 
-	/*SELECT*/
-	/*id로 유저조회하기*/
-	@GetMapping("/users/{id}")
-	public Users getUser(@PathVariable("id") int id) {
-		return usersService.getUser(id);
-	}
-	
-	@GetMapping("/users/{email}")
-	public Users getUserByEmail(@PathVariable ("email") String email) { 
-		System.out.println(email);
-		return usersService.getUserByEmail(email);
-	}
-	
-	
-	/*PUT*/	
-	/*유저 정보 업데이트*/
-	@ResponseBody
-	@PutMapping("/users/{id}")
-	public void updateUsersById(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
-		if(rbo.get("password") != null) usersService.updatePasswordInUsers(id,(String)rbo.get("password"));
-		if(rbo.get("email") != null) usersService.updateEmailInUsers(id,(String)rbo.get("email"));
-		if(rbo.get("phone") != null) usersService.updatePhoneNoInUsers(id,(String)rbo.get("phone"));
-	}
+//   /*SELECT*/
+//   /*id로 유저조회하기*/
+//   @GetMapping("/users/{id}")
+//   public Users getUser(@PathVariable("id") int id) {
+//      return usersService.getUser(id);
+//   }
+//   
 
-	/*DELETE*/
-	/*유저 삭제하기 */
-	@DeleteMapping("/users")
-	public void deleteUserById(@RequestParam int id) {
-		usersService.deleteUserById(id);
-	}
+   @GetMapping("/users/{email}")
+   public Users getUserByEmail(@PathVariable ("email") String email) { 
+      System.out.println(email);
+      return usersService.getUserByEmail(email);
+   }
+   
+   
+   /*PUT*/   
+   /*유저 정보 업데이트*/
+   @ResponseBody
+   @PutMapping("/users/{id}")
+   public void updateUsersById(@PathVariable("id") int id,@RequestBody(required= false) Map<String,Object> rbo) {
+      if(rbo.get("password") != null) usersService.updatePasswordInUsers(id,(String)rbo.get("password"));
+      if(rbo.get("email") != null) usersService.updateEmailInUsers(id,(String)rbo.get("email"));
+      if(rbo.get("phone") != null) usersService.updatePhoneNoInUsers(id,(String)rbo.get("phone"));
+   }
+
+   /*DELETE*/
+   /*유저 삭제하기 */
+   @DeleteMapping("/users")
+   public void deleteUserById(@RequestParam int id) {
+      usersService.deleteUserById(id);
+   }
 }

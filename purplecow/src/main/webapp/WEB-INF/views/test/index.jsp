@@ -323,6 +323,7 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./../../res/assets/js/plugins.js"></script>
 <script src="./../../res/assets/js/main.js"></script>
+<script src="./../../res/assets/js/index.js"></script>
 
 </body>
 </html>

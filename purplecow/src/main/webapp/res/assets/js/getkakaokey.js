@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-window.onload = function() {
-
-	$.ajax({
-		url: "/getkey",
-		type: "get",
-		contentType: 'application/json',
-		success: function(item) {
-			alert("정보 로딩 성공" + item.key );
-			
-		},
-		error: function() {
-			alert("에러" );
-		}
-	});
-};
-=======
 window.onload = function() {
 
 	$.ajax({
@@ -37,4 +20,3 @@ window.onload = function() {
 
 
 //https://kauth.kakao.com/oauth/authorize?client_id=93f0f6f4970c0e42fd6386051d315ea3&redirect_uri=http://localhost:8088/kakaologin&response_type=code
->>>>>>> dd1d6dc1783aeaa8712401716815e95089e0e857
