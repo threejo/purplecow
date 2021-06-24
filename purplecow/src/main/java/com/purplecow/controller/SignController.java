@@ -27,7 +27,6 @@ import com.purplecow.service.KakaoService;
 @Controller
 public class SignController {
 	
-	@Value("${kakao.restapi.key}") String tmp;
 	@Autowired
     private AccountMapper accountMapper;
 
