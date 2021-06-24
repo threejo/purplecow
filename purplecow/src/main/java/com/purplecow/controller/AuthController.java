@@ -21,6 +21,7 @@ import com.purplecow.security.JwtAuthToken;
 import com.purplecow.security.JwtAuthTokenProvider;
 import com.purplecow.security.TokenValidation;
 import com.purplecow.service.AuthService;
+import com.purplecow.service.UsersService;
 import com.purplecow.utils.CommonResponse;
 import com.purplecow.utils.Role;
 
@@ -36,7 +37,8 @@ public class AuthController {
 	AuthService authService;
 	@Autowired
 	TokenValidation tokenValidation;
-	
+	@Autowired
+	UsersService usersService;
 
 
 	@GetMapping("/api/v1/cars")
@@ -59,8 +61,22 @@ public class AuthController {
 	    public List<Reservations> getAllCars2(HttpSession session) {
 	        return authService.findAll();
 	    }
-	//List<Cars> -> List<Reservations> 변경
-	
+
+	 
+	 @GetMapping("api/v1/users")
+	 public Object getUsers(HttpServletRequest servletRequest, HttpServletResponse servletResponse, Object handler) {
+		 //토큰이 유효하다면
+		 if(tokenValidation.tokenIsVaild(servletRequest)) {
+			 String userEmail = tokenValidation.getTokenSubject(servletRequest);
+			 return usersService.getUserByEmail(userEmail);
+			 
+		 }
+		 else return CommonResponse.builder()
+	                .code("INVALID_JWT_TOKEN")
+	                .status(401)
+	                .message("INVALID_JWT_TOKEN.")
+	                .build();
+	 }
 	
 	
 	
