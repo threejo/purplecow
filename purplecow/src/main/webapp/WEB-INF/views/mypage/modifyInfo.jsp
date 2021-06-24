@@ -193,7 +193,7 @@
 							</div>
 							<div class="form-group mt-3">
 								<button type="submit"
-									class="button button-contactForm boxed-btn">수정하기</button>
+									class="button button-contactForm boxed-btn" id="modifyButton">수정하기</button>
 								<button type="button"
 									class="button button-contactForm boxed-btn">탈퇴하기</button>
 							</div>

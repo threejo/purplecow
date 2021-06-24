@@ -1,8 +1,10 @@
+
+
 function showUserInfo() {
 	
 	//userAPI 요청
 	$.ajax({
-		url: "/users/6",
+		url: "/users/test1@test.com",
 		type: "get",		
 		success: function(user) {
 			console.log(user);
@@ -28,6 +30,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	showUserInfo();
 });
 
+$("#modifyButton").on("click", function() {
+	
+	$.ajax({
+		url: "/users/test1@test.com",
+		type: "put",
+		contentType: 'application/json',
+		dataType: 'json',
+		success: function() {
+			alert("성공이다 이놈아");
+		},
+		error: function() {
+			alert("에러다 이놈아");
+		}
+	});
+});
 
 
 

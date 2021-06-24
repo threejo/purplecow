@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.purplecow.dto.Cars;
+import com.purplecow.dto.Reservations;
 import com.purplecow.dto.Users;
 import com.purplecow.mapper.CarsMapper;
 
@@ -18,9 +19,9 @@ public class AuthService {
 	
 	@Autowired CarsMapper carsMapper;
 
-	public List<Cars> findAll() {
+	public List<Reservations> findAll() {
 		log.info("통과3");
 		return carsMapper.getCars();
-	}
+	} 
 
 }

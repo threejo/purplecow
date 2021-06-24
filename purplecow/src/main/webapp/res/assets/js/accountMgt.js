@@ -2,7 +2,7 @@ function showUserInfo() {
 	
 	//userAPI 요청
 	$.ajax({
-		url: "/users/6",
+		url: "/users/test1@test.com",
 		type: "get",		
 		success: function(user) {
 			console.log(user);

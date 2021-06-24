@@ -39,13 +39,14 @@ public class APIUsersController {
 
 	
 
-	/*SELECT*/
-	/*id로 유저조회하기*/
-	@GetMapping("/users/{id}")
-	public Users getUser(@PathVariable("id") int id) {
-		return usersService.getUser(id);
-	}
-	
+//	/*SELECT*/
+//	/*id로 유저조회하기*/
+//	@GetMapping("/users/{id}")
+//	public Users getUser(@PathVariable("id") int id) {
+//		return usersService.getUser(id);
+//	}
+//	
+
 	@GetMapping("/users/{email}")
 	public Users getUserByEmail(@PathVariable ("email") String email) { 
 		System.out.println(email);

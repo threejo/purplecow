@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 $("#submit").bind("click", function() {
 	var data = {
       
@@ -26,7 +26,7 @@ $("#submit").bind("click", function() {
 		}
 	});
 });
-=======
+
 $("#submit").bind("click", function() {
 	var data = {
       
@@ -54,4 +54,4 @@ $("#submit").bind("click", function() {
 		}
 	});
 });
->>>>>>> dd1d6dc1783aeaa8712401716815e95089e0e857
+

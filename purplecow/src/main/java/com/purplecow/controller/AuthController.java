@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.purplecow.dto.Cars;
+import com.purplecow.dto.Reservations;
 import com.purplecow.dto.Users;
 import com.purplecow.security.JwtAuthToken;
 import com.purplecow.security.JwtAuthTokenProvider;
@@ -55,10 +56,10 @@ public class AuthController {
 	}
 	
 	 @GetMapping("/api/v2/cars")
-	    public List<Cars> getAllCars2(HttpSession session) {
+	    public List<Reservations> getAllCars2(HttpSession session) {
 	        return authService.findAll();
 	    }
-	
+	//List<Cars> -> List<Reservations> 변경
 	
 	
 	

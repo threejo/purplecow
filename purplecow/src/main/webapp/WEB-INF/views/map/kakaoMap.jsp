@@ -106,7 +106,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 예약하기</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s ">지도지도</h1>
 							</div>
 						</div>
 					</div>
@@ -122,93 +122,25 @@
 
 		<!--? Start Button -->
 		
-		<div id="map" style="width: 500px; height: 400px;"></div>
 		
-		<p>
-		    <button onclick="setCenter()">지도 중심좌표 이동시키기</button> 
-		    <button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button>
+		
+		<!-- 지도 생성 위치 div   //width: 500px; -->
+		<div id="map" style="width: 100%; height: 400px;"></div> 
+		
+		<p> 
+			<button onclick="panTo()">지도 중심좌표 부드럽게 이동시키기</button>
     	</p>
+    	
 
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=909be833fda1e6384981e3864a0882c3"></script>
-		<script>
-			var container = document.getElementById('map');// 지도를 표시할 div 
-			var options = {
-					center: new kakao.map.LatLng(33.450701, 126.570667), // 지도의 중심좌표, 위도,경도로 표시됨 
-					level:3  //지도의 확대레벨
-			}
-			
-			// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-			var map = new kakao.maps.Map(mapContainer, mapOption); 
-			
-			function setCenter() {            
-			    // 이동할 위도 경도 위치를 생성합니다 
-			    var moveLatLon = new kakao.maps.LatLng(33.452613, 126.570888);
-			    
-			    // 지도 중심을 이동 시킵니다
-			    map.setCenter(moveLatLon);
-			}
-
-			function panTo() {
-			    // 이동할 위도 경도 위치를 생성합니다 
-			    var moveLatLon = new kakao.maps.LatLng(33.450580, 126.574942);
-			    
-			    // 지도 중심을 부드럽게 이동시킵니다
-			    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-			    map.panTo(moveLatLon);            
-			}        
-			
-			
-			
-			
-		</script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
 		<!-- services 라이브러리 불러오기 -->
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=909be833fda1e6384981e3864a0882c3&libraries=services"></script>
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
 		
 		
 		
 		
-		<!-- <section class="button-area">
-			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading">
-					<strong>반납하기</strong>
-				</h3>
-
-				<div class="button-group-area mt-40">
-					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-						id="default-radio"> <label for="default-radio">YES</label>
-
-					<input type="radio" name="parking" id="default-radio"> <label
-						for="default-radio">NO</label>
-				</div>
-
-				<hr>
-				<div style="margin: 20px 0px 20px 0px;">
-					<p style="font-size: 120%; margin-bottom: 40px;">
-						<strong>반납 전 마지막 확인</strong>
-					</p>
-					<div style="margin: 10px 0px;">
-						창문은 모두 닫았나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div style="margin:10px 0px;">
-					<div>
-						실내등은 모두 껐나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
-					<div style="margin: 10px 0px;">
-						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
-
-				</div>
-
-			</div>
-			<div style="margin: 20px 350px 20px 350px;">
-				<button
-					class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-					style="font-size: 120%;" type="submit">반납하기</button>
-			</div>
-
-		</section> -->
+		
+		
 		<!-- End Button -->
 
 
@@ -378,6 +310,7 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
+	<script src="./../../res/assets/js/map.js"></script>
 
-</body>
+</body> 
 </html>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 window.onload = function() {
 
 	$.ajax({
@@ -14,7 +14,7 @@ window.onload = function() {
 		}
 	});
 };
-=======
+
 window.onload = function() {
 
 	$.ajax({
@@ -37,4 +37,4 @@ window.onload = function() {
 
 
 //https://kauth.kakao.com/oauth/authorize?client_id=93f0f6f4970c0e42fd6386051d315ea3&redirect_uri=http://localhost:8088/kakaologin&response_type=code
->>>>>>> dd1d6dc1783aeaa8712401716815e95089e0e857
+
