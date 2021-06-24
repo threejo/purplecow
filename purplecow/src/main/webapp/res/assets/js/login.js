@@ -23,9 +23,9 @@ $("#login_btn").on("click", function() {
 
 function setCookie(name, value, options = {}) { 
 
+// 필요한 경우, 옵션 기본값을 설정할 수도 있습니다.
   options = {
-    path: '/',
-    // 필요한 경우, 옵션 기본값을 설정할 수도 있습니다.
+    path: '/',    
     ...options
   };
 

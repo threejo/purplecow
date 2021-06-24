@@ -2,8 +2,14 @@
  이건 카카오 지도에 관련된 js 파일임
 */
 
+
 var mapContainer = document.getElementById('map'); // 지도를 표시할 div 
-var lat = 33.450701, lon = 126.570667; // 기본값은 카카오본사
+var lat = 33.450701, lon = 126.570667;
+// GeoLocation을 이용해서 접속 위치를 얻어옵니다
+navigator.geolocation.getCurrentPosition( function(position) {
+	lat = position.coords.latitude, // 위도
+	lon = position.coords.longitude; // 경도
+});
 
 var mapOption = { 
 	center: new kakao.maps.LatLng(lat, lon), // 지도의 중심좌표
@@ -12,21 +18,6 @@ var mapOption = {
 			
 // 지도를 표시할 div와 지도 옵션으로 지도를 생성합니다
 var map = new kakao.maps.Map(mapContainer, mapOption);
-
-
-// HTML5의 geolocation으로 사용할 수 있는지 확인합니다
-// 사용할 수 있으면 내 위치를 맵 시작위치로, 아니면 카카오 본사를
-if (navigator.geolocation) {
-			    
-	// GeoLocation을 이용해서 접속 위치를 얻어옵니다
-	navigator.geolocation.getCurrentPosition( function(position) {
-			       
-		lat = position.coords.latitude, // 위도
-		lon = position.coords.longitude; // 경도
-	});
-} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
-	alert("내 위치를 가져오는데 실패하였습니다.");
-}
 
 // 지도 이동시키기 시작 --------------------------------------------
 function panTo() {
@@ -44,23 +35,18 @@ function panTo() {
 var geocoder = new kakao.maps.services.Geocoder();
 
 // 전체 존 위치 마커를 담을 배열
-var markers = [];
+var zones = [];
 						
 $.ajax({
 	url: '/zones',
 	type: 'GET',
 	dataType: 'json',
-	success: function(response){
-		if(respone.result == 'fail'){
-			console.log(response.message);
-			return;
-		}
-		
-		if(response.result == 'success') {
+	success: function(data){
 			// zone 전체 리스트를 돌면서 마을 위치마다 마커 찍기
-			$.each (response.data, function(index, value) {
+			$.each (data, function() {
+				console.log(data);
 				// DB에서 주소를 불러와 geocoder를 이용해 좌표로 변환
-				geocoder.addressSearch(response.data[index].addr, function(result, status) {
+				geocoder.addressSearch(data.address, function(result, status) {
 					//정상적으로 검색이 완료됫으면
 					if (status === kakao.maps.services.Status.OK) {
 						var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
@@ -84,9 +70,10 @@ $.ajax({
 				
 			});
 			
-		}
 	}
 })
+
+
 
 // 마커 생성하기 시작 ---------------------------------------------
 

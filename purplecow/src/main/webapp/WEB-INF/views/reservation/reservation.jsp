@@ -194,20 +194,15 @@
 				<!-- 지도 생성 위치 div   //width: 500px; -->
 				<div id="map" style="width: 100%; height: 400px;"></div>
 				<br>
-
 				<p>
 					<button class="button button-contactForm boxed-btn"
 						onclick="panTo()">현재 위치</button>
 				</p>
 
 
-
-
+				<!-- services와 clusterer, drawing 라이브러리 불러오기 -->
 				<script type="text/javascript"
-					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
-				<!-- services 라이브러리 불러오기 -->
-				<script type="text/javascript"
-					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services,clusterer,drawing"></script>
 				<hr>
 
 
