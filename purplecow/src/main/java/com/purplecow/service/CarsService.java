@@ -23,10 +23,8 @@ public class CarsService {
 		return carsMapper.getCars();
 	}
 	
+	
 	public List<Cars> getCarByZoneId(int zones_id) {
-		/*
-		 * Map<String, Object> cars = new Map<String, Object>; cars.
-		 */
 		
 		return carsMapper.getCarByZoneId(zones_id);
 	}

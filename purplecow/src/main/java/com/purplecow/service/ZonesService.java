@@ -15,7 +15,7 @@ public class ZonesService {
 	ZonesMapper zonesMapper;
 	
 	public List<Zones> getZones() {
-		return zonesMapper.getZones();
 		
+		return zonesMapper.getZones();
 	}
 }

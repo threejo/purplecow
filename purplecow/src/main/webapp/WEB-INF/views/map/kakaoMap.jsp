@@ -122,6 +122,11 @@
 
 		<!--? Start Button -->
 		
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
+		<!-- services 라이브러리 불러오기 -->
+		<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script> -->
+		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0a25ff4f8caf391566daae2436a5cae8&libraries=services"></script>
+		
 		
 		
 		<!-- 지도 생성 위치 div   //width: 500px; -->
@@ -132,13 +137,6 @@
     	</p>
     	
 
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
-		<!-- services 라이브러리 불러오기 -->
-		<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
-		
-		
-		
-		
 		
 		
 		<!-- End Button -->

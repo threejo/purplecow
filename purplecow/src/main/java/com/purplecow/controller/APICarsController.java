@@ -31,9 +31,12 @@ public class APICarsController {
 		return carsService.getCars();
 	}
 	
-	
+	/*
+	 * SELECT 
+	 * 존 아이디에 해당되는 차 리스트를 가져온다
+	 */
 	@GetMapping("/cars/{zones_id}")
-	public List<Cars> getCarByZoneId(@PathVariable("zones_id") int zones_id) throws Exception {
+	public List<Cars> getCarByZoneId(@PathVariable("zones_id") int zones_id) {
 		log.info("잘 왔니?");
 		log.debug(zones_id);
 		return carsService.getCarByZoneId(zones_id);
