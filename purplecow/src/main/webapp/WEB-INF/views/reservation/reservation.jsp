@@ -24,6 +24,9 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
+<link rel="stylesheet" href="../../res/assets/css/return.css">
+
+
 </head>
 <body>
 	<!-- ? Preloader Start -->
@@ -49,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="index.jsp"><img
+									<a href="index.html"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -60,23 +63,29 @@
 									<div class="main-menu d-none d-lg-block">
 										<nav>
 											<ul id="navigation">
-												<li><a href="/">소개하기</a>
+												<li><a href="index.html">소개하기</a>
 													<ul class="submenu">
 														<li><a href="blog.html">이용 안내</a></li>
 														<li><a href="blog_details.html">요금 안내</a></li>
 													</ul></li>
-												<li><a href="reservation.jsp">예약하기</a>
+												<li><a href="/reservation">예약하기</a>
 													<ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
 
-												<li><a href="#">반납하기</a>
+												<li><a href="/return">반납하기</a>
 													<ul class="submenu">
-														<li><a href="blog.html">바로 반납하기</a></li>														
+														<li><a href="blog.html">바로 반납</a></li>
+														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
+												<li><a href="/mypage">마이페이지</a> <!-- Button -->
+													<ul class="submenu">
+														<li><a href="/accountMgt">계정 관리</a></li>
+														<li><a href="/payInfo">결제 및 할인</a></li>
+														<li><a href="/resvHistory">예약 내역</a></li>
+													</ul></li>
 												<li class="button-header margin-left "><a
 													href="register.html" class="btn">Sign Up</a></li>
 												<li class="button-header"><a href="login.html"
@@ -120,52 +129,95 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? Start Button -->
-		
-		
-		<section class="button-area">
-			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading">
-					<strong>반납하기</strong>
-				</h3>
 
-				<div class="button-group-area mt-40">
-					XXXXXXX 에 주차하셨나요? <input type="radio" name="parking"
-						id="default-radio"> <label for="default-radio">YES</label>
+		<section class="button-area pricing-card-area fix">
 
-					<input type="radio" name="parking" id="default-radio"> <label
-						for="default-radio">NO</label>
+			<div class="container box_1170 border-top-generic ">
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">예약 선택</h3>
+						</div>
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">반납 선택</h3>
+						</div>
+
+					</div>
+
 				</div>
 
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" name="name" id="name"
+									type="datetime-local">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" name="email" id="email"
+									type="datetime-local">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div>
+					<!--Hero form -->
+					<form action="#" class="search-box">
+						<div class="input-form">
+							<input type="text" placeholder="Search for a domain">
+							<!-- icon search -->
+							<div class="search-form">
+								<button>
+									<i class="ti-search"></i>
+								</button>
+							</div>
+							<!-- icon search -->
+							<div class="world-form">
+								<i class="fas fa-globe"></i>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<br>
+				<!-- 지도 생성 위치 div   //width: 500px; -->
+				<div id="map" style="width: 100%; height: 400px;"></div>
+				<br>
+				<p>
+					<button class="button button-contactForm boxed-btn"
+						onclick="panTo()">현재 위치</button>
+				</p>
+
+
+				<!-- services와 clusterer, drawing 라이브러리 불러오기 -->
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services,clusterer,drawing"></script>
 				<hr>
-				<div style="margin: 20px 0px 20px 0px;">
-					<p style="font-size: 120%; margin-bottom: 40px;">
-						<strong>반납 전 마지막 확인</strong>
-					</p>
-					<div style="margin: 10px 0px;">
-						창문은 모두 닫았나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div style="margin:10px 0px;">
-					<div>
-						실내등은 모두 껐나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
-					<div style="margin: 10px 0px;">
-						개인 소지품은 다 챙겼나요? <input type="checkbox" name="parking"
-							id="default-radio"> <label for="default-radio">NO</label>
-					</div>
+
+
+				<div style="margin-top: 80px">
+					<button
+						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/payment'">예약하기</button>
 
 				</div>
 
 			</div>
-			<div style="margin: 20px 350px 20px 350px;">
-				<button
-					class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-					style="font-size: 120%;" type="submit">반납하기</button>
-			</div>
+
 
 		</section>
-		<!-- End Button -->
+
 
 
 	</main>
@@ -334,6 +386,11 @@
 	<!-- Jquery Plugins, main Jquery -->
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
+
+	<!-- 예약페이지 관련 js -->
+	<script src="./../../res/assets/js/reservation.js"></script>
+
+
 
 </body>
 </html>

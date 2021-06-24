@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
-<!doctype html>
+<!doctype html> 
 <html class="no-js" lang="zxx">
 <head>
 <meta charset="utf-8">

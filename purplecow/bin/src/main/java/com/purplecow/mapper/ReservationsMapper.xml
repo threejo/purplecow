@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.purplecow.mapper.ReservationsMapper">
+
+	<insert id="insertReservations"
+		parameterType="com.purplecow.dto.Reservations">
+		INSERT INTO reservations
+		(users_id,zones_id,cars_id,start_time,end_time,delayed,accident,hipass_count)
+		VALUES
+		(#{users_id},#{zones_id},#{cars_id},#{start_time},#{end_time},#{delayed},#{accident},#{hipass_count})
+	</insert>
+
+	<select id="getReservationById"
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+		WHERE id= #{id}
+	</select>
+	<select id="getReservationsByUserId"
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+		WHERE user_id= #{usersId}
+	</select>
+	<select id="getReservations"
+		resultType="com.purplecow.dto.Reservations">
+		SELECT * FROM reservations
+	</select>
+	<select id="getCarsById"
+		resultType="com.purplecow.dto.Cars">
+		SELECT c.* FROM reservations r,cars c
+		WHERE r.cars_id=c.id and r.id=#{id}
+	</select>
+	<select id="getPaymentsById"
+		resultType="com.purplecow.dto.Payments">
+		SELECT p.* FROM reservations r,payments p
+		WHERE r.payments_id=p.id and r.id=#{id}
+	</select>
+	
+	
+	<update id="updateParkFixedInReservation">
+		UPDATE reservations 
+		SET
+		park_fixed=#{park_fixed}
+		WHERE id = #{id}
+	</update>
+	<update id="updateImagesInReservation">
+		UPDATE reservations 
+		SET	images=#{images,jdbcType=ARRAY,typeHandler=com.purplecow.mapper.ListArrayTypeHandler}		
+		WHERE id = #{id};		 
+	</update>
+	<update id="updateCarStatesInReservation">
+		UPDATE reservations 
+		SET	(outside_state,inside_state) = (#{outside_state}::car_state,#{inside_state}::car_state)		
+		WHERE id = #{id};		 
+	</update>
+	<update id="updatePaymentsInReservations">
+		UPDATE reservations 
+		SET	(cards_id,payments_id) = (#{cards_id},#{payments_id})	
+		WHERE id = #{id};		 
+	</update>
+	
+	
+
+
+</mapper>
