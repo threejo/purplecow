@@ -120,7 +120,7 @@
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation/resv" class="btn radius-btn">시작하기</a>
+                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation" class="btn radius-btn">시작하기</a>
                                     </div>
                                 </div>
                             </div>
