@@ -94,6 +94,21 @@ response
 "message":"결제 실패"}
 ```
 
+**결제 하기**
+- 메서드:put
+- url:/reservations
+- 예) 
+```
+Param
+{"resv_id":"1234",
+"card_id":"1234",
+"resv_price":"80000"}
+
+response
+{"result":"success",
+"message":"결제 실패"}
+```
+
 **사용자의 예약 리스트 확인**
 - 메서드:get
 - url:/reservations
