@@ -13,8 +13,7 @@
 
 ![기획안](https://user-images.githubusercontent.com/85234019/123058365-b6d14f00-d443-11eb-914f-391536b249dd.PNG)
 
-[자세한 기획안 링크](https://github.com/threejo/purplecow/files/6700148/default.pdf)
-
+[자세한 기획안 링크](https://github.com/noburi04/SPC_LAB1/files/6713046/figma.pdf)
 # 서비스 구조
 
 ![이미지](https://user-images.githubusercontent.com/85234019/123045209-969a9380-d435-11eb-9d6d-acda152efc63.PNG)
