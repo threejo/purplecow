@@ -44,7 +44,7 @@
 - PUT	/reservations/:resv_id
 - GET	/map_search
 - GET	/purple_zons
-- GET	/cars/:zone_id
+- GET	/cars/:zones_id
 - POST	/reservations/:cars_id
 - PUT	/reservations
 - GET	/reservations
@@ -52,6 +52,35 @@
 - POST	/users
 - GET	/users/:id
 - PUT	/users/:id
+- GET   /cars/list
+- POST  /api/v1/upload
+- POST  /api/v2/upload
+- GET   /reservations/list
+- GET   /users/:email
+- DELETE/users
+- GET   /api/v1/cars
+- GET   /api/v2/cars
+- GET   /api/v1/users
+- GET   /inuse/checkSStatus
+- POST  /api/v1/login
+- GET   /mypaage
+- GET   /accountMgt
+- GET   /modifyInfo
+- GET   /payInfo
+- GET   /resvHistory
+- GET   /payment
+- GET   /carlist
+- GET   /return
+- GET   /login
+- GET   /getkey
+- GET   /kakaologin
+- GET   /
+- GET   /ex
+- GET   /feeInfo
+- GET   /usageGuide
+- GET   /upload
+
+
 # 에러 코드
 - put /reservations/:resv_id {park_fixed":"true"} {"result"}
 
