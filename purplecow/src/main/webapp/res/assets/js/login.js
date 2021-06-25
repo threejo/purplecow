@@ -10,7 +10,7 @@ $("#login_btn").on("click", function() {
 		contentType: 'application/json',
 		data: JSON.stringify(data),
 		success: function(result) {
-			setCookie('x-auth-token', result.message, {secure: true, 'max-age': 3600,httponly: true});
+			setCookie('x-auth-token', result.message, {secure: true, 'max-age': 3600});
 			window.location.href ="/";
 
 		},
@@ -42,8 +42,9 @@ function setCookie(name, value, options = {}) {
       updatedCookie += "=" + optionValue;
     }
   }
-
+	console.log("쿠키에 들어갈 값은"+updatedCookie);
   document.cookie = updatedCookie;
+  console.log("실제 쿠키 값은"+document.cookie);
 }
 
 

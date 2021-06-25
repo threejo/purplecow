@@ -1,38 +1,34 @@
-/*function startSomething() {
-	//var tbody = document.querySelector("tbody");
+function startSomething() {
+	var x_auth_token = getCookie('x-auth-token');
+	console.log(x_auth_token);
 	
-	//carAPI 요청
+	//API 요청
 	$.ajax({
-		url: "/cars/list",
-		type: "get",		
-		success: function(cars) {
+		url: "api/v1/users",
+		type: "get",
+		beforeSend : function(xhr){
+            xhr.setRequestHeader("x-auth-token", x_auth_token);
+            xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        },
+		success: function(user) {
+			console.log("ajax결과는"+JSON.stringify(user) );
 			
-			cars.forEach((car)=>{
-				const tr = document.createElement("tr");
-				
-				//모델명 가져오기
-				const th = document.createElement("th");
-				th.textContent = car.name;
-				tr.appendChild(th);
-				//차급 가져오기
-				const td2 = document.createElement("td");
-				td2.textContent = car.scale;
-				tr.appendChild(td2);
-				//km당 주행요금 가져오기
-				const td3 = document.createElement("td");
-				td3.textContent = car.driving_fee_per_km;
-				tr.appendChild(td3);
-				//일일 주행요금 가져오기
-				const td4 = document.createElement("td");
-				td4.textContent = car.daily_rental_fee;
-				tr.appendChild(td4);
-				
-				tbody.appendChild(tr);
-			});
+  
+			if(user.name!=null){
+				$("#signupbtn1").hide();
+				$("#signinbtn1").hide();
+			}
+			
+				 
+			
+			
+			
 			
 		},
 		error: function() {
-			alert("에러다 이놈아");
+			console.log("에러다 이놈아");
+			var link = document.getElementById("purplecow_start");
+			link.setAttribute("href", "/login");
 		}
 	});
 	
@@ -43,4 +39,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
 	startSomething();
 });
 
-*/
+function getCookie(cookieName){
+    var cookieValue=null;
+    console.log("cookie의 값은"+document.cookie);
+    if(document.cookie){
+        var array=document.cookie.split((escape(cookieName)+'='));
+        if(array.length >= 2){
+            var arraySub=array[1].split(';');
+            cookieValue=unescape(arraySub[0]);
+        }
+    }
+    return cookieValue;
+}

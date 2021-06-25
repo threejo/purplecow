@@ -19,7 +19,7 @@ public class AuthService {
 	
 	@Autowired CarsMapper carsMapper;
 
-	public List<Reservations> findAll() {
+	public List<Cars> findAll() {
 		log.info("통과3");
 		return carsMapper.getCars();
 	} 
