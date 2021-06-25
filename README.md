@@ -40,3 +40,11 @@
 - put /reservations {park_fixed}
 - GET /users
 - POST /users
+
+#에러 코드
+<pre><code>{AUTHENTICATION_FAILED(401, "AUTH001", " AUTHENTICATION_FAILED."),
+    LOGIN_FAILED(401, "AUTH002", " LOGIN_FAILED."),
+    INVALID_JWT_TOKEN(401, "AUTH003", "INVALID_JWT_TOKEN.");}
+    </code>
+    </pre>
+   
