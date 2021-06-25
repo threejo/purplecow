@@ -7,6 +7,7 @@
 		resultType="com.purplecow.dto.Zones">
 		SELECT * 
 		FROM zones
+		ORDER BY id;
 	</select>
 	
 </mapper>

@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
-<link rel="stylesheet" href="../../res/assets/css/return.css">
+<link rel="stylesheet" href="../../res/assets/css/feeInfo.css">
 
 
 </head>
@@ -61,35 +61,37 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end">
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
-										                                        <nav>
-                                            <ul id="navigation">                                                                                          
-                                                <li><a href="/usageGuide">소개하기</a>
-                                                <ul class="submenu">
+										<nav>
+											<ul id="navigation">
+												<li><a href="/usageGuide">소개하기</a>
+													<ul class="submenu">
 														<li><a href="/usageGuide">이용 안내</a></li>
 														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-                                                <li><a href="/reservation">예약하기</a>
-                                                <ul class="submenu">
+												<li><a href="/reservation">예약하기</a>
+													<ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-                                                <li><a href="/return">반납 하기</a>
-                                                <ul class="submenu">
+												<li><a href="/return">반납 하기</a>
+													<ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-                                                <li><a href="/mypage">마이페이지</a>
+												<li><a href="/mypage">마이페이지</a>
 													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
-                                                <!-- Button -->
-                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
-                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
-                                            </ul>
-                                        </nav>
+												<!-- Button -->
+												<li class="button-header margin-left "><a
+													href="/registration" class="btn">Sign Up</a></li>
+												<li class="button-header"><a href="/login" class="btn3">Sign
+														In</a></li>
+											</ul>
+										</nav>
 									</div>
 								</div>
 							</div>
@@ -128,7 +130,7 @@
 		<!-- Slider Area End -->
 
 
-		<section class="button-area pricing-card-area fix">
+		<section class="button-area">
 
 			<div class="container box_1170 border-top-generic ">
 
@@ -137,10 +139,10 @@
 					<div class="row">
 
 						<div class="col-sm-6">
-							<h3 style="color: #FFFFFF">예약 선택</h3>
+							<h3>예약 선택</h3>
 						</div>
 						<div class="col-sm-6">
-							<h3 style="color: #FFFFFF">반납 선택</h3>
+							<h3>반납 선택</h3>
 						</div>
 
 					</div>
@@ -154,14 +156,12 @@
 
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control valid" 
-									type="datetime-local">
+								<input class="form-control valid" type="datetime-local">
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group">
-								<input class="form-control valid" 
-									type="datetime-local">
+								<input class="form-control valid" type="datetime-local">
 							</div>
 						</div>
 
@@ -169,50 +169,28 @@
 
 				</div>
 
-				<div>
-					<!--Hero form -->
-					<form action="#" class="search-box">
-						<div class="input-form">
-							<input type="text" placeholder="Search for a domain">
-							<!-- icon search -->
-							<div class="search-form">
-								<button>
-									<i class="ti-search"></i>
-								</button>
-							</div>
-							<!-- icon search -->
-							<div class="world-form">
-								<i class="fas fa-globe"></i>
-							</div>
-						</div>
-					</form>
-
-				</div>
 				<br>
-				<!-- 지도 생성 위치 div   //width: 500px; -->
-				<div id="map" style="width: 100%; height: 400px;"></div>
-				<br>
-
-				<p>
-					<button class="button button-contactForm boxed-btn"
-						onclick="panTo()">현재 위치</button>
-				</p>
-
-
-
-
-				<script type="text/javascript"
-					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
-				<!-- services 라이브러리 불러오기 -->
-				<script type="text/javascript"
-					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
+				<!-- 테이블 시작 -->
+				<table class="type10">
+					<thead>
+						<tr>
+							<th scope="cols">퍼플존</th>
+							<th scope="cols">이름</th>
+							<th scope="cols">주소</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+				<!-- 테이블 끝 -->
 				<hr>
 
 
 				<div style="margin-top: 80px">
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/carList'">예약하기</button>
+						id="modal_btn" style="font-size: 120%;" type="submit"
+						onClick="location.href='/carList'">예약하기</button>
 
 				</div>
 
@@ -391,7 +369,7 @@
 	<script src="./../../res/assets/js/main.js"></script>
 
 	<!-- 예약페이지 관련 js -->
-	<script src="./../../res/assets/js/reservation.js"></script>
+	<script src="./../../res/assets/js/reservation2.js"></script>
 
 
 

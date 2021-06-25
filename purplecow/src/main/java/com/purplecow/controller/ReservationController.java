@@ -22,5 +22,11 @@ public class ReservationController {
 	public String showCarList() {
 		return "reservation/carList";
 	}
+	
+	//지도API 없이 테이블로 퍼플존 리스트 조회
+	@GetMapping("reservation2")
+	public String resevation2() {
+		return "reservation/reservation2";
+	}
 
 }

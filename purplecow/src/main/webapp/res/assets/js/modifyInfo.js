@@ -41,7 +41,9 @@ $("#modifyButton").on("click", function() {
 			alert("성공이다 이놈아");
 		},
 		error: function() {
-			alert("에러다 이놈아");
+			alert("수정 완료");
+			window.location.href ="/";
+			
 		}
 	});
 });

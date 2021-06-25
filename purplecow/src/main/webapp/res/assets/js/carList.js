@@ -1,6 +1,3 @@
-
- 
- 
  function showCarsList() {
 	var tbody = document.querySelector("tbody");
 	

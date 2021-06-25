@@ -137,8 +137,8 @@
 						<tr>
 							<th scope="cols">모델명</th>
 							<th scope="cols">차급</th>
-							<th scope="cols">km당 주행가격</th>
-							<th scope="cols">일일 주행가격</th>
+							<th scope="cols">km당 주행가격 (원)</th>
+							<th scope="cols">일일 주행가격 (원)</th>
 						</tr>
 					</thead>
 					<tbody>

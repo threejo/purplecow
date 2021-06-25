@@ -66,7 +66,7 @@
 														<li><a href="/usageGuide">이용 안내</a></li>
 														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-                                                <li><a href="/reservation">예약하기</a>
+                                                <li><a href="/reservation2">예약하기</a>
                                                 <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
@@ -120,7 +120,7 @@
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation" class="btn radius-btn">시작하기</a>
+                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation2" class="btn radius-btn">시작하기</a>
                                     </div>
                                 </div>
                             </div>

@@ -131,13 +131,15 @@
 		<section class="button-area">
 
 			<div class="container box_1170 border-top-generic">
+			
 				<div class="section-top-border" style="width: 900px; margin: auto;">
+				<h2 class="mb-30">보라소님 예약 정보</h2>
 					<h3 class="mb-30">요금</h3>
 					<div>
 						<div>
 							<blockquote class="generic-blockquote" >
 								<ul class="unordered-list" style="font-size: 1.3em;">
-									<li>대여 요금
+									<li>대여 요금 : 3821원 x 3시간 = 11,463원
 								</ul>
 							</blockquote>
 						</div>
@@ -148,22 +150,22 @@
 						<div>
 							<blockquote class="generic-blockquote">
 								<ul class="unordered-list" style="font-size: 1.3em; ">
-									<li>예약 날짜, 시간
+									<li>예약 날짜, 시간 : 2021-06-25 14:00
 										<ul>
-											<li>예약 존</li>
+											<li>예약 존 : 역삼 공영주차장 (서울특별시 강남구 역삼동 829-20)</li>
 										</ul>
 									</li>
-									<li>반납 날짜, 시간
+									<li>반납 날짜, 시간 : 2021-06-25 17:00
 										<ul>
-											<li>반납 존</li>
+											<li>반납 존 : 역삼 공영주차장 (서울특별시 강남구 역삼동 829-20)</li>
 										</ul>
 									</li>
 
-									<li>차량 정보
+									<li>차량 정보 
 										<ul>
-											<li>model</li>
-											<li>scale</li>
-											<li>oiltype</li>
+											<li>model : 벤츠 C200</li>
+											<li>scale : 수입</li>
+											<li>oiltype : 휘발유</li>
 										</ul>
 									</li>
 								</ul>
