@@ -38,14 +38,12 @@
 
 [API 상세]
 |기능|Http 메서드|url|request parameter|response|
-|:----:|:-----:|:-----:|:-----:|:-----:|
+|----|-----|-----|-----|-----|
 ||put|/reservations/:resv_id|{"park_fixed":"true"}|{"result":"success"}
 |예약테이블에 외부사진 목록저장
 # 에러 코드
-
-<pre><code>{AUTHENTICATION_FAILED(401, "AUTH001", " AUTHENTICATION_FAILED."),
+|code|에러원인|조치방안|
+|{AUTHENTICATION_FAILED(401, "AUTH001", " AUTHENTICATION_FAILED."),
     LOGIN_FAILED(401, "AUTH002", " LOGIN_FAILED."),
-    INVALID_JWT_TOKEN(401, "AUTH003", "INVALID_JWT_TOKEN.");}
-    </code>
-    </pre>
-   
+    INVALID_JWT_TOKEN(401, "AUTH003", "INVALID_JWT_TOKEN.");}|ㅇㅇ|ㅇㅇ|
+
