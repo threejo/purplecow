@@ -5,7 +5,7 @@
 
 원하는 장소에서 원하는 차량을 원하는 시간만큼 쉽고 빠르게 대여 할 수 있도록 하기위한 서비스입니다.  
 
-![서비스 데모 동영상 ](hhttps://user-images.githubusercontent.com/85234019/123049730-d9ab3580-d43a-11eb-9ae1-ca3bff590c71.mp4)
+![서비스 데모 동영상 ](https://user-images.githubusercontent.com/85234019/123390115-85888880-d5d5-11eb-8c44-d37591ea3ec7.gif)
 
 # 프로젝트 기획안
 
