@@ -38,10 +38,11 @@
 # API 목록
 
 [상세 링크](https://github.com/threejo/purplecow/blob/yoontest/api.md)
+
 - PUT	/reservations/:resv_id
 - PUT	/reservations/:resv_id
 - PUT	/reservations/:resv_id
-- GET	GET	/map_search
+- GET	/map_search
 - GET	/purple_zons
 - GET	/cars/:zone_id
 - POST	/reservations/:cars_id
@@ -51,20 +52,6 @@
 - POST	/users
 - GET	/users/:id
 - PUT	/users/:id
-- PUT	/reservations/:resv_id
-- PUT	/reservations/:resv_id
-- PUT	/reservations/:resv_id
-- GET	/map_search
-- GET	/purple_zones?address="ddd"
-- GET	/cars/:zone_id
-- POST	/reservations/:cars_id
-- PUT	/reservations
-- GET	/reservations
-- POST	/users
-- GET	/users/:id 패스 파라미터
-- PUT	/users/:id
-
-
 # 에러 코드
 - put /reservations/:resv_id {park_fixed":"true"} {"result"}
 
