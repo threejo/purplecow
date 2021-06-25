@@ -128,58 +128,94 @@
 		<!-- Slider Area End -->
 
 
-		<section class="button-area">
+		<section class="button-area pricing-card-area fix">
 
-			<div class="container box_1170 border-top-generic">
-				<div class="section-top-border" style="width: 900px; margin: auto;">
-					<h3 class="mb-30">요금</h3>
-					<div>
-						<div>
-							<blockquote class="generic-blockquote" >
-								<ul class="unordered-list" style="font-size: 1.3em;">
-									<li>대여 요금
-								</ul>
-							</blockquote>
+			<div class="container box_1170 border-top-generic ">
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">예약 선택</h3>
 						</div>
-					</div>
-					<hr>
-					<h3 class="mb-30">결제 전 예약 정보 확인</h3>
-					<div>
-						<div>
-							<blockquote class="generic-blockquote">
-								<ul class="unordered-list" style="font-size: 1.3em; ">
-									<li>예약 날짜, 시간
-										<ul>
-											<li>예약 존</li>
-										</ul>
-									</li>
-									<li>반납 날짜, 시간
-										<ul>
-											<li>반납 존</li>
-										</ul>
-									</li>
-
-									<li>차량 정보
-										<ul>
-											<li>model</li>
-											<li>scale</li>
-											<li>oiltype</li>
-										</ul>
-									</li>
-								</ul>
-
-
-
-							</blockquote>
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">반납 선택</h3>
 						</div>
+
 					</div>
+
 				</div>
-								<div style="margin-top: 80px">
+
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" 
+									type="datetime-local">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" 
+									type="datetime-local">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div>
+					<!--Hero form -->
+					<form action="#" class="search-box">
+						<div class="input-form">
+							<input type="text" placeholder="Search for a domain">
+							<!-- icon search -->
+							<div class="search-form">
+								<button>
+									<i class="ti-search"></i>
+								</button>
+							</div>
+							<!-- icon search -->
+							<div class="world-form">
+								<i class="fas fa-globe"></i>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<br>
+				<!-- 지도 생성 위치 div   //width: 500px; -->
+				<div id="map" style="width: 100%; height: 400px;"></div>
+				<br>
+
+				<p>
+					<button class="button button-contactForm boxed-btn"
+						onclick="panTo()">현재 위치</button>
+				</p>
+
+
+
+
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
+				<!-- services 라이브러리 불러오기 -->
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
+				<hr>
+
+
+				<div style="margin-top: 80px">
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/inuse/checkStatus'">결제하기</button>
+						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/carList'">예약하기</button>
 
 				</div>
+
 			</div>
 
 
@@ -291,9 +327,9 @@
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 										Copyright &copy;
 										<script>
-                                 document.write(new Date()
-                                       .getFullYear());
-                              </script>
+											document.write(new Date()
+													.getFullYear());
+										</script>
 										All rights reserved | This template is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
 											href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -354,8 +390,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 리턴 관련 js -->
-	<script src="./../../res/assets/js/return.js"></script>
+	<!-- 예약페이지 관련 js -->
+	<script src="./../../res/assets/js/reservation.js"></script>
 
 
 
