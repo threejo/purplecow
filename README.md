@@ -37,7 +37,7 @@
 
 # API 목록
 
-[상세 링크](https://github.com/threejo/purplecow/blob/yoontest/api.md)
+[API 상세 링크](https://github.com/threejo/purplecow/blob/yoontest/api.md)
 
 - PUT	/reservations/:resv_id
 - PUT	/reservations/:resv_id
