@@ -37,11 +37,21 @@
 # API 목록
 
 [API 상세]
-|기능|Http 메서드|url|request parameter|response|
-|----|-----|-----|-----|-----|
-||put|/reservations/:resv_id|{"park_fixed":"true"}|{"result":"success"}
-|예약테이블에 외부사진 목록저장
+[상세 링크](https://github.com/threejo/purplecow/blob/yoontest/api.md)
+- PUT	/reservations/:resv_id
+- PUT	/reservations/:resv_id
+- GET	/map_search
+- GET	/purple_zones?address="ddd"
+- GET	/cars/:zone_id
+- POST	/reservations/:cars_id
+- PUT	/reservations
+- GET	/reservations
+- POST	/users
+- GET	/users/:id 패스 파라미터
+- PUT	/users/:id
+
 # 에러 코드
+- put /reservations/:resv_id {park_fixed":"true"} {"result"}
 
 |code|에러원인|조치방안|
 |----|----|----|
