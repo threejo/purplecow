@@ -61,14 +61,14 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end">
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
-										<nav>
+										                                        <nav>
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="/usageGuide">소개하기</a>
                                                 <ul class="submenu">
 														<li><a href="/usageGuide">이용 안내</a></li>
 														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-                                                <li><a href="packages.html">예약하기</a>
+                                                <li><a href="/reservation">예약하기</a>
                                                 <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
@@ -79,14 +79,15 @@
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-                                                <li><a href="#">마이페이지</a>
-                                             <ul class="submenu">
-														<li><a href="/resvHistory">예약 내역</a></li>
+                                                <li><a href="/mypage">마이페이지</a>
+													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
+														<li><a href="/payInfo">결제 및 할인</a></li>
+														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="register.html" class="btn">Sign Up</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn3">Sign In</a></li>
+                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
                                             </ul>
                                         </nav>
 									</div>
@@ -112,7 +113,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 반납하기</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s " onClick="location.href='/carList'">차량 예약하기</h1>
 							</div>
 						</div>
 					</div>
@@ -126,7 +127,7 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? 반납 설문 시작 -->
+
 		<section class="button-area">
 
 			<div class="container box_1170 border-top-generic">
@@ -148,13 +149,13 @@
 				<!-- 테이블 끝 -->
 				<button
                   class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                  id="modal_btn" style="font-size: 120%;" type="submit">예약하기</button>
+                  id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/payment'">예약하기</button>
 			</div>
 			
 
 
 		</section>
-		<!-- 반납 설문 시작 끝-->
+
 
 
 	</main>

@@ -61,37 +61,35 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end">
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
-										<nav>
-											<ul id="navigation">
-												<li><a href="index.html">소개하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+										                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="/usageGuide">소개하기</a>
+                                                <ul class="submenu">
+														<li><a href="/usageGuide">이용 안내</a></li>
+														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-												<li><a href="packages.html">예약하기</a>
-													<ul class="submenu">
+                                                <li><a href="/reservation">예약하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-
-												<li><a href="/return">반납하기</a>
-													<ul class="submenu">
+                                                <li><a href="/return">반납 하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="/mypage">마이페이지</a> <!-- Button -->
+                                                <li><a href="/mypage">마이페이지</a>
 													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
-												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="login.html"
-													class="btn3">Sign In</a></li>
-											</ul>
-										</nav>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                            </ul>
+                                        </nav>
 									</div>
 								</div>
 							</div>
@@ -179,7 +177,7 @@
 								<div style="margin-top: 80px">
 					<button
 						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/payment'">결제하기</button>
+						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/resvHistory'">결제하기</button>
 
 				</div>
 			</div>
