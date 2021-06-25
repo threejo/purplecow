@@ -24,20 +24,18 @@ import com.purplecow.service.UsersService;
 @RestController
 public class APIUsersController {
 
-	@Autowired UsersService usersService;
-	
+   @Autowired UsersService usersService;
+   
 
-	/*POST*/
-	/*유저 생성하기 */
-	@ResponseBody
-	@PostMapping(value = "/users")
-	public void insertUsers(@RequestBody Users users) {
+   /*POST*/
+   /*유저 생성하기 */
+   @ResponseBody
+   @PostMapping(value = "/users")
+   public void insertUsers(@RequestBody Users users) {
 
-		usersService.insertUser(users);
+      usersService.insertUser(users);
 
-	} 
-
-	
+   } 
 
 //	/*SELECT*/
 //	/*id로 유저조회하기*/
@@ -64,10 +62,11 @@ public class APIUsersController {
 		if(rbo.get("phone") != null) usersService.updatePhoneNoInUsers(id,(String)rbo.get("phone"));
 	}
 
-	/*DELETE*/
-	/*유저 삭제하기 */
-	@DeleteMapping("/users")
-	public void deleteUserById(@RequestParam int id) {
-		usersService.deleteUserById(id);
-	}
+
+   /*DELETE*/
+   /*유저 삭제하기 */
+   @DeleteMapping("/users")
+   public void deleteUserById(@RequestParam int id) {
+      usersService.deleteUserById(id);
+   }
 }

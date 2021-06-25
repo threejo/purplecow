@@ -12,8 +12,6 @@
 	href="../../res/assets/img/cow.ico">
 
 <!-- CSS here -->
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 <link rel="stylesheet" href="../../res/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="../../res/assets/css/owl.carousel.min.css">
 <link rel="stylesheet" href="../../res/assets/css/slicknav.css">
@@ -27,8 +25,6 @@
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
 <link rel="stylesheet" href="../../res/assets/css/return.css">
-<link rel="stylesheet"
-	href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 
 
 </head>
@@ -56,7 +52,7 @@
 							<!-- Logo -->
 							<div class="col-xl-2 col-lg-2">
 								<div class="logo">
-									<a href="/"><img
+									<a href="index.html"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
 								</div>
 							</div>
@@ -65,37 +61,35 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end">
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
-										<nav>
-											<ul id="navigation">
-												<li><a href="index.html">소개하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+										                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="/usageGuide">소개하기</a>
+                                                <ul class="submenu">
+														<li><a href="/usageGuide">이용 안내</a></li>
+														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-												<li><a href="packages.html">예약하기</a>
-													<ul class="submenu">
+                                                <li><a href="/reservation">예약하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-
-												<li><a href="/return">반납하기</a>
-													<ul class="submenu">
+                                                <li><a href="/return">반납 하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="/mypage">마이페이지</a> <!-- Button -->
+                                                <li><a href="/mypage">마이페이지</a>
 													<ul class="submenu">
 														<li><a href="/accountMgt">계정 관리</a></li>
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
-												<li class="button-header margin-left "><a
-													href="/registration" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="/login" class="btn3">Sign
-														In</a></li>
-											</ul>
-										</nav>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                            </ul>
+                                        </nav>
 									</div>
 								</div>
 							</div>
@@ -119,7 +113,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">예약하기</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 예약하기</h1>
 							</div>
 						</div>
 					</div>
@@ -133,33 +127,100 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<section class="team-area section-padding40 offset-lg-1">
-			<div class="container">
-				<div class="dropdown">
-  <div class="dropdown-trigger">
-    <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-      <span>Click me</span>
-      <span class="icon is-small">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-    </button>
-  </div>
-  <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-    <div class="dropdown-content">
-      <a href="#" class="dropdown-item">
-        시간
-      </a>
-      <a href="#" class="dropdown-item">
-        시간
-      </a>
-      <a href="#" class="dropdown-item">
-        시간
-      </a>
-    </div>
-  </div>
-</div>
+
+		<section class="button-area pricing-card-area fix">
+
+			<div class="container box_1170 border-top-generic ">
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">예약 선택</h3>
+						</div>
+						<div class="col-sm-6">
+							<h3 style="color: #FFFFFF">반납 선택</h3>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="col-sm-12">
+
+					<div class="row">
+
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" 
+									type="datetime-local">
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<input class="form-control valid" 
+									type="datetime-local">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div>
+					<!--Hero form -->
+					<form action="#" class="search-box">
+						<div class="input-form">
+							<input type="text" placeholder="Search for a domain">
+							<!-- icon search -->
+							<div class="search-form">
+								<button>
+									<i class="ti-search"></i>
+								</button>
+							</div>
+							<!-- icon search -->
+							<div class="world-form">
+								<i class="fas fa-globe"></i>
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<br>
+				<!-- 지도 생성 위치 div   //width: 500px; -->
+				<div id="map" style="width: 100%; height: 400px;"></div>
+				<br>
+
+				<p>
+					<button class="button button-contactForm boxed-btn"
+						onclick="panTo()">현재 위치</button>
+				</p>
+
+
+
+
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0"></script>
+				<!-- services 라이브러리 불러오기 -->
+				<script type="text/javascript"
+					src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a6a4b36d784da909ee182a145ec366a0&libraries=services"></script>
+				<hr>
+
+
+				<div style="margin-top: 80px">
+					<button
+						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/carList'">예약하기</button>
+
+				</div>
+
 			</div>
+
+
 		</section>
+
 
 
 	</main>
@@ -308,7 +369,6 @@
 
 	<!-- Date Picker -->
 	<script src="./../../res/assets/js/gijgo.min.js"></script>
-
 	<!-- Nice-select, sticky -->
 	<script src="./../../res/assets/js/jquery.nice-select.min.js"></script>
 	<script src="./../../res/assets/js/jquery.sticky.js"></script>
@@ -330,8 +390,9 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 마이페이지 관련 js -->
-	<script src="./../../res/assets/js/reservations.js"></script>
+	<!-- 예약페이지 관련 js -->
+	<script src="./../../res/assets/js/reservation.js"></script>
+
 
 
 </body>

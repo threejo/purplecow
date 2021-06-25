@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="../../res/assets/css/slick.css">
 <link rel="stylesheet" href="../../res/assets/css/nice-select.css">
 <link rel="stylesheet" href="../../res/assets/css/style.css">
-<link rel="stylesheet" href="../../res/assets/css/checkStatus.css">
+<link rel="stylesheet" href="../../res/assets/css/return.css">
 
 
 </head>
@@ -61,32 +61,35 @@
 									class="menu-wrapper d-flex align-items-center justify-content-end">
 									<!-- Main-menu -->
 									<div class="main-menu d-none d-lg-block">
-										<nav>
-											<ul id="navigation">
-												<li><a href="index.html">소개하기</a>
-													<ul class="submenu">
-														<li><a href="blog.html">이용 안내</a></li>
-														<li><a href="blog_details.html">요금 안내</a></li>
+										                                        <nav>
+                                            <ul id="navigation">                                                                                          
+                                                <li><a href="/usageGuide">소개하기</a>
+                                                <ul class="submenu">
+														<li><a href="/usageGuide">이용 안내</a></li>
+														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-												<li><a href="packages.html">예약하기</a>
-													<ul class="submenu">
+                                                <li><a href="/reservation">예약하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
 														<li><a href="elements.html">부름예약</a></li>
 													</ul></li>
-
-												<li><a href="#">반납하기</a>
-													<ul class="submenu">
+                                                <li><a href="/return">반납 하기</a>
+                                                <ul class="submenu">
 														<li><a href="blog.html">바로 반납</a></li>
 														<li><a href="blog.html">반납 연장</a></li>
 													</ul></li>
-												<li><a href="#">마이페이지</a> <!-- Button -->
-												<li class="button-header margin-left "><a
-													href="register.html" class="btn">Sign Up</a></li>
-												<li class="button-header"><a href="login.html"
-													class="btn3">Sign In</a></li>
-											</ul>
-										</nav>
+                                                <li><a href="/mypage">마이페이지</a>
+													<ul class="submenu">
+														<li><a href="/accountMgt">계정 관리</a></li>
+														<li><a href="/payInfo">결제 및 할인</a></li>
+														<li><a href="/resvHistory">예약 내역</a></li>
+													</ul></li>
+                                                <!-- Button -->
+                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                            </ul>
+                                        </nav>
 									</div>
 								</div>
 							</div>
@@ -110,7 +113,7 @@
 					<div class="row align-items-center justify-content-center">
 						<div class="col-xl-8 col-lg-9 col-md-12 ">
 							<div class="hero__caption hero__caption3 text-center">
-								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 상태 확인</h1>
+								<h1 data-animation="fadeInLeft" data-delay=".6s ">차량 예약하기</h1>
 							</div>
 						</div>
 					</div>
@@ -124,68 +127,64 @@
 		</div>
 		<!-- Slider Area End -->
 
-		<!--? 차량 상태 확인 시작 -->
+
 		<section class="button-area">
-			<!-- 차량 외부 -->
+
 			<div class="container box_1170 border-top-generic">
-				<h3 class="text-heading">
-					<strong>차량 외부</strong>
-				</h3>
-				<div>
-					<h6>Step1. 퍼플카 외관 꼼꼼히 촬영하기!</h6>
-				</div>
-				<div class="button-group-area mt-40" style="margin: 20px 0px">
-					<input type="radio" name="outStatus" id="outStatus" value="Good"
-						checked> <label for="default-radio">Good</label> <input
-						type="radio" name="outStatus" id="outStatus" value="Soso">
-					<label for="default-radio">So-so</label> <input type="radio"
-						name="outStatus" id="outStatus" value="Bad"> <label
-						for="default-radio">Bad</label>
-				</div>
-				<!-- 이미지 등록 -->
-				<div id="image_manage">
-					<div class="img_inline">
-					<form method="POST" enctype="multipart/form-data" id="uploadForm">
-						<input type="file" id="real-input" class="image_inputType_file" name="profile"
-							style="display: none;" accept="img/*" required multiple>
-						<button class="browse-btn">
-							<img src="https://img.icons8.com/nolan/64/camera.png" />
-						</button>
-						</form>
-					</div>
-					<!-- 이미지 미리보기 -->
-					<div id="imagePreview" class="img_inline"></div>
-
-
-				</div>
-
-				<!-- 이미지 등록 끝-->
-				<!-- 차량 내부 -->
-				<div class="container box_1170 border-top-generic">
-					<h3 class="text-heading">
-						<strong>차량 내부</strong>
-					</h3>
+				<div class="section-top-border" style="width: 900px; margin: auto;">
+					<h3 class="mb-30">요금</h3>
 					<div>
-						<h6>Step2. 내부 확인 후 이전 이용자 매너 평가하기!</h6>
+						<div>
+							<blockquote class="generic-blockquote" >
+								<ul class="unordered-list" style="font-size: 1.3em;">
+									<li>대여 요금
+								</ul>
+							</blockquote>
+						</div>
 					</div>
-					<div class="button-group-area mt-40" style="margin: 20px 0px">
-						<input type="radio" name="inStatus" id="inStatus" value="Good"
-							checked> <label for="default-radio">Good</label> <input
-							type="radio" name="inStatus" id="inStatus" value="Soso">
-						<label for="default-radio">So-so</label> <input type="radio"
-							name="inStatus" id="inStatus" value="Bad"> <label
-							for="default-radio">Bad</label>
-					</div>
-
+					<hr>
+					<h3 class="mb-30">결제 전 예약 정보 확인</h3>
 					<div>
-						<button
-							class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-							id="ajax_btn" style="font-size: 120%;" type="submit">확
-							인</button>
+						<div>
+							<blockquote class="generic-blockquote">
+								<ul class="unordered-list" style="font-size: 1.3em; ">
+									<li>예약 날짜, 시간
+										<ul>
+											<li>예약 존</li>
+										</ul>
+									</li>
+									<li>반납 날짜, 시간
+										<ul>
+											<li>반납 존</li>
+										</ul>
+									</li>
+
+									<li>차량 정보
+										<ul>
+											<li>model</li>
+											<li>scale</li>
+											<li>oiltype</li>
+										</ul>
+									</li>
+								</ul>
+
+
+
+							</blockquote>
+						</div>
 					</div>
 				</div>
+								<div style="margin-top: 80px">
+					<button
+						class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+						id="modal_btn" style="font-size: 120%;" type="submit" onClick="location.href='/inuse/checkStatus'">결제하기</button>
+
+				</div>
+			</div>
+
+
 		</section>
-		<!-- 차량 상태 확인 끝-->
+
 
 
 	</main>
@@ -292,9 +291,9 @@
 										<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 										Copyright &copy;
 										<script>
-											document.write(new Date()
-													.getFullYear());
-										</script>
+                                 document.write(new Date()
+                                       .getFullYear());
+                              </script>
 										All rights reserved | This template is made with <i
 											class="fa fa-heart" aria-hidden="true"></i> by <a
 											href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -315,8 +314,7 @@
 	</div>
 
 	<!-- JS here -->
-	<script type="text/javascript"
-		src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
 	<script src="./../../res/assets/js/vendor/modernizr-3.5.0.min.js"></script>
 	<!-- Jquery, Popper, Bootstrap -->
 	<script src="./../../res/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -356,8 +354,8 @@
 	<script src="./../../res/assets/js/plugins.js"></script>
 	<script src="./../../res/assets/js/main.js"></script>
 
-	<!-- 해당페이지 관련 js -->
-	<script src="./../../res/assets/js/checkStatus.js"></script>
+	<!-- 리턴 관련 js -->
+	<script src="./../../res/assets/js/return.js"></script>
 
 
 

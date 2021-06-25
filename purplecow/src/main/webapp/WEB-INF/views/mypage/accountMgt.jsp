@@ -129,6 +129,7 @@
 		</div>
 		<!-- Slider Area End -->
 
+
 		<section class="button-area">
 			<div
 				class="container box_1170 border-top-generic col-lg-3 offset-lg-1">

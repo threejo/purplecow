@@ -27,13 +27,16 @@ public class APICarsController {
 	/*user_id로 특정 사용자의 예약 전체 조회*/
 	/*예약 전체 목록 조회*/
 	@GetMapping("/cars/list")
-	public List<Reservations> getReservations() {
+	public List<Cars> getReservations() {
 		return carsService.getCars();
 	}
 	
-	
+	/*
+	 * SELECT 
+	 * 존 아이디에 해당되는 차 리스트를 가져온다
+	 */
 	@GetMapping("/cars/{zones_id}")
-	public List<Cars> getCarByZoneId(@PathVariable("zones_id") int zones_id) throws Exception {
+	public List<Cars> getCarByZoneId(@PathVariable("zones_id") int zones_id) {
 		log.info("잘 왔니?");
 		log.debug(zones_id);
 		return carsService.getCarByZoneId(zones_id);

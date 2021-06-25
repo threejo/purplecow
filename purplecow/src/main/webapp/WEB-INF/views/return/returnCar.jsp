@@ -88,7 +88,7 @@
 													</ul></li>
                                     <li class="button-header margin-left "><a
                                        href="register.html" class="btn">Sign Up</a></li>
-                                    <li class="button-header"><a href="login.html"
+                                    <li class="button-header"><a href="login"
                                        class="btn3">Sign In</a></li>
                                  </ul>
                               </nav>

@@ -66,7 +66,7 @@
 														<li><a href="/usageGuide">이용 안내</a></li>
 														<li><a href="/feeInfo">요금 안내</a></li>
 													</ul></li>
-                                                <li><a href="/reservation/resv">예약하기</a>
+                                                <li><a href="/reservation">예약하기</a>
                                                 <ul class="submenu">
 														<li><a href="blog.html">왕복 예약</a></li>
 														<li><a href="blog_details.html">편도 예약</a></li>
@@ -83,9 +83,10 @@
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
-                                                <!-- Button -->
-                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
-                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                                <!-- Button -->                                                
+                                                <li id="signupbtn1"class="button-header margin-left"><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li id="signinbtn1"class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                               
                                             </ul>
                                         </nav>
                                     </div>
@@ -119,7 +120,7 @@
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a data-animation="fadeInLeft" data-delay="1s" href="/reservation/resv" class="btn radius-btn">시작하기</a>
+                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation" class="btn radius-btn">시작하기</a>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +184,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo mb-25">
-                                <a href="index.html"><img
+                                <a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
                             </div>
                             <div class="footer-tittle mb-50">
@@ -323,6 +324,7 @@
 <!-- Jquery Plugins, main Jquery -->	
 <script src="./../../res/assets/js/plugins.js"></script>
 <script src="./../../res/assets/js/main.js"></script>
+<script src="./../../res/assets/js/index.js"></script>
 
 </body>
 </html>

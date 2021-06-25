@@ -27,6 +27,7 @@ public class TokenValidation {
 	        	
 	        	log.info("토큰 존재하나요?"+token.isPresent());
 	        	JwtAuthToken jwtAuthToken = jwtAuthTokenProvider.convertAuthToken(token.get());
+	        	log.info("토큰 데이터는?"+jwtAuthToken.getData().getSubject());
 	        	if(jwtAuthToken.validate() & Role.USER.getCode().equals(jwtAuthToken.getData().get("role"))) {
 	        		return true;
 	        	}
@@ -37,6 +38,11 @@ public class TokenValidation {
 	            return false;
 	        }
 		
+	}
+	
+	public String getTokenSubject(HttpServletRequest servletRequest) {
+		Optional<String> token = resolveToken(servletRequest);
+		return jwtAuthTokenProvider.convertAuthToken(token.get()).getData().getSubject();
 	}
 	
 	

@@ -17,7 +17,7 @@ public interface CarsMapper {
 
 	List<Cars> getCarByZoneId(int zones_id);
 	
-	List<Reservations> getCars();
+	List<Cars> getCars();
 
 
 	

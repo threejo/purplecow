@@ -16,6 +16,8 @@ public class Cars {
 	 * 사용가능 여부,현재 위치한 존 정보,유종,차급*/
 	
 	private int id;
+	private String name;
+	private String number;
 	private String model_color;
 	private int daily_rental_fee;
 	private int driving_fee_per_km;
@@ -23,6 +25,7 @@ public class Cars {
 	private int zones_id;
 	private OilTypes oil_type;
 	private CarScales scale;
+
 	
 	/*Getter & Setter*/
 	
@@ -75,7 +78,7 @@ public class Cars {
 		this.scale = scale;
 	}
 	
-	
+
 	/*constructor*/
 	
 	
