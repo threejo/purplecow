@@ -16,7 +16,7 @@
 [자세한 기획안 링크](https://github.com/noburi04/SPC_LAB1/files/6713046/figma.pdf)
 # 서비스 구조
 
-![이미지](https://user-images.githubusercontent.com/85234019/123045209-969a9380-d435-11eb-9d6d-acda152efc63.PNG)
+![이미지](https://user-images.githubusercontent.com/85234019/123387991-4e18dc80-d5d3-11eb-83b4-e5ee1ea5c3de.png)
 
 # Database Schema
 
