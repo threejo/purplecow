@@ -38,9 +38,9 @@
 
 [API 상세]
 |기능|Http 메서드|url|request parameter|response|
-|-----|-----|-----|-----|-----|
-|예약테이블에 정해진 자리 주차여부 저장|put|/reservations/:resv_id|{"park_fixed":"true"}|{"result":"success"}
-
+|:----:|:-----:|:-----:|:-----:|:-----:|
+||put|/reservations/:resv_id|{"park_fixed":"true"}|{"result":"success"}
+|예약테이블에 외부사진 목록저장
 # 에러 코드
 
 <pre><code>{AUTHENTICATION_FAILED(401, "AUTH001", " AUTHENTICATION_FAILED."),
