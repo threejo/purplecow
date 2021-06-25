@@ -28,15 +28,30 @@
 - Java script
 - CSS
 - AWS ec2(linux)
-- SpringBoot
-- PostgreSQL
-- STS
+- SpringBoot version 2, 4, 6
+- PostgreSQL 9.6.22
+- STS 4.10.0
 - eclipse
 - Jsp
+- jdk-8u201
 
 # API 목록
 
 [상세 링크](https://github.com/threejo/purplecow/blob/yoontest/api.md)
+- PUT	/reservations/:resv_id
+- PUT	/reservations/:resv_id
+- PUT	/reservations/:resv_id
+- GET	GET	/map_search
+- GET	/purple_zons
+- GET	/cars/:zone_id
+- POST	/reservations/:cars_id
+- PUT	/reservations
+- GET	/reservations
+- GET	/reservations/:resv_id
+- POST	/users
+- GET	/users/:id
+- PUT	/users/:id
+- PUT	/reservations/:resv_id
 - PUT	/reservations/:resv_id
 - PUT	/reservations/:resv_id
 - GET	/map_search
@@ -48,6 +63,7 @@
 - POST	/users
 - GET	/users/:id 패스 파라미터
 - PUT	/users/:id
+
 
 # 에러 코드
 - put /reservations/:resv_id {park_fixed":"true"} {"result"}
