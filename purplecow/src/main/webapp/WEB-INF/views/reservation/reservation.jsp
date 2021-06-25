@@ -170,15 +170,21 @@
 					</div>
 
 				</div>
+				
 
 				<div>
-					<!--Hero form -->
-					<form action="#" class="search-box">
+				<form action="#">
+					<input type="text" id="search_address" placeholder="주소">
+					<input type="button" onclick="kakaoPostcode()" value="주소 검색"><br>
+				</form>
+					<!-- Hero form, 검색기능 -->
+					<form action="kakaoPostcode()" class="search-box">
+						<!-- 인풋태그 div 영역 -->
 						<div class="input-form">
-							<input type="text" placeholder="Search for a domain">
-							<!-- icon search -->
+							<input type="text" id="search_address" placeholder="Search for a domain">
+							<!-- icon search, 버튼 돋보기 아이콘 -->
 							<div class="search-form">
-								<button>
+								<button onclick="kakaoPostcode()" id="kakaoPostcode()">
 									<i class="ti-search"></i>
 								</button>
 							</div>
@@ -188,16 +194,22 @@
 							</div>
 						</div>
 					</form>
+					
+					
 
 				</div>
+				
 				<br>
 				<!-- 지도 생성 위치 div   //width: 500px; -->
 				<div id="map" style="width: 100%; height: 400px;"></div>
 				<br>
+				<!-- 현재위치 찾아주는 버튼, 어느정도 오차가 있다. -->
 				<p>
 					<button class="button button-contactForm boxed-btn"
 						onclick="panTo()">현재 위치</button>
 				</p>
+				
+				
 
 
 				<!-- services와 clusterer, drawing 라이브러리 불러오기 -->
