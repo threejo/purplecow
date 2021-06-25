@@ -83,9 +83,10 @@
 														<li><a href="/payInfo">결제 및 할인</a></li>
 														<li><a href="/resvHistory">예약 내역</a></li>
 													</ul></li>
-                                                <!-- Button -->
-                                                <li class="button-header margin-left "><a href="/registration" class="btn">Sign Up</a></li>
-                                                <li class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                                <!-- Button -->                                                
+                                                <li id="signupbtn1"class="button-header margin-left"><a href="/registration" class="btn">Sign Up</a></li>
+                                                <li id="signinbtn1"class="button-header"><a href="/login" class="btn3">Sign In</a></li>
+                                               
                                             </ul>
                                         </nav>
                                     </div>
@@ -119,7 +120,7 @@
                                     <!-- Slider btn -->
                                     <div class="slider-btns">
                                         <!-- Hero-btn -->
-                                        <a data-animation="fadeInLeft" data-delay="1s" href="/reservation/resv" class="btn radius-btn">시작하기</a>
+                                        <a id="purplecow_start" data-animation="fadeInLeft" data-delay="1s" href="/reservation/resv" class="btn radius-btn">시작하기</a>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +184,7 @@
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
                             <div class="footer-logo mb-25">
-                                <a href="index.html"><img
+                                <a href="/"><img
 										src="../../res/assets/img/logo/purplecow1.png" alt=""></a>
                             </div>
                             <div class="footer-tittle mb-50">

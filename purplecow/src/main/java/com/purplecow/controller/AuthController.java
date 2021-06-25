@@ -58,7 +58,7 @@ public class AuthController {
 	}
 	
 	 @GetMapping("/api/v2/cars")
-	    public List<Reservations> getAllCars2(HttpSession session) {
+	    public List<Cars> getAllCars2(HttpSession session) {
 	        return authService.findAll();
 	    }
 

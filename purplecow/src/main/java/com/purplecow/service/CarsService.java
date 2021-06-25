@@ -19,7 +19,7 @@ public class CarsService {
 	
 	@Autowired CarsMapper carsMapper;
 
-	public List<Reservations> getCars() {
+	public List<Cars> getCars() {
 		return carsMapper.getCars(); 
 	}
 	
