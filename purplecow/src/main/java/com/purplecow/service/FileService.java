@@ -19,7 +19,7 @@ public class FileService {
 	public String uploadImage(MultipartFile file) {
 		//원래 파일이름을 unique하게 바꿔서 fileName에 저장
 		String fileName = createFileName(file.getOriginalFilename());
-		//ObjectMetadat객체를 원래 파일의 contenttype으로 설정
+		//ObjectMetadat객체를 원래 파일의 content type으로 설정
         ObjectMetadata objectMetadata = new ObjectMetadata();
         objectMetadata.setContentType(file.getContentType());
         //s3service에 파일, objectmetadata,파일이름 전달
@@ -45,6 +45,30 @@ public class FileService {
             throw new IllegalArgumentException(String.format("잘못된 형식의 파일 (%s) 입니다", fileName));
         }
     }
+    
+  //이미지 목록 업로드
+    public String[] uploadImages(MultipartFile[] files) {
+       String[] fileNames = new String[files.length];
+       int index=0;
+       for(MultipartFile file: files) {
+          //원래 파일이름을 unique하게 바꿔서 fileName에 저장
+          String fileName = createFileName(file.getOriginalFilename());
+          //ObjectMetadat객체를 원래 파일의 content type으로 설정
+            ObjectMetadata objectMetadata = new ObjectMetadata();
+            objectMetadata.setContentType(file.getContentType());
+            //s3service에 파일, objectmetadata,파일이름 전달
+            try (InputStream inputStream = file.getInputStream()) {
+                s3Service.uploadFile(inputStream, objectMetadata, fileName);
+            } catch (IOException e) {
+                throw new IllegalArgumentException(String.format("파일 변환 중 에러가 발생하였습니다 (%s)", file.getOriginalFilename()));
+            }
+            fileNames[index++]=s3Service.getFileUrl(fileName);
+            
+       }
+       
+         //s3Service에서 원래 파일이름을 전달하고 fileURL받기
+         return fileNames;
+     }
 
 
 }

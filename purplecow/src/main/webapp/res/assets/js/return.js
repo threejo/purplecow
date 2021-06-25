@@ -14,7 +14,7 @@ window.onload = function() {
 
 };
 
-$("#radioButton").bind("click", function() {
+$("#radioButton").on("click", function() {
 	var data = {
                 "park_fixed": $('input[name="park_fixed"]:checked').val()
         }

@@ -31,7 +31,7 @@ import com.purplecow.service.FileService;
  */
 
 @RestController
-public class FileController {
+public class APIFileController {
 
 	@Autowired FileService fileService;
 
@@ -78,6 +78,12 @@ public class FileController {
 		return fileService.uploadImage(file);
     }
 	
+	@PostMapping("/api/v2/upload")
+    public String[] uploadImages(@RequestParam(name="profile") MultipartFile[] file) {	
+		
+		return fileService.uploadImages(file);
+    }
+	
 	
 
 	// Detects text in the specified remote image on Google Cloud Storage.
@@ -120,6 +126,7 @@ public class FileController {
 	      }
 	    }
 	  }
-
+ 
 
 }
+
