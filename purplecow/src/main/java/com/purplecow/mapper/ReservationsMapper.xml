@@ -9,6 +9,14 @@
 		VALUES
 		(#{users_id},#{zones_id},#{cars_id},#{start_time},#{end_time},#{delayed},#{accident},#{hipass_count})
 	</insert>
+	
+	<insert id="insertResevByCarId"
+		parameterType="com.purplecow.dto.Reservations">
+		INSERT INTO reservations
+		(cars_id)
+		VALUES
+		(#{cars_id})
+	</insert>
 
 	<select id="getReservationById"
 		resultType="com.purplecow.dto.Reservations">

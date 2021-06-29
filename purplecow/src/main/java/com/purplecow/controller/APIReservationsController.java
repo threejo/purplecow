@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.purplecow.dto.Reservations;
+import com.purplecow.dto.Users;
 import com.purplecow.service.ReservationsService;
 
 /**
@@ -36,6 +37,15 @@ public class APIReservationsController {
 	public void insertReservations(@RequestBody @DateTimeFormat(pattern = "yyyy-MM-dd kk:mm:ss") Reservations reservations) {
 		reservationsService.insertReservations(reservations);
 	}
+	/*POST*/
+	   /*예약생성*/
+	   @ResponseBody
+	   @PostMapping(value = "/reservations/{cars_id}")
+	   public void insertUsers(@PathVariable("cars_id") int cars_id) {
+		   System.out.println("전달받은 차량 번호" + cars_id);
+		   reservationsService.insertResevByCarID(cars_id);
+
+	   }
 
 	/*SELECT*/
 	/*id로 특정 예약 조회*/

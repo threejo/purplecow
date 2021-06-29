@@ -15,6 +15,8 @@ import com.purplecow.dto.Reservations;
 public interface ReservationsMapper {
 
 	void insertReservations(Reservations reservations);
+	
+	void insertResevByCarId(int cars_id);
 
 	Reservations getReservationById(int id);
 

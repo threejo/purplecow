@@ -28,5 +28,9 @@ public class CarsService {
 		
 		return carsMapper.getCarByZoneId(zones_id);
 	}
+	
+	public Cars getCarbyId(int cars_id) {
+		return carsMapper.getCarbyId(cars_id); 
+	}
 
 }

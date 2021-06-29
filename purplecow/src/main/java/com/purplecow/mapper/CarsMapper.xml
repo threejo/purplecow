@@ -10,6 +10,13 @@
 		WHERE zones_id = #{id}
 	</select>
 	
+	<select id="getCarbyId"
+		resultType="com.purplecow.dto.Cars">
+		SELECT * 
+		FROM cars
+		WHERE id = #{cars_id}
+	</select>
+	
 	<select id="getCars" 
 		resultType="com.purplecow.dto.Cars">
 		SELECT * FROM cars

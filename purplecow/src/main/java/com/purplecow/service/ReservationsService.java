@@ -28,6 +28,10 @@ public class ReservationsService {
 	public void insertReservations(Reservations reservations) {
 		reservationsMapper.insertReservations(reservations);
 	}
+	
+	public void insertResevByCarID(int cars_id){
+		reservationsMapper.insertResevByCarId(cars_id);
+	}
 
 	public Reservations getReservationById(int id) {
 		return reservationsMapper.getReservationById(id);

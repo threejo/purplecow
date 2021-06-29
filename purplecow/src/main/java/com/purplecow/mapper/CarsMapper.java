@@ -19,6 +19,8 @@ public interface CarsMapper {
 	
 	List<Cars> getCars();
 
+	Cars getCarbyId(int cars_id);
+
 
 	
 	 
